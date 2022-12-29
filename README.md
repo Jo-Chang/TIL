@@ -6,8 +6,8 @@
 OT
 
 ### Day2
-Markdown/
-CLI/
+Markdown /
+CLI /
 GIT
 
 ### Day3
