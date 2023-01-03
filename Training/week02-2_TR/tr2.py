@@ -113,10 +113,10 @@ while True:
         
         if num8_1 < num8_2:
             for i in range(num8_2 - 1, num8_1, -1):
-                print(i)
+                print(i, end = ' ')
         elif num8_1 > num8_2:
             for i in range(num8_1 - 1, num8_2, -1):
-                print(i)
+                print(i, end = ' ')
         else:
             print(False)
         ###
