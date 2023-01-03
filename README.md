@@ -23,3 +23,6 @@
 
 ### Day1
 -   python - print, data type(numeric, string, list)
+
+### Day2
+-   python - 제어문 ( if, for )
