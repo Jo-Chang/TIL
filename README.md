@@ -1,5 +1,20 @@
 # TIL (Today I Learned)
 
+## Contents
+- [Week1](#week1)
+    + [Day1](#day1)
+    + [Day2](#day2)
+    + [Day3](#day3)
+    + [Day4](#day4)
+    + [Day5](#day5)
+- [Week2](#week2)
+    + [Day1](#day1-1)
+    + [Day2](#day2-1)
+    + [Day3](#day3-1)
+
+
+---
+
 ## Week1
 
 ### Day1
@@ -26,3 +41,6 @@
 
 ### Day2
 -   python - 제어문 ( if, for )
+
+### Day3
+-   python - 제어문 ( while ), 함수
