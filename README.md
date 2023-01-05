@@ -11,7 +11,7 @@
     + [Day1](#day1-1)
     + [Day2](#day2-1)
     + [Day3](#day3-1)
-
+    + [Day4](#day4-1)
 
 ---
 
@@ -44,3 +44,6 @@
 
 ### Day3
 -   python - 제어문 ( while ), 함수
+
+### Day4
+-   python - Dictionary, Module, Error/Exception
