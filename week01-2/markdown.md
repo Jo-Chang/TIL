@@ -38,7 +38,7 @@
     [^1]: This is the footnote.
 *   ### Heading ID {#'custom-id'} 입니다.
 *   Definition List 입니다 - term
-    :   definition 
+: definition 
 *   ~~Strikethrough~~ 입니다.
 *   Task List 입니다.
 - [x] Write the press release
