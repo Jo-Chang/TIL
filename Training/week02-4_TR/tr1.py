@@ -76,6 +76,7 @@ Hint : 딕셔너리 안에 딕셔너리를 넣을 수 있습니다.')
         
     elif problem_number == '6':
         print('# 6. 문자열을 입력받고, 문자열에서 개별 문자가 나오는 횟수를 출력하세요.')
+        """
         ########## solution code
         str = input('문자열을 입력하세요 > ')
         len = 0
@@ -92,6 +93,20 @@ Hint : 딕셔너리 안에 딕셔너리를 넣을 수 있습니다.')
                     if str[i] == str[j]:
                         count += 1
                 print(f'{str[i]} {count}')
+        ##########
+        """
+        ########## solution code_use dictionary
+        str = input('문자열을 입력하세요 > ')
+        dict_var = {}
+        for ch in str:
+            dict_var[ch] = 0
+        
+        for ch in str:
+            dict_var[ch] += 1
+        
+        for key, val in dict_var.items():
+            print(key, val)
+        
         ##########
         print()
        
