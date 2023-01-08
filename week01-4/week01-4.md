@@ -1,4 +1,14 @@
-# DAY01-4
+# Week01-4
+-  git ( branch ) 
+
+<br>*[Parent Contents...](../README.md)*
+
+## Contents
+- [Git branch](#git-branch)
+- [git merge](#git-merge-case)
+- [git PR](#git-pr-현업)  
+- [git restore](#git-add--commit-복구--restore)
+- [+commit message tips](#commit-message-tip)
 
 ## Git branch
 >   독립적인 작업흐름을 만들고 관리
@@ -36,8 +46,9 @@
 3. merge commit 충돌
     - conflic 발생!
 ---
-## git PR(Pull Request) 현업
+## git PR 현업
 
+- PR ( Pull Request )
 - Git Flow : Git을 활용하여 협업하는 흐름으로 branch를 활용하는 전략
 - 기본 원칙
     1. master branch는 반드시 배포 가능한 상태여야 한다.

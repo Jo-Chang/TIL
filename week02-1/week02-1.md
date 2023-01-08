@@ -1,5 +1,19 @@
-# Day02-1
----ll
+# Week02-1
+-   Python ( variable type, operator, container )
+
+<br>*[Parent Contents...](../README.md)*
+
+## Contents
+- [컴퓨터 프로그래밍 언어](#컴퓨터-프로그래밍-언어)
+- [파이썬](#파이썬--python)
+    + [변수 타입](#변수-타입)
+    + [연산자](#연산자--operator)
+    + [컨테이너](#시퀀스형-컨테이너--sequential-container)
+    + [문자열](#문자열--string-type)
+    + [리스트](#리스트)
+    + [None](#none)
+
+---
 
 ---
 

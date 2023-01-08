@@ -1,11 +1,16 @@
 # Week02-3
+-   반복문 ( while ), 함수
+
+<br>*[Parent Contents...](../README.md)*
 
 ## Contents
 - [반복문 while](#반복문-while)
 - [함수](#함수)
 - [내장 함수](#내장-함수)
-  * [map(function, iterable)](#map)
+  * [map](#map)
+
 ---
+
 ### 반복문 while
 -   조건식이 참인 경우 반복적으로 코드 실행
 ```

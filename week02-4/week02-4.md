@@ -1,5 +1,7 @@
-# Week02-4
+# Week02-4  
 -   컬렉션 ( Collections ) 자료형
+
+<br>*[Parent Contents...](../README.md)*
 
 ## Contents
 - [Dictionary](#Dictionary)
@@ -38,6 +40,7 @@ students['박영희'] = 95
 ---
 
 ### Error/Exception Handling
+
 #### Python Error
 -   디버깅 ( debugging ) : 에러/예외 처리 
 -   문법 에러 ( Syntax Error )

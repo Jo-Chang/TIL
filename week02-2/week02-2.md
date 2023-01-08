@@ -1,7 +1,22 @@
 # Day02-2
-##   제어문
+-   제어문
 
-### String Formatting
+<br>*[Parent Contents...](../README.md)*
+
+## Contents
+- [String Formatting](#string-formatting)
+- [형변환](#형변환--typecasting)
+    + [암시적 형변환](#암시적-형변환--implicit)
+    + [명시적 형변환](#명시적-형변환--explicit)
+* [*문자열 출력 tip](#문자열-출력-tip)
+- [제어문](#제어문)
+    + [조건문](#조건문)
+    + [반복문](#반복문)
+    + [반복문 제어](#반복문-제어)
+
+---
+
+## String Formatting
 -   문자열을 변수를 활용하여 만들기
 ```
 name = 'Kim'
@@ -16,13 +31,14 @@ print('내 성적은 %f' % score)
 # 내 성적은 4.5
 ```
 ---
-### 형 변환 ( Typecasting )
+
+## 형변환 ( Typecasting )
 -   In python, 데이터 형태 서로 변환 가능
 
-#### 암시적 형 변환 ( Implicit ) 
+### 암시적 형변환 ( Implicit ) 
 -   사용자가 의도하지 않은 형 변환
 
-#### 명시적 형 변환 ( Explicit )
+### 명시적 형변환 ( Explicit )
 -   사용자가 특정 함수를 활용하여 의도하여 형 변환
 
 #### *문자열 출력 tip
@@ -31,13 +47,15 @@ print('이름 : ' + name + ', 나이 : ' + str(age))
 print('이름 : {}, 나이 : {}'.format(name, age))
 print(f'이름 : {name}, 나이 : {age}')
 ```
+
 ---
 
-### 제어문
+## 제어문
 -   객체를 제어
 -   특정 상황에 따라 코드를 선택적, 반복적으로 실행
 -   순서도 ( flow chart ) 활용 표현
 -   조건문, 반복문, ...
+
 ---
 
 ### 조건문
@@ -50,10 +68,10 @@ else:
     # Run this Code block
 ```
 
-#### 복수 조건문
+### 복수 조건문
 -   elif를 활용
 
-#### 중첩 조건문
+### 중첩 조건문
 -   if문 안 if문
 
 <a name = "range"></a>
@@ -109,7 +127,10 @@ for idx in range(len(chars)):
     print(chars[idx])
 ```
 
-#### 반복문 제어
+---
+
+### 반복문 제어
+
 -   break :
     반복 즉시 종료
 -   continue :
