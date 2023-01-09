@@ -4,12 +4,18 @@ ref) https://devhealer.tistory.com/53
 
 1.  `$git log`
     - commit log 확인
+
 2.  `$git rebase -i {hash}`
     - 수정하고 싶은 날짜의 commit hash 복사
-3.  `$git commit --ammed --no edit --date="{조작하고 싶은 날짜}"
+    - `$git rebase -i --root`로 작동
+
+3.  `$git commit --amend --no-edit --date="{조작하고 싶은 날짜}"
+    - 날짜 형식 : {Sun 1 Mar 2020 20:11:22 KST}
     - 날짜 지정
+
 4.  `$git rebase -- continue`
     - rebase 진행
+
 5.  `git push -f origin master`
     - 강제 푸쉬(-f option)을 사용해 수정한 rebase 내용 등록
 
