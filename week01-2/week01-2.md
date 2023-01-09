@@ -1,7 +1,7 @@
 # Week01-2
 -   
 
-<br>*[Parent Contents...](../README.md)*
+<br>[Parent Contents...](../README.md/#til-today-i-learned)
 
 ## Contents
 -   [markdown](TIL/markdown.md)
