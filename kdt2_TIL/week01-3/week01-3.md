@@ -1,7 +1,7 @@
 # Week01-3
 -   
 
-<br>[Parent Contents...](../README.md/#til-today-i-learned)
+<br>[Parent Contents...](../../README.md/#til-today-i-learned)
 
 ## Contents
 -   

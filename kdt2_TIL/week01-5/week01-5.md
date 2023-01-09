@@ -1,6 +1,6 @@
 # Week01-5
 
-<br>[Parent Contents...](../README.md/#til-today-i-learned)
+<br>[Parent Contents...](../../README.md/#til-today-i-learned)
 
 ### 채용 공고 리서치 & 기초 프로필 작성
 

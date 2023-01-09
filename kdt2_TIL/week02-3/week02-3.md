@@ -1,7 +1,7 @@
 # Week02-3
 -   반복문 ( while ), 함수
 
-<br>[Parent Contents...](../README.md/#til-today-i-learned)
+<br>[Parent Contents...](../../README.md/#til-today-i-learned)
 
 ## Contents
 - [반복문 while](#반복문-while)
