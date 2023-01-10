@@ -1,7 +1,7 @@
 # Week02-4  
 -   컬렉션 ( Collections ) 자료형
 
-<br>[Parent Contents...](../../README.md/#til-today-i-learned)
+<br>[Parent Contents...](../../../README.md/#til-today-i-learned)
 
 ## Contents
 - [Dictionary](#Dictionary)

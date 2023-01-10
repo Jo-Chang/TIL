@@ -1,7 +1,7 @@
 # Week02-1
 -   Python ( variable type, operator, container )
 
-<br>[Parent Contents...](../../README.md/#til-today-i-learned)
+<br>[Parent Contents...](../../../README.md/#til-today-i-learned)
 
 ## Contents
 - [컴퓨터 프로그래밍 언어](#컴퓨터-프로그래밍-언어)

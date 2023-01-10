@@ -86,8 +86,14 @@ while True:
         while num > 0:
             sum += num % 10
             num = int(num / 10)
-        
+            # num //= 10
         print(sum)
+        
+        # num = input("문자열을 입력하세요 > ")
+        # sum = 0
+        # for i in num:
+        #     sum += int(i)
+        # print(sum)
         ##########
         print()
      

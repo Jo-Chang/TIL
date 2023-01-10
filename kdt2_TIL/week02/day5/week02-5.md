@@ -1,7 +1,7 @@
 # Week02-5
 -   project1
 
-<br>[Parent Contents...](../../README.md/#til-today-i-learned)
+<br>[Parent Contents...](../../../README.md/#til-today-i-learned)
 
 ## Contents
 - [프로젝트 안내](#프로젝트-안내)

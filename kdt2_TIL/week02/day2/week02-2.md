@@ -1,7 +1,7 @@
 # Week02-2
 -   제어문
 
-<br>[Parent Contents...](../../README.md/#til-today-i-learned)
+<br>[Parent Contents...](../../../README.md/#til-today-i-learned)
 
 ## Contents
 - [String Formatting](#string-formatting)
