@@ -67,3 +67,6 @@
 
 ### Day2
 -   [python - function](kdt2_TIL/week03/day2/week03-2.md/#week03-2)
+
+### Day3
+-   [python - user class, oop](kdt2_TIL/week03/day3/week03-3.md/#week03-3)
