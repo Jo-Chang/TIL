@@ -12,6 +12,18 @@
 ### add
 -   'a' 모드로 파일 열고 .write()로 내용 추가
 
+### summary
+| Character | Meaning |
+| --- | --- |
+| 'r' | open for reading(default) |
+| 'w' | open for writing. truncating the file first |
+| 'x' | open for exclusive creation, failling if the file already exists |
+| 'a' | open for writing, appending to the end of file if it exists |
+| 'b' | binary mode |
+| 't' | text mode (default) |
+| '+' | open for updating (reading and writing) |
+
+
 ### 예제
 ```
 # w: 쓰기
