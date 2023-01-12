@@ -4,7 +4,13 @@
 <br>[Parent Contents...](../../../README.md/#til-today-i-learned)
 
 ## Contents
-- 
+- [Attribute](#attribute)
+- [Class method](#class-method)
+- [Static method](#static-method)
+- [Method Summary](#method-summary)
+- [Inheritance](#Inheritance)
+- [Syntax sugar](#syntax-sugar)
+- [tips](#tips)
 
 ---
 
@@ -19,7 +25,7 @@ class circle:
 
 ---
 
-## class Method
+## Class Method
 -   클래스 메소드 ( method ) : 클래스가 사용할 메소드
 -   @classmethod 데코레이터[^1]를 사용하여 정의
 -   호출시 첫번째 인자로 클래스(cls)가 전달
@@ -47,7 +53,7 @@ class MyClass
 
 ---
 
-## 메소드 정리
+## Method Summary
 |메소드 이름 | Require |
 | --- | --- |
 |스태틱 메소드|인스턴스나 클래스를 활용하거나 조작하지 않는 경우, 전달 되는 인자 없음|
@@ -164,7 +170,7 @@ bay1.gene
     def f(a, b, /, c, d, *, e, f):
         print(a, b, c, d, e, f)
     ```
-    
+
 ---
 
 ## tips
