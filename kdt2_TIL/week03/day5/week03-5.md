@@ -35,3 +35,27 @@
 
 ## Project
 -   [TMDB](https://www.themoviedb.org/)의 API를 통한 실습 -> [API](https://developers.themoviedb.org/3)
+
+---
+
+## Virtual Envrironment
+-   가상 환경 - from python ver.3.5
+-   특정 디렉토리에 가상 환경 만들고 고유한 파이썬 패키지 집합
+-   가상환경 생성하면, 해당 디렉토리에 별도의 파이썬 패키지 설치
+    ```bash
+    $python -m venv <폴더명>
+    ```
+
+-   가상환경 활성화
+    |플랫폼|셸|가상 환경을 활성화하는 명령|
+    | --- | --- | --- |
+    |POSIX|bash/zsh|`$ source <venv> /bin/activate`|
+    ||fish|`$ source <venv> /bin/activate.fish`|
+    ||csh/tcsh|`$ source <venv> /bin/activate.sch`|
+    ||PowerShell Core|`$ <venv> /bin/Activate.ps1`|
+    |윈도우|cmd.exe|`C:\ <venv> \Scripts\activate.bat`|
+    ||PowerShell|`PS C:\> <venv> \Scripts\Activate.ps1`|
+    +   가상환경 비활성화는 `$ deactivate` 사용
+
+    ![그림](assets/01.png)
+    ![그림](assets/02.png)
