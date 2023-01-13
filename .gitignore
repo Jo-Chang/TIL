@@ -1,4 +1,6 @@
 # git ignore
+./*/.gitignore
 
 # config files
 *.env
+
