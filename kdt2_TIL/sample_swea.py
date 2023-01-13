@@ -19,26 +19,32 @@ while True:
     print_problem_info(problem_num, dict_var[problem_num])
     if problem_num == "":
         #################### solution code
+        pass
         ####################
     
     elif problem_num == "":
         #################### solution code
+        pass
         ####################
     
     elif problem_num == "":
         #################### solution code
+        pass
         ####################
     
     elif problem_num == "":
         #################### solution code
+        pass
         ####################
     
     elif problem_num == "":
         #################### solution code
+        pass
         ####################
     
     elif problem_num == "":
         #################### solution code
+        pass
         ####################
         
     else:
