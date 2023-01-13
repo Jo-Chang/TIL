@@ -15,6 +15,11 @@ def search_movie(title):
     }
 
     res = requests.get(BASE_URL+path, params=params).json()
+    
+    # pprint(res)
+    # if title == "검색할 수 없는 영화":
+        # pprint(res)
+        
     if len(res.get("results")) == 0:
         return None
     else:

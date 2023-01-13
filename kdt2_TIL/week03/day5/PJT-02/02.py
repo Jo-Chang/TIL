@@ -13,6 +13,7 @@ def vote_average_movies():
     }
     
     res = requests.get(BASE_URL+path, params=params).json()
+    
     result_list = []
     for movie in res.get("results"):
           if float(movie.get("vote_average")) >= 8:
