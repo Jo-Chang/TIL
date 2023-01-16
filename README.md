@@ -88,7 +88,7 @@
 ## Week4
 
 ### Day1
--   [](kdt2_TIL/week04/day1/week04-1.md/#week04-1)
+-   [Algorithm, IO](kdt2_TIL/week04/day1/week04-1.md/#week04-1)
 
 ### Day2
 -   [](kdt2_TIL/week04/day2/week04-2.md/#week04-2)
