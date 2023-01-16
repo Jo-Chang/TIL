@@ -16,33 +16,38 @@ while True:
         print(f"\u001b[90m{k}. {v}\033[0m")
 
     problem_num = input("\n문제 번호 입력 > ")
-    print_problem_info(problem_num, dict_var[problem_num])
     if problem_num == "":
+        print_problem_info(problem_num, dict_var[problem_num])
         #################### solution code
         pass
         ####################
     
     elif problem_num == "":
+        print_problem_info(problem_num, dict_var[problem_num])
         #################### solution code
         pass
         ####################
     
     elif problem_num == "":
+        print_problem_info(problem_num, dict_var[problem_num])
         #################### solution code
         pass
         ####################
     
     elif problem_num == "":
+        print_problem_info(problem_num, dict_var[problem_num])
         #################### solution code
         pass
         ####################
     
     elif problem_num == "":
+        print_problem_info(problem_num, dict_var[problem_num])
         #################### solution code
         pass
         ####################
     
     elif problem_num == "":
+        print_problem_info(problem_num, dict_var[problem_num])
         #################### solution code
         pass
         ####################
