@@ -88,10 +88,10 @@
 ## Week4
 
 ### Day1
--   [Algorithm, IO](kdt2_TIL/week04/day1/week04-1.md/#week04-1)
+-   [Algorithm / IO](kdt2_TIL/week04/day1/week04-1.md/#week04-1)
 
 ### Day2
--   [](kdt2_TIL/week04/day2/week04-2.md/#week04-2)
+-   [Algorithm - Time Complexity, Big O / List](kdt2_TIL/week04/day2/week04-2.md/#week04-2)
 
 ### Day3
 -   [](kdt2_TIL/week04/day3/week04-3.md/#week04-3)
