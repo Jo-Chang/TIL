@@ -72,7 +72,7 @@
     <br>시간 복잡도에 따라 <span style = "color:#FF5353;">성능</span>이 달라질 수 있고
     <br>시험에서 <span style = "color:#FF5353;">정답 여부</span>가 갈리는 포인트가 된다는 것이다.
 
--   Big-O CheatSheet
+-   Big-O CheatSheet<br>
     ![Common Data Structure Operations](assets/01.png)
     ![Array Sorting Algorithms](assets/02.png)
     
