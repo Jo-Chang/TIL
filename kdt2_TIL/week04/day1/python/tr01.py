@@ -107,6 +107,12 @@ while True:
                 problem_result.append(0)
                 
         print(sum(problem_result))
+        '''
+        i = 0
+        while i < N:
+            ~
+            i += 1
+        '''
         ####################
         
     else:

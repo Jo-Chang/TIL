@@ -1,13 +1,15 @@
 def print_problem_info(str1, str2):
     print(f"\033[95m# {str1}. \x1b[96m{str2}\033[00m")
 
+list_var = [0 for i in range(6)]
+list_var = []
 dict_var = {
-    0 : "",
-    1 : "",
-    2 : "",
-    3 : "",
-    4 : "",
-    5 : "",
+    list_var[0] : "",
+    list_var[1] : "",
+    list_var[2] : "",
+    list_var[3] : "",
+    list_var[4] : "",
+    list_var[5] : "",
 }
 
 dict_var = dict(sorted(dict_var.items()))
@@ -23,37 +25,37 @@ while True:
         print("Terminated!")
         break
     
-    if problem_num == 0:
+    if problem_num == list_var[0]:
         print_problem_info(problem_num, dict_var[problem_num])
         #################### solution code
         pass
         ####################
     
-    elif problem_num == 1:
+    elif problem_num == list_var[1]:
         print_problem_info(problem_num, dict_var[problem_num])
         #################### solution code
         pass
         ####################
     
-    elif problem_num == 2:
+    elif problem_num == list_var[2]:
         print_problem_info(problem_num, dict_var[problem_num])
         #################### solution code
         pass
         ####################
     
-    elif problem_num == 3:
+    elif problem_num == list_var[3]:
         print_problem_info(problem_num, dict_var[problem_num])
         #################### solution code
         pass
         ####################
     
-    elif problem_num == 4:
+    elif problem_num == list_var[4]:
         print_problem_info(problem_num, dict_var[problem_num])
         #################### solution code
         pass
         ####################
     
-    elif problem_num == 5:
+    elif problem_num == list_var[5]:
         print_problem_info(problem_num, dict_var[problem_num])
         #################### solution code
         pass
