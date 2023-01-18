@@ -74,6 +74,7 @@ while True:
     elif problem_num == list_var[4]:
         print_problem_info(problem_num, dict_var[problem_num])
         #################### solution code
+        '''
         N = int(input())
 
         count = 1
@@ -83,6 +84,47 @@ while True:
             temp_num = (temp_num % 10) * 10 + (temp_num // 10 + temp_num % 10) % 10
 
         print(count)
+        '''
+        # Sol by string
+        N = input()
+        
+        # 먼저 주어진 수가 10보다 작다면 앞에 0을 붙여 두 자리 수로 만든다.
+        if int(N) < 10:
+            N = "0" + N
+                
+        # N을 복사한 변수
+        given_n = N
+                
+        # 사이클 횟수
+        cnt = 0
+        while True:
+            
+            # 각 자리의 숫자를 더한다.
+            first = N[-1]
+            second = N[0]
+            
+            sum_number = int(first) + int(second)
+            
+            # 주어진 수의 가장 오른쪽 자리 수와 앞에서 구한 합의 가장 오른쪽 자리 수를 이어 붙이면 새로운 수를 만들 수 있다.
+            # 주어진 수 N
+            # 구한 합 sum_number
+            
+            new_number = N[-1] + str(sum_number)[-1]
+            
+            print(new_number)
+            
+            # 연산 횟수 증가(사이클 횟수 증가)
+            cnt += 1
+            
+            if new_number == given_n:
+                break
+            
+            # new_number를 다시 N에 넣어줘요.
+            # N의 값을 새로운 수를 저장하면?
+            N = new_number
+            
+        print(cnt)
+        
         ####################
         
     else:
