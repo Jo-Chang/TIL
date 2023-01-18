@@ -94,7 +94,7 @@
 -   [Algorithm - Time Complexity, Big O / List](kdt2_TIL/week04/day2/week04-2.md/#week04-2)
 
 ### Day3
--   [](kdt2_TIL/week04/day3/week04-3.md/#week04-3)
+-   [String](kdt2_TIL/week04/day3/week04-3.md/#week04-3)
 
 ### Day4
 -   [](kdt2_TIL/week04/day4/week04-4.md/#week04-4)
