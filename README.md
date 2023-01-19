@@ -75,10 +75,10 @@
 -   [python - function](kdt2_TIL/week03/day2/week03-2.md/#week03-2)
 
 ### Day3
--   [python - user class, oop](kdt2_TIL/week03/day3/week03-3.md/#week03-3)
+-   [python - user Class, OOP](kdt2_TIL/week03/day3/week03-3.md/#week03-3)
 
 ### Day4
--   [python - class](kdt2_TIL/week03/day4/week03-4.md/#week03-4)
+-   [python - Class](kdt2_TIL/week03/day4/week03-4.md/#week03-4)
 
 ### Day5
 -   [API, project](kdt2_TIL/week03/day5/week03-5.md/#week03-5)
@@ -88,16 +88,16 @@
 ## Week4
 
 ### Day1
--   [Algorithm / IO](kdt2_TIL/week04/day1/week04-1.md/#week04-1)
+-   [algorithm / python - IO](kdt2_TIL/week04/day1/week04-1.md/#week04-1)
 
 ### Day2
--   [Algorithm - Time Complexity, Big O / List](kdt2_TIL/week04/day2/week04-2.md/#week04-2)
+-   [algorithm - Time Complexity, Big O / python - list](kdt2_TIL/week04/day2/week04-2.md/#week04-2)
 
 ### Day3
--   [String](kdt2_TIL/week04/day3/week04-3.md/#week04-3)
+-   [python - string](kdt2_TIL/week04/day3/week04-3.md/#week04-3)
 
 ### Day4
--   [](kdt2_TIL/week04/day4/week04-4.md/#week04-4)
+-   [python - dictionary](kdt2_TIL/week04/day4/week04-4.md/#week04-4)
 
 ### Day5
 -   [](kdt2_TIL/week04/day5/week04-5.md/#week04-5)
