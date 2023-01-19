@@ -1,5 +1,6 @@
 # Database
 
+<link rel="stylesheet" href="./assets/my_style.css">
 -----
 
 ## 데이터베이스의 성질
@@ -24,4 +25,18 @@
 -----
 
 ## Big Data
--   
+
+### Data
+-   수집
+    +   웹 - 많은 정보 존재, 빅데이터를 <span>크롤링/스크레이핑</span>
+    +   서비스 - 서비스 이용자들의 유입과 이탈 분석, <span>Google Analytics</span>
+
+-   저장 / 분석
+    +   DBMS ( Database Management System ) - 데이터 전처리[^1] ,설계, 저장
+    >   MySQL, ORACLE Databse, Microsoft SQL Server, MariaDB, ...
+    +   통계 / 확률 / 기계학습 - 데이터 분석
+
+-   시각화
+    +   Data Visualization - 데이터를 그래프로 표현하거나, 데이터의 어떤 숫자를 표시할지 연구
+
+[^1]: 데이터 전처리 : 데이터를 개발자가 필요한 형태로 변환하는 과정, 오류 수정 포함
