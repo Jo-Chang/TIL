@@ -58,6 +58,19 @@ while True:
             "F": 0.0,
         }
 
+        # score1_dict = {
+        #     "A": 4.0,
+        #     "B": 3.0,
+        #     "C": 2.0,
+        #     "D": 1.0,
+        #     "F": 0.0,
+        # }
+        # score2_dict = {
+        #     "+": 0.3,
+        #     "0": 0.0,
+        #     "-": -0.3,
+        # }
+
         print(score_dict.get(input()))
         ####################
     
@@ -75,16 +88,24 @@ while True:
             "W": 9, "X": 9, "Y": 9, "Z": 9,
             "OPERATOR": 0, 
         }
+        # dial_dict = {
+        #     "ABC": 2,
+        #     "DEF": 3,
+        #     "GHI": 4,
+        #     "JKL": 5,
+        #     "MNO": 6,
+        #     "PQRS": 7,
+        #     "TUV": 8,
+        #     "WXYZ": 9,
+        # }
 
         # 시간 맞추기
         TIME_GAP = 1
-        for key in dial_dict.keys():
-            dial_dict[key] += TIME_GAP
             
         words = input()
         time_sum = 0
         for word in words:
-            time_sum += dial_dict[word]
+            time_sum += dial_dict[word] + TIME_GAP
         print(time_sum)
         ####################
     
@@ -92,6 +113,7 @@ while True:
         print_problem_info(problem_num, dict_var[problem_num])
         #################### solution code
         total_num = int(input()) * int(input()) * int(input())
+        # str(total_num)
         num_dict = {}
 
         while total_num > 0:
@@ -111,6 +133,8 @@ while True:
         log_dict = {} 
         for i_num in range(int(input())):
             name, log = input().split()
+            # name, log = sys.stdin.readline().split()
+            # 훨씬 빠름!
             log_dict[name] = log
 
         left_name = [name for name in log_dict.keys() if log_dict[name] == "enter"]
