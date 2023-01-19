@@ -1,15 +1,19 @@
 import sys
 
-PROBLEM_NUM = 2947
+PROBLEM_NUM = 10988
 
 sys.stdin = open(f"tr_01_{PROBLEM_NUM}.txt", encoding="UTF8")
 
 #####
 
-num_order = list(map(int, input().split()))
+word = input()
 
-while num_order != [1, 2, 3, 4, 5]:
-    for i in range(len(num_order) - 1):
-        if num_order[i] > num_order[i+1]:
-            num_order[i], num_order[i+1] = num_order[i+1], num_order[i]
-            print(*num_order)
+i = 0
+rev_i = len(word) - 1 - i
+while i < len(word) - 1 - i:
+    if word[i] != word[len(word) - 1 - i]:
+        print(0)
+        break
+    i += 1
+else:
+    print(1)

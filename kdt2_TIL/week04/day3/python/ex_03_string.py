@@ -59,6 +59,12 @@ while True:
                 else:
                     return 0
             return 1
+        
+        def is_palindrome2(word):
+            if (word == word[::-1]):
+                return 1
+            else:
+                return 0
             
         print(is_palindrome(input()))
         ####################
