@@ -66,6 +66,16 @@ while True:
             else:
                 return 0
             
+        def is_palindrome3(word):
+            i = 0
+            rev_i = len(word) - 1 - i
+            while i < len(word) - 1 - i:
+                if word[i] != word[len(word) - 1 - i]:
+                    return 0
+                i += 1
+            else:
+                return 1
+            
         print(is_palindrome(input()))
         ####################
     
