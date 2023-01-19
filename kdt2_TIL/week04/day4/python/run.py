@@ -1,18 +1,17 @@
 import sys
 
-sys.stdin = open("practice_dict_03.txt")
+PROBLEM_NUM = 7785
+
+sys.stdin = open(f"tr_01_{PROBLEM_NUM}.txt")
 
 ###########
 
-members = input().split()
-dict_var = {}
+log_dict = {} 
+for i_num in range(int(input())):
+    name, log = input().split()
+    log_dict[name] = log
 
-for member in members:
-    dict_var[member] = dict_var.get(member, 0) + 1
+left_name = [name for name in log_dict.keys() if log_dict[name] == "enter"]
+left_name.sort(reverse=True)
 
-min_foul = min(dict_var.values())
-
-for key in dict_var.keys():
-    if dict_var.get(key) == min_foul:
-        print(key)
-print(min_foul)
+print(*left_name, sep="\n")
