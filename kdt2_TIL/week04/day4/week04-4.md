@@ -1,6 +1,7 @@
 # Week04-4
 -   Dictionary
 
+<link rel="stylesheet" href="../../css/my_style.css">
 -----
 
 <br>[Parent Contents...](../../../README.md/#til-today-i-learned)
@@ -15,12 +16,12 @@
 -----
 
 ## Hash Table
--   Dictionary - <span style="color:#FF5353">Non-sequence &  Key-Value</span>
+-   Dictionary - <span class="s_red">Non-sequence &  Key-Value</span>
     +   Key는 Immutable(변경 불가능)
 -   Hash Function : 임의 길이의 데이터를 고정 길이의 데이터로 매핑하는 함수
 -   Hash : 해시 함수를 통해 얻어진 값
 -   파이썬의 딕셔너리는 해시 함수와 해시 테이블을 이용하기 때문에 
-<br>삽입, 삭제, 수정, 조회 <span style="color:#FF5353">연산의 속도가 리스트보다 빠르다.</span>
+<br>삽입, 삭제, 수정, 조회 <span class="s_red">연산의 속도가 리스트보다 빠르다.</span>
 <br> -> Hash function을 이용한 산술 계산으로 값이 있는 위치를 바로 알 수 있기 때문에
 
 -   딕셔너리 사용 경우

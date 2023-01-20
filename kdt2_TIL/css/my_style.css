@@ -1,1 +1,12 @@
+@charset "utf-8";
+
+/* id 속성 테스트 */
+/* id : 여러 class를 묶어놓은 그룹 */
+#s_blue { color: #5353FF; }
+
+/* class 속성 */
+/* class : 비슷한 스탈일을 사용하는 그룹*/
+.s_red { color: #FF5353; }
+
+/* span 속성을 모두 아래 color로 변경 */
 span { color: #FF5353; }
