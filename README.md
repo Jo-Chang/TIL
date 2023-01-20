@@ -100,4 +100,4 @@
 -   [python - dictionary](kdt2_TIL/week04/day4/week04-4.md/#week04-4)
 
 ### Day5
--   [](kdt2_TIL/week04/day5/week04-5.md/#week04-5)
+-   [코딩테스트 준비 가이드](kdt2_TIL/week04/day5/week04-5.md/#week04-5)
