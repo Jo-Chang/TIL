@@ -28,7 +28,7 @@
 
 -----
 
-## Week1
+## <summary>Week1</summary>
 
 ### Day1
 -   [OT](kdt2_TIL/week01/day1/week01-1.md/#week01-1)
@@ -47,7 +47,7 @@
 
 -----
 
-## Week2
+## <summary>Week2</summary>
 
 ### Day1
 -   [python - print, data type(numeric, string, list)](kdt2_TIL/week02/day1/week02-1.md/#week02-1)
@@ -66,7 +66,7 @@
 
 -----
 
-## Week3
+## <summary>Week3</summary>
 
 ### Day1
 -   [python - tuple, set, method, map](kdt2_TIL/week03/day1/week03-1.md/#week03-1)
@@ -85,7 +85,7 @@
 
 -----
 
-## Week4
+## <summary>Week4</summary>
 
 ### Day1
 -   [algorithm / python - IO](kdt2_TIL/week04/day1/week04-1.md/#week04-1)
