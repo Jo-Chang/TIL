@@ -1,34 +1,29 @@
-# TIL (Today I Learned)
+# TIL
+- Today I Learned..
 
-## Contents
-- [Week1](#week1)
-    + [Day1](#day1)
-    + [Day2](#day2)
-    + [Day3](#day3)
-    + [Day4](#day4)
-    + [Day5](#day5)
-- [Week2](#week2)
-    + [Day1](#day1-1)
-    + [Day2](#day2-1)
-    + [Day3](#day3-1)
-    + [Day4](#day4-1)
-    + [Day5](#day5-1)
-- [Week3](#week3)
-    + [Day1](#day1-2)
-    + [Day2](#day2-2)
-    + [Day3](#day3-2)
-    + [Day4](#day4-2)
-    + [Day5](#day5-2)
-- [Week3](#week4)
-    + [Day1](#day1-2)
-    + [Day2](#day2-2)
-    + [Day3](#day3-2)
-    + [Day4](#day4-2)
-    + [Day5](#day5-2)
+<br>
 
 -----
 
-## <summary>Week1</summary>
+## Contents
+- [Week1](#week1-🔼)
+<br>
+
+- [Week2](#week2-🔼)
+<br>
+
+- [Week3](#week3-🔼)
+<br>
+
+- [Week4](#week4-🔼)
+
+
+
+-----
+
+
+## Week1    [:arrow_up_small:](#til)
+<br>
 
 ### Day1
 -   [OT](kdt2_TIL/week01/day1/week01-1.md/#week01-1)
@@ -45,9 +40,12 @@
 ### Day5
 -   [취업 특강](kdt2_TIL/week01/day5/week01-5.md/#week01-5)
 
+
 -----
 
-## <summary>Week2</summary>
+
+## Week2    [:arrow_up_small:](#til)
+<br>
 
 ### Day1
 -   [python - print, data type(numeric, string, list)](kdt2_TIL/week02/day1/week02-1.md/#week02-1)
@@ -64,9 +62,12 @@
 ### Day5
 -   [Project1](kdt2_TIL/week02/day5/week02-5.md/#week02-5)
 
+
 -----
 
-## <summary>Week3</summary>
+
+## Week3    [:arrow_up_small:](#til)
+<br>
 
 ### Day1
 -   [python - tuple, set, method, map](kdt2_TIL/week03/day1/week03-1.md/#week03-1)
@@ -83,9 +84,12 @@
 ### Day5
 -   [API, project](kdt2_TIL/week03/day5/week03-5.md/#week03-5)
 
+
 -----
 
-## <summary>Week4</summary>
+
+## Week4    [:arrow_up_small:](#til)
+<br>
 
 ### Day1
 -   [algorithm / python - IO](kdt2_TIL/week04/day1/week04-1.md/#week04-1)
