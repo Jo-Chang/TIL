@@ -1,6 +1,7 @@
 # Week04-3
 -   String
 
+<link rel="stylesheet" href="../../css/my_style.css">
 -----
 
 <br>[Parent Contents...](../../../README.md/#til-today-i-learned)
@@ -8,13 +9,15 @@
 ## Contents
 - [String](#string)
 - [String Slicing](#slicing)
+- [String Method](#method)
+- [ASCII Code](#ascii-code)
 
 <br>
 
 -----
 
 ## String
--   문자열은 <span style="color:#FF5353">immutable</span>(변경 불가능한) 자료형!
+-   문자열은 <span>immutable</span>(변경 불가능한) 자료형!
     +   -> 문자열은 `.sort()` `.remove()` `.append()` `.pop()` 등 불가능
     ```python
     word = "apple"
@@ -53,23 +56,23 @@
 
 ## Method
 -   `.split()`
-:   문자열을 일정 기준으로 나누어 <span style="color:#FF5353">리스트</span>로 반환
+:   문자열을 일정 기준으로 나누어 <span>리스트</span>로 반환
 -   `.strip()`
-:   문자열의 양쪽 끝에 있는 <span style="color:#FF5353">특정 문자(default 공백)</span>를 모두 <span style="color:#FF5353">제거</span>한 새로운 문자열 반환
+:   문자열의 양쪽 끝에 있는 <span>특정 문자(default 공백)</span>를 모두 <span>제거</span>한 새로운 문자열 반환
 -   `.find(word)`
-:   문자 찾고 <span style="color:#FF5353">인덱스</span> 반환, 없으면 <span style="color:#FF5353">-1</span>
+:   문자 찾고 <span>인덱스</span> 반환, 없으면 <span>-1</span>
 -   `.index(word)`
-:   문자 찾고 <span style="color:#FF5353">인덱스</span> 반환, 없으면 <span style="color:#FF5353">오류</span>
+:   문자 찾고 <span>인덱스</span> 반환, 없으면 <span>오류</span>
 -   `.count(word)`
-:   문자 <span style="color:#FF5353">갯수</span> 반환
+:   문자 <span>갯수</span> 반환
 -   `.replace(word1, word2, num)`
-:   word1을 word2로 <span style="color:#FF5353">수정</span>한 새로운 문자열 반환, <span style="color:#FF5353">num 갯수만큼</span> replace
+:   word1을 word2로 <span>수정</span>한 새로운 문자열 반환, <span>num 갯수만큼</span> replace
 -   `.join(word)`
-:   iterable의 각각 원소 사이에 특정 문자를 <span style="color:#FF5353">삽입</span>한 새로운 문자열 반환
+:   iterable의 각각 원소 사이에 특정 문자를 <span>삽입</span>한 새로운 문자열 반환
 -   `.startwith(word)`
-:   word 단어로 <span style="color:#FF5353">시작</span>하는지 Bool
+:   word 단어로 <span>시작</span>하는지 Bool
 -   `.endwith(word)`
-:   word 단어로 <span style="color:#FF5353">끝</span>나는지 Bool
+:   word 단어로 <span>끝</span>나는지 Bool
 
 -----
 
@@ -84,5 +87,5 @@
     ![](assets/01.PNG)
 
 -   파이썬 내장 함수
-    +   `ord(word)` : <span style="color:#FF5353">문자 -> 아스키코드</span>로 변환하는 내장함수
-    +   `chr(ASCII code)` : <span style="color:#FF5353">아스키코드 -> 문자</span>로 변환하는 내장함수
+    +   `ord(word)` : <span>문자 -> 아스키코드</span>로 변환하는 내장함수
+    +   `chr(ASCII code)` : <span>아스키코드 -> 문자</span>로 변환하는 내장함수
