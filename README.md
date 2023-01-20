@@ -22,7 +22,7 @@
 -----
 
 
-## Week1    [:arrow_up_small:](#til)
+## Week1 [:arrow_up_small:](#til)
 <br>
 
 ### Day1
@@ -44,7 +44,7 @@
 -----
 
 
-## Week2    [:arrow_up_small:](#til)
+## Week2 [:arrow_up_small:](#til)
 <br>
 
 ### Day1
@@ -66,7 +66,7 @@
 -----
 
 
-## Week3    [:arrow_up_small:](#til)
+## Week3 [:arrow_up_small:](#til)
 <br>
 
 ### Day1
@@ -88,7 +88,7 @@
 -----
 
 
-## Week4    [:arrow_up_small:](#til)
+## Week4 [:arrow_up_small:](#til)
 <br>
 
 ### Day1
