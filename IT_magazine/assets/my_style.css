@@ -1,1 +1,8 @@
-span { color: #FF5353; }
+@charset "utf-8";
+
+/* #span_color */
+.s_blue     { color: #5353FF; }
+.s_green    { color: #53FF53; }
+.s_red      { color: #FF5353; }
+
+span        { color: #FF5353; }
