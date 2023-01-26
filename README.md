@@ -1,4 +1,4 @@
-# TIL
+# TIL :book:
 - Today I Learned..
 
 <br>
@@ -6,23 +6,26 @@
 -----
 
 ## Contents
-- [Week1](#week1-🔼)
+- [Week1](#week1)
 <br>
 
-- [Week2](#week2-🔼)
+- [Week2](#week2)
 <br>
 
-- [Week3](#week3-🔼)
+- [Week3](#week3)
 <br>
 
-- [Week4](#week4-🔼)
+- [Week4](#week4)
+<br>
 
+- [Week5](#week5)
 
 
 -----
 
 
-## Week1 [:arrow_up_small:](#til)
+## Week1
+[:arrow_up_small:](#til)
 <br>
 
 ### Day1
@@ -44,7 +47,8 @@
 -----
 
 
-## Week2 [:arrow_up_small:](#til)
+## Week2
+[:arrow_up_small:](#til)
 <br>
 
 ### Day1
@@ -66,7 +70,8 @@
 -----
 
 
-## Week3 [:arrow_up_small:](#til)
+## Week3
+[:arrow_up_small:](#til)
 <br>
 
 ### Day1
@@ -88,7 +93,8 @@
 -----
 
 
-## Week4 [:arrow_up_small:](#til)
+## Week4
+[:arrow_up_small:](#til)
 <br>
 
 ### Day1
@@ -105,3 +111,17 @@
 
 ### Day5
 -   [코딩테스트 준비 가이드](kdt2_TIL/week04/day5/week04-5.md/#week04-5)
+
+
+-----
+
+
+## Week5
+[:arrow_up_small:](#til)
+<br>
+
+### Day1
+-   [python - stack, queue](kdt2_TIL/week05/day1/week05-1.md/#week05-1)
+
+### Day2
+-   [](kdt2_TIL/week05/day2/week05-2.md/#week05-2)
