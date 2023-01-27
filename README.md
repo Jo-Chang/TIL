@@ -123,4 +123,4 @@
 -   [python - stack, queue](kdt2_TIL/week05/day1/week05-1.md/#week05-1)
 
 ### Day2
--   [](kdt2_TIL/week05/day2/week05-2.md/#week05-2)
+-   [python - heap, set](kdt2_TIL/week05/day2/week05-2.md/#week05-2)
