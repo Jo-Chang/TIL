@@ -101,7 +101,15 @@ while True:
         print_problem_info(problem_num, dict_var[problem_num])
         
         #################### solution code
-        pass
+        def get_mod42_set(lst_):
+            return set([mem%42 for mem in lst_])
+
+
+        nums = []
+        for T in range(10):
+            nums.append(int(sys.stdin.readline()))
+            
+        print(len(get_mod42_set(nums)))
         ####################
     
     
@@ -109,7 +117,18 @@ while True:
         print_problem_info(problem_num, dict_var[problem_num])
         
         #################### solution code
-        pass
+        def my_sort(x):
+            return len(x), x
+            
+        def get_my_dict(lst_):
+            return sorted(lst_, key=my_sort)
+
+
+        word_lst = set([])
+        for T in range(int(sys.stdin.readline())):
+            word_lst.add(sys.stdin.readline().strip())
+            
+        print(*get_my_dict(word_lst), sep="\n")
         ####################
     
     
