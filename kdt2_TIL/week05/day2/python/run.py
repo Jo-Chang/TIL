@@ -6,57 +6,83 @@ PROBLEM_NUM = 11286
 sys.stdin = open(f"{PROBLEM_NUM}.txt", encoding="UTF8")
 
 #####
-from collections import deque
+num_lst  = []
 
-num_deq = deque([])
-
+def compare(a, b):
+    if abs(a) > abs(b):
+        return True
+    elif abs(a) == abs(b):
+        if a > b:
+            return True
+        else:
+            return False
+    else:
+        return False
+    
 def my_heapify():
-    idx = len(num_deq) - 1
+    idx = len(num_lst) - 1
     while idx > 0:
-        if abs(num_deq[idx]) < abs(num_deq[idx//2]):
-            num_deq[idx], num_deq[idx//2] = num_deq[idx//2], num_deq[idx]
-        elif abs(num_deq[idx]) == abs(num_deq[idx//2]):
-            if num_deq[idx] < num_deq[idx//2]:
-                num_deq[idx], num_deq[idx//2] = num_deq[idx//2], num_deq[idx]
+        parent = idx // 2
+        if compare(num_lst[parent], num_lst[idx]):
+            num_lst[parent], num_lst[idx] = num_lst[idx], num_lst[parent]
+            idx = parent
+        else:
+            break
+    
+def my_pop():
+    num_lst[0], num_lst[len(num_lst) - 1] = num_lst[len(num_lst) - 1], num_lst[0]
+    idx = 0
+
+    while 2*idx + 2 < len(num_lst) - 1:
+        left = 2*idx + 1
+        right = 2*idx + 2
+        if abs(num_lst[left]) < abs(num_lst[right]): # left greater
+            if compare(num_lst[idx], num_lst[right]):
+                num_lst[idx], num_lst[left] = num_lst[left], num_lst[idx]
+                idx = left
             else:
                 break
-        else:
-            break
-        idx //= 2
-
-def my_pop():
-    num_deq[0], num_deq[len(num_deq) - 1] = num_deq[len(num_deq) - 1], num_deq[0]
-    
-    idx = 0
-    while 2*idx + 2 < len(num_deq) - 1:
-        if abs(num_deq[idx]) < abs(num_deq[2*idx + 1]) or abs(num_deq[idx]) < abs(num_deq[2*idx + 2]):
-            if abs(num_deq[2*idx + 1]) < abs(num_deq[2*idx + 2]): # left greater
-                num_deq[idx], num_deq[2*idx + 1] = num_deq[2*idx + 1], num_deq[idx]
-                idx = 2*idx + 1
-            elif abs(num_deq[2*idx + 1]) == abs(num_deq[2*idx + 2]): # left-right even
-                if num_deq[2*idx + 1] < num_deq[2*idx + 2]:
-                    num_deq[idx], num_deq[2*idx + 1] = num_deq[2*idx + 1], num_deq[idx]
-                    idx = 2*idx + 1
+        elif abs(num_lst[left]) == abs(num_lst[right]): # left-right even
+            if num_lst[left] <= num_lst[right]:
+                if compare(num_lst[idx], num_lst[left]):
+                    num_lst[idx], num_lst[left] = num_lst[left], num_lst[idx]
+                    idx = left
                 else:
-                    num_deq[idx], num_deq[2*idx + 2] = num_deq[2*idx + 2], num_deq[idx]
-                    idx = 2*idx + 2
-            else: # right greater
-                num_deq[idx], num_deq[2*idx + 2] = num_deq[2*idx + 2], num_deq[idx]
-                idx = 2*idx + 2
-        else:
-            break
+                    break
+            else:
+                if compare(num_lst[idx], num_lst[right]):
+                    num_lst[idx], num_lst[right] = num_lst[right], num_lst[idx]
+                    idx = right
+                else:
+                    break
+        else: # right greater
+            if compare(num_lst[idx], num_lst[right]):
+                num_lst[idx], num_lst[right] = num_lst[right], num_lst[idx]
+                idx = right
+            else:
+                break
     
-    return num_deq.pop()
+    # after while - only left child
+    last_left = 2*idx + 1
+    if last_left == len(num_lst) - 2:
+        if compare(num_lst[idx], num_lst[last_left]):
+            num_lst[idx], num_lst[last_left] = num_lst[last_left], num_lst[idx]
+
+    return num_lst.pop()
     
 def sol(n):
     if n == 0:
-        if num_deq:
+        if num_lst:
+            # print(f"pop : {num_lst}")
             print(my_pop())
+            # print(f"after pop : {num_lst}")
         else:
             print(0)
     else:
-        num_deq.append(n)
+        num_lst.append(n)
+        # print(f"add : {num_lst}")
         my_heapify()
+        # print(f"after heap: {num_lst}")
 
 
 for T in range(int(sys.stdin.readline())):
