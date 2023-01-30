@@ -3,8 +3,8 @@
 
 <!--a style="display:scroll; position:fixed; bottom:10px; right:5px;" href="#" title="top"><img src="assets/images/btn_top.png"></a-->
 <link rel="stylesheet" type="text/css" href="assets/stylesheets/floating_btn.css"/>
-<script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
-<script type="text/javascript" src="assets/javascripts/floating_btn.js"></script>
+<!--script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+<script type="text/javascript" src="assets/javascripts/floating_btn.js"></script-->
 
 <!--assets-->
 
