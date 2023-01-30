@@ -23,7 +23,9 @@
 <br>
 
 - [Week5](#week5)
+<br>
 
+- [Week6](#week6)
 
 -----
 
@@ -124,3 +126,25 @@
 
 ### Day2
 -   [python - heap, set](kdt2_TIL/week05/day2/week05-2.md/#week05-2)
+
+
+-----
+
+
+## Week6
+<br>
+
+### Day1
+-   [python - two-dimensional list](kdt2_TIL/week06/day1/week06-1.md/#week06-1)
+
+### Day2
+-   [](kdt2_TIL/week06/day2/week06-2.md/#week06-2)
+
+### Day3
+-   [](kdt2_TIL/week06/day3/week06-3.md/#week06-3)
+
+### Day4
+-   [](kdt2_TIL/week06/day4/week06-4.md/#week06-4)
+
+### Day5
+-   [](kdt2_TIL/week06/day5/week06-5.md/#week06-5)
