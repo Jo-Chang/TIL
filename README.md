@@ -4,7 +4,7 @@
 
 <a style="display:scroll; position:fixed; bottom:10px; right:5px;" href="#" title="top"><img src="assets/btn_top.png"></a>
 
-
+- <a href="#pb">Python Basic</a>
 <br>
 
 -----
@@ -29,6 +29,13 @@
 
 -----
 
+<details>
+<span id="pb"></span>
+<summary>## Python Basic</summary>
+
+## Haha
+
+</details>
 
 ## Week1
 <br>
