@@ -1,0 +1,52 @@
+/* floating-btn : https://github.com/seanmacentee/scroll-to-top-button/blob/master/README.md*/
+.scrollUpButton {
+ display: none;
+ opacity: 0.6;
+ position: fixed;
+ bottom: 10px;
+ right: 10px;
+ display: none;
+ background: #000;
+ color: #fff;
+ font-size: 1.5em;
+ text-decoration: none;
+ padding: 5px 10px 5px 10px;
+}
+.scrollUpButton:hover, .scrollUpButton:focus {
+ outline: none;
+ text-decoration: none;
+ color: #fff;
+ opacity: 1;
+}
+
+
+a.topBtn { 
+	position: fixed; /* 포지션 고정 */ 
+	right: 2%; /* 오른쪽에서 2% - %도 할수 있음*/ 
+	bottom: 5px; /* 밑에서 5px */ 
+	display: none; /* 보여지지 없음 - 기본적으로 안보여지게 */ 
+	z-index: 9999; /* 포지션을 먼저 지정후 z-좌표(레이어) : 9999입니다. */ 
+}
+
+.toTop {
+	position: fixed; 	/* 포지션 고정 */
+	bottom: 100px; 		/* 밑에서 100px */
+	display: none; 		/* 보여지지 없음 - 기본적으로 안보여지게 */
+	z-index: 9999; 		/* 포지션을 먼저 지정후 z-좌표(레이어) : 9999입니다. */
+}
+
+.myTopBtn {
+    display:scroll; 
+    position:fixed; 
+    bottom:10px; 
+    right:5px;
+}
+
+
+.myTitle {
+	font-size: 60px;
+	text-align:center;
+	background : linear-gradient(to right top, #2dd1c5, #8f6fe9);
+	color: transparent;
+	-webkit-background-clip: text;
+}
