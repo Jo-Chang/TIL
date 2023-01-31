@@ -33,49 +33,73 @@ while True:
     if problem_num == list_var[0]:
         print_problem_info(problem_num, dict_var[problem_num])
         
+        
         #################### solution code
         pass
         ####################
+    
+    
+    
     
     
     elif problem_num == list_var[1]:
         print_problem_info(problem_num, dict_var[problem_num])
         
+        
         #################### solution code
         pass
         ####################
+    
+    
+    
     
     
     elif problem_num == list_var[2]:
         print_problem_info(problem_num, dict_var[problem_num])
         
+        
         #################### solution code
         pass
         ####################
+    
+    
+    
     
     
     elif problem_num == list_var[3]:
         print_problem_info(problem_num, dict_var[problem_num])
         
+        
         #################### solution code
         pass
         ####################
+    
+    
+    
     
     
     elif problem_num == list_var[4]:
         print_problem_info(problem_num, dict_var[problem_num])
         
+        
         #################### solution code
         pass
         ####################
+    
+    
+    
     
     
     elif problem_num == list_var[5]:
         print_problem_info(problem_num, dict_var[problem_num])
         
+        
         #################### solution code
         pass
         ####################
+        
+        
+        
         
         
     else:
