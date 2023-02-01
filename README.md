@@ -84,7 +84,15 @@
 
 -   [python - two-dimensional list](kdt2_TIL/week06/day1/week06-1.md/#week06-1)
 
--   [](kdt2_TIL/week06/day2/week06-2.md/#week06-2)
+-   [python - two-dimensional list2](kdt2_TIL/week06/day2/week06-2.md/#week06-2)
+
+
+-----
+
+
+## Search
+
+-   [algortihm - exhaustive search](kdt2_TIL/week06/day3/week06-3.md/#week06-3)
 
 
 -----
