@@ -7,17 +7,13 @@ PROBLEM_NUM = 1526
 
 #####
 import sys
+from itertools import chain
 
     
-def get_666_num(num):
-    ans = 666
-    cnt = 0
-    while True:
-        if "666" in str(ans):
-            cnt += 1
-            if cnt == num:
-                return ans
-        ans += 1
+matrix = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+]
 
-
-print(get_666_num(int(sys.stdin.readline())))
+print(*list(chain(*matrix)))

@@ -41,8 +41,10 @@ while True:
             return ans_h, ans_m
 
 
+        # input
         hour_num, minute_num = map(int, sys.stdin.readline().split())
         time_num = int(sys.stdin.readline())
+        # print
         print(*get_time(hour_num, minute_num, time_num))
         ####################
     
@@ -69,9 +71,10 @@ while True:
             return max(lst_2)
             
 
+        # input
         n_num, m_num = map(int, sys.stdin.readline().split())
         card_lst = list(map(int, sys.stdin.readline().split()))
-
+        # print
         print(get_closest_sum(m_num, card_lst))
         ####################
     
@@ -92,10 +95,13 @@ while True:
                 return "KIN"
             else:
                 return sum(sorted_lst) - sorted_lst[JUDGE_NUM - 1] - sorted_lst[0]
+            
+            # return "KIN" if sorted_lst[JUDGE_NUM - 2] - sroted_lst[1] > 3 else sum(sorted_lst) - sorted_lst[JUDGE_NUM - 1] -sorted_lst[0]
 
-
+        # input
         for T in range(int(sys.stdin.readline())):
             score_lst = list(map(int, sys.stdin.readline().split()))
+            # print
             print(is_KIN(score_lst))
         ####################
     
@@ -123,7 +129,7 @@ while True:
                 
             return num
 
-
+        # input & print
         print(get_max_KEUNMIN_num(int(sys.stdin.readline())))
         ####################
     
