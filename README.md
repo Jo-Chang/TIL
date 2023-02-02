@@ -67,7 +67,7 @@
 -----
 
 
-## Python Data Structure
+## Data Structure
 <br>
 
 -   [algorithm / python - IO](kdt2_TIL/week04/day1/week04-1.md/#week04-1)
@@ -86,13 +86,17 @@
 
 -   [python - two-dimensional list2](kdt2_TIL/week06/day2/week06-2.md/#week06-2)
 
+-   [python - graph](kdt2_TIL/week06/day4/week06-4.md/#week06-4)
 
 -----
 
 
 ## Search
 
+-   [algorithm - Time Complexity, Big O / python - list](kdt2_TIL/week04/day2/week04-2.md/#week04-2)
+
 -   [algortihm - exhaustive search](kdt2_TIL/week06/day3/week06-3.md/#week06-3)
+
 
 
 -----
