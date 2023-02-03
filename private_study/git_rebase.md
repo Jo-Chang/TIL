@@ -27,7 +27,7 @@ commit id :  2681ca48937ef0f36a7e31a4a4a815c8f528936b ->
 로 변화
 
 -   수정 전
-![수정전](img/git_rebase_01.png)
+![수정전](assets/img/git_rebase_01.png)
 <br>:arrow_down_small:<br>
 -   수정 후
-![수정후](img/git_rebase_02.png)
+![수정후](assets/img/git_rebase_02.png)
