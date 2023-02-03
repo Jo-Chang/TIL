@@ -7,6 +7,7 @@ sys.stdin = open(f"{PROBLEM_NUM}.txt")
 #####
 
 from itertools import combinations
+from heapq import *
 
 #input
 word = sys.stdin.readline().strip()
@@ -19,12 +20,13 @@ def get_split_reversed_word(word):
     lst_ = []
     lst2_ = []
     split_lst = list(combinations(range(len(word) - 1), 2))
-    for i in range(len(word)-2):
-        for j in range(i + 1, len(word) - 1):
-            for k in range(j + 1, len(word)):
-                lst2_.append(word[:j][::-1] + word[j:k][::-1] + word[k:][::-1])
+    # for i in range(len(word)-2):
+    for j in range(1, len(word) - 1):
+        for k in range(j + 1, len(word)):
+            heappush(lst2_, word[:j][::-1] + word[j:k][::-1] + word[k:][::-1])
     
-    # print(min(lst2_))
+    print(lst2_)
+    print(min(lst2_))
     # print(split_lst)
     
     for cut1, cut2 in split_lst:
