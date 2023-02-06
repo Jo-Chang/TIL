@@ -3,7 +3,7 @@
 
 -----
 
-<br>[Parent Contents...](../../../README.md/#til-today-i-learned)
+<br>[Parent Contents...](../../README.md/#til-today-i-learned)
 
 ## Contents
 - [Time Complexity](#time-complexity)

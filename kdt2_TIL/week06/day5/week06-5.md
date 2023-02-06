@@ -1,11 +1,13 @@
 # Week06-5
-<link rel="stylesheet" href="../../css/my_style.css">
 
 -   project
 
+
+<link rel="stylesheet" href="../../assets/stylesheets/my_style.css">
+
 -----
 
-<br>[Parent Contents...](../../../README.md/#til-today-i-learned)
+<br>[Parent Contents...](../../README.md/#til-today-i-learned)
 
 ## Contents
 - [sample](#sample)

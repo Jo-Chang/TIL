@@ -1,7 +1,7 @@
 # Week03-2
 -   사용자 정의 함수
 
-<br>[Parent Contents...](../../../README.md/#til-today-i-learned)
+<br>[Parent Contents...](../../README.md/#til-today-i-learned)
 
 ## Contents
 - [Function](#function)

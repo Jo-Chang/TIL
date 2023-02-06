@@ -1,7 +1,7 @@
 # Week03-1
 -   메서드 ( Method )
 
-<br>[Parent Contents...](../../../README.md/#til-today-i-learned)
+<br>[Parent Contents...](../../README.md/#til-today-i-learned)
 
 ## Contents
 - [Tuple](#tuple)

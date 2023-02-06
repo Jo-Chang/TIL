@@ -1,7 +1,7 @@
 # Week01-4
 -  git ( branch ) 
 
-<br>[Parent Contents...](../../../README.md/#til-today-i-learned)
+<br>[Parent Contents...](../../README.md/#til-today-i-learned)
 
 ## Contents
 - [Git branch](#git-branch)

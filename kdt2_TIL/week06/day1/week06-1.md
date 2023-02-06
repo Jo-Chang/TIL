@@ -1,11 +1,11 @@
 # Week06-1
-<link rel="stylesheet" href="../../css/my_style.css">
+<link rel="stylesheet" href="../../assets/stylesheets/my_style.css">
 
 -   Two Dimensional List
 
 -----
 
-<br>[Parent Contents...](../../../README.md/#til-today-i-learned)
+<br>[Parent Contents...](../../README.md/#til-today-i-learned)
 
 ## Contents
 - [Two Dimensional List](#two-dimensional-list)

@@ -1,7 +1,7 @@
 # Week03-3
 -   사용자 정의 클래스, OOP
 
-<br>[Parent Contents...](../../../README.md/#til-today-i-learned)
+<br>[Parent Contents...](../../README.md/#til-today-i-learned)
 
 ## Contents
 - [object](#object)

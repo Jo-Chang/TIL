@@ -1,11 +1,11 @@
 # Week04-5
 -   코딩 테스트 준비 가이드
 
-<link rel="stylesheet" href="../../css/my_style.css">
+<link rel="stylesheet" href="../../assets/stylesheets/my_style.css">
 
 -----
 
-<br>[Parent Contents...](../../../README.md/#til-today-i-learned)
+<br>[Parent Contents...](../../README.md/#til-today-i-learned)
 
 ## Contents
 - [코딩 테스트 준비 가이드](#코딩-테스트-준비-가이드)

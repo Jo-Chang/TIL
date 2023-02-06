@@ -1,11 +1,13 @@
 # Week06-3
-<link rel="stylesheet" href="../../css/my_style.css">
 
 -   Exhaustive Search
 
+
+<link rel="stylesheet" href="../../assets/stylesheets/my_style.css">
+
 -----
 
-<br>[Parent Contents...](../../../README.md/#til-today-i-learned)
+<br>[Parent Contents...](../../README.md/#til-today-i-learned)
 
 ## Contents
 - [Brute-force](#brute-force)
