@@ -110,6 +110,8 @@
 
 -   [database - basic, relational database](week07/day3/week07-3.md)
 
+-   [database - basic, query](week07/day4/week07-4.md)
+
 
 -----
 
