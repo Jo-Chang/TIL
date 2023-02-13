@@ -80,7 +80,10 @@ GROUP BY orderNumber
 ORDER BY total DESC;
 
 -- 문제 15
-SELECT SUBSTR(orderDate, 1, 4) AS year, COUNT(orderNumber)
+SELECT SUBSTR(orderDate, 1, 4) AS year, 
+--  SELECT YEAR(orderDate) AS year,
+--  SELECT EXTRACT(year from orderDate) AS year,
+COUNT(orderNumber)
 FROM orders
 GROUP BY year;
 
