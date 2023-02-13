@@ -112,6 +112,8 @@
 
 -   [database - basic, query](week07/day4/week07-4.md)
 
+-   [database - query filering, grouping](week08/day1/week08-1.md)
+
 
 -----
 
