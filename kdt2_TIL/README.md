@@ -110,9 +110,11 @@
 
 -   [database - basic, relational database](week07/day3/week07-3.md)
 
--   [database - basic, query](week07/day4/week07-4.md)
+-   [sql - basic, query](week07/day4/week07-4.md)
 
--   [database - query filering, grouping](week08/day1/week08-1.md)
+-   [sql - filering, grouping](week08/day1/week08-1.md)
+
+-   [sql - managing tables](week08/day2/week08-2.md)
 
 
 -----
