@@ -24,13 +24,13 @@ VALUES
 
 -- 문제 3
 INSERT INTO 
-	users (first_name, last_name, birthday, city, country, email)
+	users (first_name, last_name, birthday)
 VALUES
-	("first1", "last1", "1100-01-01", "", "", ""),
-    ("first2", "last2", "1200-01-01", "", "", ""),
-    ("first3", "last3", "1300-01-01", "", "", ""),
-    ("first4", "last4", "1400-01-01", "", "", ""),
-    ("first5", "last5", "1500-01-01", "", "", "");
+	("first1", "last1", "1100-01-01"),
+    ("first2", "last2", "1200-01-01"),
+    ("first3", "last3", "1300-01-01"),
+    ("first4", "last4", "1400-01-01"),
+    ("first5", "last5", "1500-01-01");
 
 -- 문제 4
 UPDATE
@@ -67,5 +67,5 @@ WHERE
 DELETE FROM
 	users
 ORDER BY
-	userId DESC
+    userId DESC
 LIMIT 1;
