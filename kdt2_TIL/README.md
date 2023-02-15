@@ -116,6 +116,8 @@
 
 -   [sql - managing tables](week08/day2/week08-2.md)
 
+-   [sql - multi table queries](week08/day3/week08-3.md)
+
 
 -----
 
