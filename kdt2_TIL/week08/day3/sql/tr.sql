@@ -105,3 +105,22 @@ INNER JOIN products AS p
 	ON od.productCode = p.productCode
 ORDER BY
 	orderNumber;
+
+/*
+SELECT
+	o.orderNumber, od.productCode, orderDate, productName
+FROM orderdetails od
+	INNER JOIN orders o USING (orderNumber)
+	INNER JOIN products p USING (productCode)
+ORDER BY
+	orderNumber;
+*/
+/*
+SELECT
+	o.orderNumber, od.productCode, orderDate, productName
+FROM orderdetails od
+	NATURAL JOIN orders o
+	NATURAL JOIN products p
+ORDER BY
+	orderNumber;
+*/
