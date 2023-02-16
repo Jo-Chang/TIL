@@ -118,6 +118,7 @@
 
 -   [sql - multi table queries](week08/day3/week08-3.md)
 
+-   [sql - nested queries](week08/day4/week08-4.md)
 
 -----
 
