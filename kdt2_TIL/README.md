@@ -120,6 +120,8 @@
 
 -   [sql - nested queries](week08/day4/week08-4.md)
 
+-   [sql - sqld](sqldday5/week08-5.md)
+
 -----
 
 
