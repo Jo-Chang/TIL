@@ -124,6 +124,8 @@
 
 -   [sql - advanced 01](week09/day1/week09-1.md)
 
+-   [sql - advanced 02](week09/day2/week09-2.md)
+
 -----
 
 
