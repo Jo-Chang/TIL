@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My page</title>
+  <style>
+    /* 전체 선택자 */
+    * {
+      color: red;
+    }
+
+    /* 타입 선택자 */
+    h1, h2 {
+      color: blue;
+    }
+
+    /* 클래스 선택자 */
+    .green {
+      color: green;
+    }
+
+    /* id 선택자 */
+    #purple {
+      color: purple;
+    }
+
+    /* 자식 결합자 */
+    /* 직계 자식만 선택 */
+    .green > span {
+      font-size: 50px;
+    }
+
+    /* 자손 결합자 */
+    /* class="green" 안 모든 li 자손 선택 */
+    .green li {
+      color: brown;
+      background-color: gray;
+    }
+  </style>
+</head>
+<body>
+  <p>This is my page</p>
+  <h1>메인 제목</h1>
+  <p id="purple">This is <em>emphasis</em></p>
+  <p class="green">This is <strong>strong</strong> this</p>
+  <a href="https://www.google.co.kr/" target="_blank">Google로 이동</a>
+  <ol>
+    <li><img src="images/sample.png" alt="sample-img"></li>
+    <li><img src="https://random.imagecdn.app/500/150/" alt="sample-img"></li>
+  </ol>
+  <ul class="green">
+    <li>Python</li>
+    <li>Algorithm</li>
+    <li>Web</li>
+      <ol>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JS</li>
+      </ol>
+  </ul>
+  <p class="green">Lorem, <span>ipsum</span> dolar.</p>
+  <p class="green">Lorem, <b><span>ipsum</span></b> dolar.</p>
+</body>
+</html>
+
+<!-- 주석 -->
