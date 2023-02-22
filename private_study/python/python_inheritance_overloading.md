@@ -126,3 +126,177 @@ for k, v in data.items():
 
 -   연산자 중복 ( Operator Overloading ) : 언어에서 미리 정의되어 있는 일부 연산자나 메서드의 재정의를 허용하는 것
 >   Special method, Magic method, Dunder(__) method
+-   class 작성을 통해 재정의 한다.
+-   이름 앞뒤에 더블언더스코어(__)가 붙어있다.
+>   __init__, __str__, __add__, __lt__ 등
+
+### Magic method 구분
+
+-   연산의 관리
+    ```python
+    __add__(self,oth)
+    __sub__(self,oth)
+    __mul__(self,oth)
+    ...
+    ```
+    ```python
+    class MyStr(object):
+        def __init__(self, string):
+            self.string = string
+        def __add__(self, string2):
+            return self.string + str(string2)
+
+    aa=MyStr("korea")
+    bb=aa+590
+    print(bb) # korea590
+    ```
+    ```python
+    class MyList(object):
+        def __init__(self, data1):
+            self.mylist = data1
+        def __add__(self, data2):
+            new_list = [x+y for x, y in zip(self.mylist, data2.mylist)]
+
+            return new_list
+
+    aa = MyList([3,6,9,12,15])
+    bb = MyList([100,200,300,400,500])
+
+    cc = aa+bb  # aa.__add__(bb)
+    print(cc)   # [103, 206, 309, 412, 515]
+    ```
+
+-   객체의 생성, 초기화, 소멸
+    ```python
+    __new__(cls[,..])
+    __init__(self[,...])
+    __del__(self)
+    ```
+
+-   객체의 표현
+    +   print(), str(), repr() 함수 사용시 호출
+    
+-   속성 관리
+    ```python
+    __getattr__(self,name)  # 객체에 존재하지 않는 속성에 참조 시도가 있을 때 호출
+    __setattr__(self)       # 객체의 속성 변경 발생시 호출 (재귀호출 주의)
+    ```
+    ```python
+    class Myclass:
+        class_name = "Myclass"
+
+        def __getattr__(self, name):
+            print(name, " 속성은 없습니다.")
+
+        def __setattr__(self, name, value):
+            print(name, " 속성을 ", value, "로 변경요청이 들어왔습니다.")
+
+        def __str__(self):
+            return str(Myclass) + "<----클래스명"
+
+    c = Myclass()
+    
+    print(c.class_name)
+    print(c.name)
+    print(c.data)
+    c.class_name="good class"
+    print(c.class_name)
+    print(str(c))
+    ```
+
+-   디스크립터(Descriptor) 관리
+    ```python
+    __get__(self, instance, owner)
+    __set__(self, instance, value)
+    __delete__(self, instance)
+    ```
+    ```python
+    class Descriptor(object):   # 디스크립터 정의
+        def __init__(self):
+            self.value = ""
+        
+        def __get__(self, instance, owner):
+            print("꺼내오기: %s"%self.value)
+
+        def __set__(self, instance, value):
+            print("넣기:%s"%value)
+            self.value = value
+
+    class Person(object):   # 소유자(wrapper)
+        name = Descriptor()
+
+    pp = Person()   # 사용자
+    pp.name="초록빛 바다"
+    print("꺼내온 결과-->", pp.name)
+    ```
+    ```python
+    # Descriptor 대신 Decorator 활용
+    class sample:
+        @property
+        def data(self):
+            return self.__value
+        @data.setter
+        def data(self, value):
+            print("속성이 변경되었습니다.")
+            self.__value = value * 5
+        @data.getter
+        def data(self):
+            print("속성 참조")
+            return self.__value
+
+    a = []
+    for i in range(5):
+        a.append(sample())
+        a[i].data = i
+    
+    for i in range(5):
+        print(a[i].data)
+    print(a[3].__value)     # AttributeError: "sample object has not attribute "__value"
+    # 클래스 내부에서 private 변수 (__value)로 선언했기 때문
+    ```
+
+-   컨테이너(집단형 자료, list, tuple, dictionary, ...) 관리
+    ```python   
+    __len__(self) 
+    __getitem__(self, key) 
+    __setitem__(self, key, value) 
+    __missing__(self, key) 
+    __delitem__(self, key)
+    __iter__(self)
+    __reversed__(self)
+    __contains__(self, item)
+    ```
+    ```python
+    class Data(list):
+        def __init__(self, data):
+            list.__init__(self.data)
+            print("초기화")
+        def __getitem__(self, key):
+            print("getitem호출")
+            r = list.__getitem__(self, key)
+            return r
+        def __setitem__(self, key, data):
+            print("setitem호출")
+            list.__setitem__(self, key, data)
+    
+    l = Data([0, 1, 2, 3, 4, 5, 6, 7])  # 초기화
+    x = l[5]                            # getitem호출
+    l[3] = 33                           # setitem호출
+    x = l[3:7]                          # getitem호출
+    l[0:4] = [55, 66, 77, 88]           # setitem호출
+    l.append(8)                         
+    for i in range(len(l)):             
+        print(l[i])                     '''
+                                        getitem호출
+                                        55
+                                        getitem호출
+                                        66
+                                        getitem호출
+                                        77
+                                        getitem호출
+                                        88
+                                        getitem호출
+                                        5
+                                        ...
+                                        '''
+    ```
