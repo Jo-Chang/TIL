@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    h1 {
+      border-style:dotted;
+      border-bottom-color:aqua
+    }
+    .box1 {
+      border-style: ridge;
+      border-width: 10px;
+      border-color: brown;
+      border-bottom-color: aqua;
+      margin-bottom: 10px;
+      margin-top: 50px;
+      margin-left: 30px;
+      width: 300px;
+      padding-left: 50px; /* contents 오른쪽으로 이동*/
+    }
+    .box2 {
+      width: 300px;
+      /* shorthand - 작성 순서 무관 */
+      border: 1px solid black;
+      /* shorthand */
+      margin: 25px auto; /* 상하 25px 좌우 auto */
+    }
+    .box3 {
+      width: 300px;
+      border: 1px solid black;
+      /* 우측 정렬 */
+      /* 오른쪽의 margin area를 왼쪽으로 모두 보낸다 */
+      margin-left: auto;
+    }
+  </style>
+  <h1>box</h1>
+</head>
+<body>
+  <div class="box1">box1</div>
+  <div class="box2">box2</div>
+  <div class="box3">box3</div>
+</body>
+</html>
