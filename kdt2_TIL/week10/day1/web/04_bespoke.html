@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    .container {
+      position: relative;
+      border: 5px solid black;
+    }
+
+    .link {
+      width: 10rem;
+      height: 10rem;
+      background-color: black;
+      border-radius: 50%;
+      color: white;
+      text-align: center;
+      line-height: 10rem;
+      text-decoration: none;
+    }
+
+    .link-position {
+      position: absolute;
+      left: 0px;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .img {
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img src="https://images.samsung.com/kdp/static/pcd/bespoke/home/2022/refrigerators-01.jpg" alt="#" class="img">
+    <a href="#" class="link link-position">
+        비교하기
+    </a>
+  </div>
+</body>
+</html>
