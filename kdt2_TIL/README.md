@@ -1,6 +1,7 @@
 <h1 class="myTitle">TODAY I LEARNED &#128214;</h1>
 
 
+<link rel="stylesheet" type="button/css" href="assets/stylesheets/my_style.css"/>
 <link rel="stylesheet" type="text/css" href="assets/stylesheets/floating_btn.css"/>
 <!--script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
 <script type="text/javascript" src="assets/javascripts/floating_btn.js"></script-->
@@ -138,6 +139,8 @@
 
 - [Web - box model](week09/day4/week09-4.md)
 
+- [Web - positioning](week10/day1/week10-1.md)
+
 
 -----
 
@@ -167,4 +170,4 @@
 
 -----
 
-<a class="myTopBtn" href="#"><img src="assets/images/btn_top.png"></a>
+<a class="top_btn" href="#"><img src="assets/images/btn_top.png"></a>

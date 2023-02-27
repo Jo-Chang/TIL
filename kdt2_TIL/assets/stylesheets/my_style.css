@@ -10,3 +10,13 @@
 
 /* span 속성을 모두 아래 color로 변경 */
 span { color: #FF5353; }
+
+/* top 버튼 속성 */
+.top_btn {
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+  border-radius: 50%;
+  background-color: #333333;
+  color: white;
+}
