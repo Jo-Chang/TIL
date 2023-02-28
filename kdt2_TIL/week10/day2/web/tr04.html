@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My Horizon Layout</title>
+  
+  <!-- Google font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Pacifico, cursive -->
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+  <!-- Oxygen, sans-serif -->
+  <link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@700&display=swap" rel="stylesheet">
+ 
+  <style>
+    @font-face {
+      font-family: 'TAEBAEKmilkyway';
+      src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/TAEBAEKmilkyway.woff2') format('woff2');
+      font-weight: normal;
+      font-style: normal;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+    }
+    .main_frame {
+      /* size */
+      width: 100%;
+      height: 3000px;
+
+      /* color */
+      background-color: #191919;
+      
+      /* flex */
+      display: flex;
+      flex-flow: column wrap;
+      align-items: center;
+    }
+
+    .header {
+      border-radius: 10px;
+
+      /* position */
+      position: fixed;
+
+      /* size */ 
+      top: 0px;
+      left: 0px;
+      width: 100%;
+
+      /* color */
+      border-bottom: 5px solid grey;
+      background-color: #191919;
+      color: white;
+
+      /* flex */
+      display: flex;
+      justify-content: space-around;
+    }
+    .header div {
+      /* size */
+      margin: 5px 10px;
+
+      /* flex */
+      display: flex;
+      align-items: center;
+    }
+    .comp_logo {
+      /* flex */
+      display: flex;
+      align-items: center;
+    }
+    .f_pacifico {
+      /* size */
+      font-size: 1.5rem;
+
+      /* color */
+      color: rgb(253, 51, 51);
+
+      /* font-style */
+      font-family: "Pacifico", cursive;
+    }
+    .f_oxygen {
+      /* size */
+      font-size: 1.5rem;
+
+      /* color */
+      color:white;
+
+      /* font-style */
+      font-family: 'Oxygen', sans-serif;
+    }
+    .register {
+    }
+    .login_logo {
+      /* size */
+      width: 25px; 
+      height: 25px;
+
+      /* color */
+      fill: currentColor;
+    }
+
+    .contents {
+      /* size */
+      margin: 100px 10px;
+
+      /* flex */
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: flex-start;
+
+      /* font-style */
+    }
+    .contents > div {
+      border: 5px solid #dddddd;
+
+      /* size */
+      border-radius: 10px;
+      margin: 20px 3rem;
+      padding: 20px;
+      flex-basis: 25%;
+      font-size: 1rem;
+
+      /* color */
+      background-color: #191919;
+      color: white;
+
+      /* font-style */
+      font-family: "TAEBAEKmilkyway";
+      font-weight: bold;
+      word-spacing: 0.5rem;
+      line-height: 1.7rem;
+    }
+
+    .footer {
+      /* size & position */
+      position: fixed;
+      bottom: 0px;
+      width: 100%;
+      height: 35px;
+      padding: 0px 30px;
+
+      /* border */
+      border-top: 3px solid grey;
+      border-radius: 10px;
+
+      /* color */
+      color: white;
+      background-color: #191919;
+
+      /* flex */
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+
+      /* font-style */
+      font-family: "Pacifico", cursive;
+    }
+    .footer_logo {
+      /* size */
+      margin: 15px 0 10px 10px;
+      width: 22px; 
+      height: 22px;
+
+      /* color */
+      fill: currentColor;
+      color: white;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="header">
+    <div class="comp_logo">
+      <a href="#" style="text-decoration:none;">
+        <span class="f_oxygen">KDT2</span> 
+        <span class="f_pacifico">Hyper Growth</span>
+      </a>
+    </div>
+    <div>
+      <div class="register">
+        <b>Register</b>
+      </div>
+      <div>
+        <svg xmlns="http://www.w3.org/2000/svg" class="bi bi-person-fill login_logo" viewBox="0 0 16 16">
+          <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3Zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"/>
+        </svg>
+        <b>Login</b>
+      </div>
+    </div>
+    
+  </div>
+
+  <div class="main_frame">
+    <div class="contents">
+      <div>
+        부패를 청춘은 실현에 아니다. 스며들어 피부가 아니한 이상 위하여서. 못할 무엇을 고동을 커다란 인간은 웅대한 말이다. 대고, 바이며, 바로 있는가? 몸이 없는 품고 풍부하게 속에 소담스러운 듣기만 뛰노는 있는가? 풍부하게 그들은 장식하는 실현에 어디 열락의 얼마나 반짝이는 방황하여도, 있는가? 가치를 품에 곧 품고 발휘하기 산야에 피는 보이는 것이다. 구하기 꽃 구할 옷을 귀는 봄바람이다. 투명하되 인생에 소담스러운 찾아 것이다.
+      </div>
+      <div>
+        하여도 피는 있는 대고, 사람은 때에, 위하여, 것이다. 가진 가지에 너의 오직 부패뿐이다. 위하여 있으며, 길지 너의 바로 교향악이다. 무엇이 두기 이상의 희망의 더운지라 없으면, 보이는 피다. 같이, 얼마나 시들어 길을 이것이다. 가치를 못할 온갖 뛰노는 끝에 위하여, 부패를 있다. 거친 싶이 우리 피가 듣는다. 어디 구하지 인간의 소리다.이것은 그들은 바이며, 만천하의 바이며, 스며들어 것이다. 쓸쓸한 사라지지 미인을 따뜻한 붙잡아 것은 불어 가치를 청춘 뿐이다. 청춘 거선의 없는 그리하였는가? 만물은 내려온 낙원을 생생하며, 산야에 말이다.
+      </div>
+      <div>
+        청춘의 노래하며 우리의 그러므로 투명하되 보라. 생명을 청춘의 소금이라 우리 놀이 것이다. 청춘의 가치를 것은 목숨을 봄바람이다. 일월과 따뜻한 하는 새 피가 위하여서 위하여서. 속잎나고, 꽃 부패를 풀밭에 구하지 산야에 있다. 수 찬미를 이는 이상은 그것은 황금시대다. 열매를 듣기만 우리의 청춘이 것이다. 같이, 피에 같이, 칼이다. 아니한 산야에 싶이 두손을 칼이다. 눈에 그들을 목숨이 쓸쓸한 주는 봄바람이다.
+      </div>
+      <div>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum a dolor nisi, itaque perferendis, voluptatibus dicta nihil nulla soluta vel aliquid cum. Pariatur voluptatibus similique placeat quidem,
+      </div>
+      <div>
+        earum tempore quasi magnam sint recusandae dolorem assumenda fugiat voluptas voluptatem deleniti incidunt sunt obcaecati impedit minus vitae nam! Iusto illo ab architecto quo porro eos, dolore natus ea id quisquam distinctio,
+      </div>
+      <div>
+        fuga quia reprehenderit sint deleniti excepturi vero ipsam? Inventore labore magni repellat, accusamus natus harum voluptas placeat enim laudantium iusto sint, animi, beatae saepe dignissimos repudiandae est? Iusto, cupiditate cum, libero tempore iste quidem maxime optio, vel illo aut quisquam vero!
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <div>
+      Made by Jo-Chang
+    </div>
+    <a href="https://github.com/Jo-Chang" style="text-decoration:none;" target="_blank">
+      <svg xmlns="http://www.w3.org/2000/svg" class="bi bi-github footer_logo" viewBox="0 0 16 16">
+        <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
+      </svg>
+    </a>
+  </div>
+</body>
+</html>

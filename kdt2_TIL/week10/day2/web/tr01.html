@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My NavBar</title>
+  
+  <!-- Google font -->
+  <!-- Pacifico, cursive -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+  <!-- Oxygen, sans-serif -->
+  <link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@700&display=swap" rel="stylesheet">
+ 
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    .main_frame {
+      border: 1px black solid;
+      margin: 10px auto;
+      width: 100%;
+      height: 3000px;
+      
+      /* flex */
+      display: flex;
+      flex-flow: column wrap;
+      align-items: center;
+    }
+
+    .navbar {
+      border-radius: 0 0 10px 10px;
+      border-bottom: 3px solid grey;
+      top: 0px;
+      width: 100%;
+      position: fixed;
+      background-color: #292929;
+      color: white;
+      /* flex */
+      display: flex;
+      justify-content: space-between;
+    }
+    .navbar > div {
+      margin: 5px 30px;
+      display: flex;
+      align-items: center;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+    .f_pacifico {
+      font-size: 1.5rem;
+      font-family: "Pacifico", cursive;
+      color: rgb(253, 51, 51);
+    }
+    .f_oxygen {
+      font-size: 1.5rem;
+      font-family: 'Oxygen', sans-serif;
+      color:white;
+    }
+    .login {
+      width: 25px; 
+      height: 25px;
+      fill: currentColor;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="main_frame">
+    <div class="navbar">
+      <div class="logo">
+        <a href="#" style="text-decoration:none;">
+          <span class="f_oxygen">KDT2</span> 
+          <span class="f_pacifico">Hyper Growth</span>
+        </a>
+      </div>
+      <div>
+        <svg xmlns="http://www.w3.org/2000/svg" class="bi bi-person-fill login" viewBox="0 0 16 16">
+          <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3Zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"/>
+        </svg>
+        <b>Login</b>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
