@@ -141,6 +141,8 @@
 
 - [Web - positioning](week10/day1/week10-1.md)
 
+- [Web - layout](week10/day2/week10-2.md)
+
 
 -----
 
