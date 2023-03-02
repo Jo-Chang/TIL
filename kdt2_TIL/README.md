@@ -143,6 +143,8 @@
 
 - [Web - layout](week10/day2/week10-2.md)
 
+- [Web - semantic web](week10/day3/week10-3.md)
+
 
 -----
 
