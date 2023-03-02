@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tim Berners-Lee</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      border: 3px solid grey;
+      width: 50rem;
+
+      display: flex;
+      flex-flow: column nowrap;
+
+      font-size: 1.5rem;
+    }
+    header {
+      position: relative;
+    }
+
+    .card__thumbnail {
+      /* border: 1px solid black; */
+      position: static;
+      width: 100%;
+      flex: 1;
+    }
+    .card__description {
+      /* border: 1px solid black; */
+      width: 100%;
+      padding: 1rem 3rem;
+    }
+
+    .card__thumbnail__nation {
+      position: absolute;
+      right: 0px;
+      width: 7rem;
+    }
+    .card__description__title {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+    }
+    .card__description__title-name {}
+    .card__description__title-job {}
+    .card__description__short {}
+    .card__description__list {}
+    .card__description__list__contents {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-between;
+    }
+
+    .card__description__title--feature {}
+    .card__description__title-name--feature {
+      font-size: 2.5rem;
+    }
+    .card__description__title-job--feature {
+      font-style: italic;
+      color: #777777;
+    }
+    .card__description__short--feature {
+      font-size: 1.3rem;
+    }
+    .card__description__list--feature{
+      list-style: none;
+      line-height: 3rem;
+      padding: 0;
+    }
+    .card__description__list__contents--feature {
+      text-indent: 0;
+    }
+  </style>
+</head>
+<body>
+<header class="card_thumbnail">
+  <img src="img/01.jpg" alt="Tim Berners-Lee" class="card__thumbnail">
+  <img src="img/02.png" alt="England flag" class="card__thumbnail__nation">
+</header>
+<main class="card__description">
+  <article>
+    <div class="card__description__title">
+      <h1 class="card__description__title-name--feature">팀 버너스리</h1>
+      <h4 class="card__description__title-job card__description__title-job--feature">프로그래머</h4>
+    </div>
+    <div class="card__description__short--feature">1989년 월드 와이드 웹의 하이퍼텍스트 시스템을 고안하여 개발. 웹의 아버지</div>
+    <ul class="card__description__list--feature">
+      <li class="card__description__list__contents .card__description__list__contents--feature">
+          <span>국적</span>
+          <span>영국</span>
+      </li>
+      <li class="card__description__list__contents .card__description__list__contents--feature">
+        <span>생년월일</span>
+        <span>1955년 6월 8일</span>
+      </li>
+      <li class="card__description__list__contents .card__description__list__contents--feature">
+        <span>직업</span>
+        <span>전산과학자, 프로그래머, 교수</span>
+      </li>
+      <li class="card__description__list__contents .card__description__list__contents--feature">
+        <span>출신 대학</span>
+        <span>옥스퍼드 대학교 물리학 학사</span>
+      </li>
+      <li class="card__description__list__contents .card__description__list__contents--feature">
+        <span>추가 정보</span>
+        <span><a href="https://ko.wikipedia.org/wiki/팀_버너스리" target="_blank">https://ko.wikipedia.org/wiki/팀_버너스리</a></span>
+      </li>
+    </ul>
+  </article>
+</main>
+</body>
+</html>
