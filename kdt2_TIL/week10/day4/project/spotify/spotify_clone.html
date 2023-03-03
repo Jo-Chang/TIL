@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./spotify_clone.css">
+  <link rel="shortcut icon" type="image/x-icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Spotify_logo_without_text.svg/2048px-Spotify_logo_without_text.svg.png">
+  <title>Spotify - 웹 플레이어</title>
+</head>
+<body>
+  <nav class="nav-list">
+    <a href="https://open.spotify.com/" class="a-remove-line" target="_blank;">
+      <img class="spotify-logo" src="https://storage.googleapis.com/pr-newsroom-wp/1/2018/11/Spotify_Logo_RGB_White.png" alt="fhrh">
+    </a>
+    <table class="nav-list__table">
+        <tr class="nav-list__table__contents">
+          <th>
+            <svg role="img" class="nav-list__icon" aria-hidden="true" viewBox="0 0 24 24" data-encore-id="icon">
+              <path d="M13.5 1.515a3 3 0 0 0-3 0L3 5.845a2 2 0 0 0-1 1.732V21a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-6h4v6a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V7.577a2 2 0 0 0-1-1.732l-7.5-4.33z"></path>
+            </svg>
+          </th>
+          <td>
+            홈
+          </td>
+        </tr>
+        <tr class="nav-list__table__contents">
+          <th>
+            <svg role="img" aria-hidden="true" class="nav-list__icon" viewBox="0 0 24 24" data-encore-id="icon">
+              <path d="M10.533 1.279c-5.18 0-9.407 4.14-9.407 9.279s4.226 9.279 9.407 9.279c2.234 0 4.29-.77 5.907-2.058l4.353 4.353a1 1 0 1 0 1.414-1.414l-4.344-4.344a9.157 9.157 0 0 0 2.077-5.816c0-5.14-4.226-9.28-9.407-9.28zm-7.407 9.279c0-4.006 3.302-7.28 7.407-7.28s7.407 3.274 7.407 7.28-3.302 7.279-7.407 7.279-7.407-3.273-7.407-7.28z"></path>
+            </svg>
+          </th>
+          <td>
+            검색하기
+          </td>
+        </tr>
+        <tr class="nav-list__table__contents">
+          <th>
+            <svg role="img" aria-hidden="true" class="nav-list__icon" viewBox="0 0 24 24" data-encore-id="icon">
+              <path d="M14.5 2.134a1 1 0 0 1 1 0l6 3.464a1 1 0 0 1 .5.866V21a1 1 0 0 1-1 1h-6a1 1 0 0 1-1-1V3a1 1 0 0 1 .5-.866zM16 4.732V20h4V7.041l-4-2.309zM3 22a1 1 0 0 1-1-1V3a1 1 0 0 1 2 0v18a1 1 0 0 1-1 1zm6 0a1 1 0 0 1-1-1V3a1 1 0 0 1 2 0v18a1 1 0 0 1-1 1z"></path>
+            </svg>
+          </th>
+          <td>
+            내 라이브러리
+          </td>
+        </tr>
+        <tr>
+          
+        </tr>
+        <tr class="nav-list__table__contents">
+          <th>
+            <svg role="img" aria-hidden="true" viewBox="0 0 16 16" data-encore-id="icon" class="nav-list__icon">
+              <path d="M15.25 8a.75.75 0 0 1-.75.75H8.75v5.75a.75.75 0 0 1-1.5 0V8.75H1.5a.75.75 0 0 1 0-1.5h5.75V1.5a.75.75 0 0 1 1.5 0v5.75h5.75a.75.75 0 0 1 .75.75z"></path>
+            </svg> 
+          </th>
+          <td>
+            플레이리스트 만들기
+          </td>
+        </tr>
+        <tr class="nav-list__table__contents">
+          <th>
+            <svg role="img" aria-hidden="true" viewBox="0 0 16 16" data-encore-id="icon" class="nav-list__icon heart">
+              <path d="M15.724 4.22A4.313 4.313 0 0 0 12.192.814a4.269 4.269 0 0 0-3.622 1.13.837.837 0 0 1-1.14 0 4.272 4.272 0 0 0-6.21 5.855l5.916 7.05a1.128 1.128 0 0 0 1.727 0l5.916-7.05a4.228 4.228 0 0 0 .945-3.577z"></path></svg>
+          </th>
+          <td>
+            좋아요 표시한 곡
+          </td>
+        </tr>
+    </table>
+  </nav>
+  <header class="nav-header">
+    <div class="nav-header__left">
+      <div>
+        <svg role="img" aria-hidden="true" class="nav-header__icon--color nav-header__btn" viewBox="0 0 16 16" data-encore-id="icon"><path d="M11.03.47a.75.75 0 0 1 0 1.06L4.56 8l6.47 6.47a.75.75 0 1 1-1.06 1.06L2.44 8 9.97.47a.75.75 0 0 1 1.06 0z"></path></svg>
+      </div>
+      <div>
+        <svg role="img" aria-hidden="true" class="nav-header__icon--color nav-header__btn" viewBox="0 0 16 16" data-encore-id="icon"><path d="M4.97.47a.75.75 0 0 0 0 1.06L11.44 8l-6.47 6.47a.75.75 0 1 0 1.06 1.06L13.56 8 6.03.47a.75.75 0 0 0-1.06 0z"></path></svg>
+      </div>
+    </div>
+    <div class="nav-header__right">
+      <a class="a-remove-line" target="_blank" href="https://www.spotify.com/kr-ko/signup?forward_url=https%3A%2F%2Fopen.spotify.com%2F">
+        <div class="font-center nav-header__register">
+          가입하기
+        </div>
+      </a>
+      <a class="a-remove-line" target="_blank" href="https://accounts.spotify.com/ko/login?continue=https%3A%2F%2Fopen.spotify.com%2F">
+        <div class="font-center nav-header__login">
+          로그인하기
+        </div>
+      </a>
+    </div>
+  </header>
+  <main class="article-board">
+    <article class="article-box">
+      <img src="https://thumb.mt.co.kr/06/2022/11/2022110911520881578_1.jpg/dims/optimize/" alt="">
+      <h4>End Theory</h4>
+      <h5>YOUNHA</h5>
+    </article>
+    <article class="article-box">
+      <img src="https://image.bugsm.co.kr/album/images/500/40271/4027185.jpg" alt="IU LILAC">
+      <h4>라일락</h4> 
+      <h5>IU</h5>
+    </article>
+    <article class="article-box">
+      <img src="https://images.genius.com/db3372d42ecad441f12c066b54ae39fb.1000x1000x1.jpg" alt="IU Celebrity">
+      <h4>Celebrity</h4> 
+      <h5>IU</h5>
+    </article>
+    <article class="article-box">
+      <img src="https://mblogthumb-phinf.pstatic.net/20160501_127/incubator7_14620793100667l8er_JPEG/attachImage_3925130377.jpeg?type=w800" alt="oasis">
+      <h4>Don't Look Back in Anger</h4>  
+      <h5>Oasis</h5>
+    </article>
+    <article class="article-box">
+      <img src="https://sitem.ssgcdn.com/67/21/84/item/1000022842167_i1_1200.jpg" alt="beenzino">
+      <h4>Boogie On & On</h4>
+      <h5>Beenzino</h5>
+    </article>
+    <article class="article-box">
+      <img src="https://image.bugsm.co.kr/album/images/500/4036/403619.jpg" alt="IU on Friday">
+      <h4>금요일에 만나요</h4>
+      <h5>IU</h5>
+    </article>
+    <article class="article-box">
+      <img src="https://image.bugsm.co.kr/album/images/500/200941/20094140.jpg" alt="IU Pallette">
+      <h4>Palette</h4>
+      <h5>IU</h5>
+    </article>
+    <article class="article-box">
+      <img src="https://upload.wikimedia.org/wikipedia/ko/d/db/BTS_-_Butter.png" alt="BTS">
+      <h4>Butter</h4>
+      <h5>BTS</h5>
+    </article>
+    <article class="article-box">
+      <img src="https://image.bugsm.co.kr/album/images/500/40780/4078016.jpg" alt="Newjeans">
+      <h4>Hype Boy</h4>
+      <h5>Newjeans</h5>
+    </article>
+    <article class="article-box">
+      <img src="https://images.genius.com/bb45c5652897cb5ae51c7c9fc95198a9.1000x1000x1.png" alt="Newjeans">
+      <h4>Tomboy</h4>
+      <h5>(G)I-Dle</h5>
+    </article>
+  </main>
+  <footer>    
+    <div class="footer">
+      <div class="footer__description">
+        <p>법률 정보 개인정보 보호 센터 개인정보 처리방침 쿠키 광고 상세정보</p>        
+      </div>
+      <table class="footer__group">
+        <tbody>  
+          <tr>
+            <td>designed by GROUP 8</td> 
+          </tr>           
+          <tr class="footer__github__id">
+            <th>김창조</th>
+            <td>
+              <a href="https://github.com/Jo-Chang" style="text-decoration:none;" target="_blank">
+                <svg xmlns="http://www.w3.org/2000/svg" class="bi bi-github footer__group__logo" viewBox="0 0 16 16">
+                  <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
+                </svg>
+              </a>
+            </td>
+          </tr>
+          <tr class="footer__github__id">
+            <th>최계수</th>
+            <td>
+              <a href="https://github.com/Pysonny" style="text-decoration:none;" target="_blank">
+                <svg xmlns="http://www.w3.org/2000/svg" class="bi bi-github footer__group__logo" viewBox="0 0 16 16">
+                  <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
+                </svg>
+              </a>
+            </td>
+          </tr>
+          <tr class="footer__github__id">
+            <th>박현준</th>
+            <td>
+              <a href="https://github.com/DT-HYUNJUN" style="text-decoration:none;" target="_blank">
+                <svg xmlns="http://www.w3.org/2000/svg" class="bi bi-github footer__group__logo" viewBox="0 0 16 16">
+                  <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
+                </svg>
+              </a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </footer>
+  
+</body>
+</html>
+
