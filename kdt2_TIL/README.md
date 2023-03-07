@@ -147,6 +147,8 @@
 
 - [Web - bootstrap](week11/day1/week11-1.md)
 
+- [Web - grid](week11/day2/week11-2.md)
+
 
 -----
 
