@@ -1,0 +1,52 @@
+* {
+  box-sizing: border-box;
+}
+
+.card {
+  background: rgba(0,0,0,0);
+} 
+
+.card-title-small {
+  font-size: 1rem;
+  text-overflow: ellipsis;
+}
+
+.card-font-small {
+  font-size: 0.7rem;
+}
+
+.crs-body {
+  height: 8rem;
+}
+
+h5 {
+  text-overflow: ellipsis;
+}
+
+.mybox_img {
+  width: 30px;
+}
+
+.github-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.s1-card-body:hover {
+  color: rgb(125, 170, 253);
+}
+
+
+.s1_img {
+  transition: all 0.2s linear;
+  border-radius: 5px;
+  width: 7rem;
+  height: 7rem;
+}
+.s1_img:hover {
+  transform: scale(1.2);
+}
+
+.s3-text-font {
+  font-size: 0.8rem;
+}
