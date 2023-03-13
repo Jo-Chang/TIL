@@ -133,6 +133,9 @@ HTML lang="en"
 - 'classList' property : 클래스 속성 조작, 요소의 클래스 목록을 DOMTkenList(유사 배열) 형태로 반환, add()와 remove() 메서드를 사용해 지정한 클래스 값을 추가 혹은 제거
   + element.classList.add() : 지정한 클래스 값 추가
   + element.classList.remove() : 지정한 클래스 값 삭제
+  + element.classList.replace() : 지정한 클래스 이름 변경
+
+- Attribute 조작
   + 조회 `.getAttribute()` / 설정(수정) `.setAttribute()` / 삭제 `.removeAttribute()`
 
 - 'textContent' property : HTML 콘텐츠 조작, 요소의 텍스트 콘텐츠를 표현
