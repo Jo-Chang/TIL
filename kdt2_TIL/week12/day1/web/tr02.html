@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript DOM</title>
+  <style>
+    .box {
+      height: 300px;
+      width: 300px;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 2rem;
+      font-weight: 900;
+      margin: 1rem
+    }
+
+    .blue {
+      background-color: lightblue;
+    }
+
+    .green {
+      background-color: lightgreen;
+    }
+
+    .red {
+      background-color: lightcoral;
+    }
+
+    .black {
+      background-color: black;
+    }
+
+    .pink {
+      background-color: lightpink;
+    }
+
+    .circle {
+      border-radius: 50%;
+    }
+
+    .border-2 {
+      border-width: 2px;
+    }
+
+    .border-dashed {
+      border-style: dashed;
+    }
+
+    .border-black {
+      border-color: black;
+    }
+  </style>
+</head>
+
+<body>
+  <div>
+    <div class="blue">blue</div>
+    <div class="box green box2" box="2">green</div>
+    <div class="box red">black</div>
+    <div id="yellow" class="box">yellow</div>
+    <div class="box black">black</div>
+    <div id="pink">pink</div>
+  </div>
+</body>
+
+<script>
+  // DOM 선택 및 조작 
+  // 1. class가 blue인 요소에 box 클래스 추가
+  const blueClass = document.querySelector(".blue")
+  blueClass.classList.add("box")
+  // document.querySelector(".blue").classList.add("blue2")
+  console.log(blueClass)
+
+  console.log("==========")
+
+  // 2. class가 box2인 요소의 box2 클래스 제거
+  const box2Class = document.querySelector(".box2")
+  // console.log(document.querySelector(".box2"))
+  console.log(box2Class)
+  console.log(box2Class.getAttribute("class"))
+  box2Class.classList.remove("box2")
+  console.log(box2Class)
+  console.log(box2Class.getAttribute("class"))
+
+  console.log("==========")
+
+  // 3. class가 red인 요소의 텍스트를 red로 변경
+  const redClass = document.querySelector(".red")
+  console.log(redClass)
+  console.log(redClass.textContent)
+  redClass.textContent = "red"
+  console.log(redClass)
+  console.log(redClass.textContent)
+
+  console.log("==========")
+
+  // 4. class가 black인 요소의 color를 white로 변경
+  const blackClass = document.querySelector(".black")
+  blackClass.style.color = "white"
+  console.log(blackClass)
+
+  console.log("==========")
+  
+  // 5. id가 yellow인 요소의 background-color를 lightyellow로 변경
+  const yellowId = document.querySelector("#yellow")
+  yellowId.style.backgroundColor = "lightyellow"
+  console.log(yellowId)
+
+  console.log("==========")
+
+  // 6. id가 pink인 요소의 클래스를 box pink circle border-2 border-dashed border-black로 설정
+  const pinkId = document.querySelector("#pink")
+  // pinkId.classList.add("abcde")
+  console.log(pinkId)
+  console.log(pinkId.classList)
+  // pinkId.classList.add("box pink circle border-2 border-dashed border-black")
+  pinkId.setAttribute("class", "box pink circle border-2 border-dashed border-black")
+  console.log(pinkId)
+  console.log(pinkId.classList)
+
+</script>
+
+</html>
