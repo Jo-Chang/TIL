@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // while
+    let i = 0
+    
+    while (i < 6) {
+      console.log(i)
+      i += 1
+    }
+
+    console.log('===========')
+
+    // for
+    for (let i = 0; i < 6; i ++) {
+      console.log(i)
+    }
+
+    console.log('===========')
+
+    // for...in
+    const fruits = { a: 'apple', b: 'banana' }
+
+    for (const key in fruits) {
+      console.log(key)  // a, b
+      console.log(fruits[key]) // apple, banana
+    }
+    console.log('===========')
+
+    // for...of
+    const numbers = [0, 1, 2, 3]
+
+    for (const number of numbers) {
+      console.log(number) // 0, 1, 2, 3
+    }
+
+    console.log('===========')
+
+    // for...in vs for...of
+    const arr = [3, 5, 7]
+
+    for (const i in arr) {
+      console.log(i) // 0 1 2
+    }
+    console.log('===========')
+    for (const i in arr) {
+      console.log(arr[i]) // 3 5 7
+    }
+    console.log('===========')
+    for (const i of arr) {
+      console.log(i) // 3 5 7
+    }
+    console.log('===========')
+
+    // for...in vs for...of 2
+    
+    console.log('===========')
+  </script>
+</body>
+</html>
