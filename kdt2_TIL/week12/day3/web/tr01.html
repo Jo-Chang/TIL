@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="https://oopy.lazyrockets.com/api/v2/notion/image?src=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F4c14a348-0f93-4541-91d6-dfe4f265d252%2Fhypergrowth_%25E1%2584%2585%25E1%2585%25A9%25E1%2584%2580%25E1%2585%25A9%25E1%2584%2589%25E1%2585%25B5%25E1%2586%25B7%25E1%2584%2587%25E1%2585%25A9%25E1%2586%25AF.png&blockId=a86012c3-a307-48f1-9c8f-0190bf2151cd&width=256">
+  <title>JavaScript Basics</title>
+</head>
+
+<body>
+
+</body>
+
+<script>
+  /*
+  1. 0 2 4 6 8 을 값으로 가진 배열 생성 및 출력 
+  */
+  console.log('1. ==========')
+  let array = [0, 2, 4, 6, 8]
+  array.forEach((item) => {
+    console.log(item)
+  })
+  // for (const num of arrayNum) {
+  //   console.log(num)
+  // }
+  /*
+  2. 아래 반복문 코드와 동일한 결과의 반복문 코드를 map 메서드를 활용해서 작성
+  let array = [0, 2, 4, 6, 8]
+  for (let i = 0; i < array.length; i++) {
+    let result = array[i] * 2
+    console.log(result)
+  }
+  */
+  console.log('2. ==========')
+  array = [0, 2, 4, 6, 8]
+  // const doubleNumbers = array.map((item) => {
+  //   return item * 2
+  // })
+  // console.log(`hello ${doubleNumbers}`)
+  const doubleNumbers = array.map((item) => {
+    console.log(item * 2)
+  })
+  /*
+  3. 아래 반복문 코드와 동일한 결과의 반복문 코드를 forEach 메서드를 활용해서 작성
+  let array = [0, 2, 4, 6, 8]
+   for (let i = 0; i < array.length; i++) {
+     let result = array[i] * 2
+     console.log(result)
+   }
+   */
+  console.log('3. ==========')
+  array = [0, 2, 4, 6, 8]
+  array.forEach((item) => {
+    console.log(item * 2)
+  })
+  /*
+  4. 아래 반복문 코드와 동일한 결과의 반복문 코드를 map 메서드를 활용해서 작성
+  let array = [0, 2, 4, 6, 8]
+  let newArray = []
+  for (let i = 0; i < array.length; i++) {
+    let result = array[i] * 3
+    newArray.push(result)
+  }
+  console.log(newArray)
+  */
+  array = [0, 2, 4, 6, 8]
+  let newArray = array.map((item) => {
+    return (item * 3)
+  })
+  console.log(`4. ${newArray}`)
+  /*
+  5. 아래 반복문 코드와 동일한 결과의 반복문 코드를 forEach 메서드를 활용해서 작성
+  let array = [0, 2, 4, 6, 8]
+   let newArray = []
+   for (let i = 0; i < array.length; i++) {
+     let result = array[i] * 3
+     newArray.push(result)
+   }
+   console.log(newArray)
+  */
+   array = [0, 2, 4, 6, 8]
+   newArray = []
+   array.forEach((item) => {
+    newArray.push(item * 3)
+   })
+   console.log(`5. ${newArray}`)
+  /*
+  6. 아래 배열 변수가 주어졌을 때 홀수인 원소만 출력하는 반복문을 map 메서드를 활용해서 작성
+  // 아래 배열 활용
+  let array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+  */
+  array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+  const oddArray = array.map((item, idx, list) => {
+    if (item % 2 !== 0) {
+      return item
+    } else {
+      // array.splice(idx, 1)
+      // console.log(list)
+    }
+  })
+  // console.log(`6. ${oddArray}`)
+  oddArray.map((item) => {
+    if (item !== undefined) console.log(item)
+  })
+  /*
+  7. 아래 배열 변수가 주어졌을 때 짝수인 원소만 출력하는 반복문을 forEach 메서드를 활용해서 작성
+  // 아래 배열 활용
+  let array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+  */
+  console.log('7. ==========')
+  array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+  array.forEach((item) => {
+    if (item % 2 === 0) {
+      console.log(item)
+    }
+  })
+
+</script>
+
+</html>
