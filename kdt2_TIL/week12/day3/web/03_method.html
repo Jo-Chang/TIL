@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    const person = {
+      name: 'Sophia',
+      greeting: function () {
+        return `hello, ${this.name}`
+      },
+      // greeting : () => ({`hello, ${this.name}`})
+    }
+
+    // Nested 함수에서의 문제점
+    const myObj2 = {
+      numbers: [1, 2, 3],
+      myFunc: function () {
+        this.numbers.forEach(function (number) {
+          console.log(number) // 1 2 3
+          console.log(this) // window
+        })
+      }
+    }
+    // Nested 해결
+    const myObj3 = {
+      numbers: [1, 2, 3],
+      myFunc: function() {
+        this.numbers.forEach((number) => {
+          console.log(number) // 1 2 3
+          console.log(this) // myObj3
+        })
+      }
+    }
+    // 화살표 함수는 자신만의 this를 가지지않기 떄문에 외부 함수에서 this 값을 가져옴
+  </script>
+</body>
+</html>

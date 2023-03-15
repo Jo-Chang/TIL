@@ -155,6 +155,8 @@
 
 - [Web - javascript2](week12/day2/week12-2.md)
 
+- [Web - javascript3](week12/day3/week12-3.md)
+
 
 -----
 

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // forEach
+    const fruits = ['apple', 'banana', 'coconut']
+
+    fruits.forEach((fruit, idx, arr) => {
+      console.log(`${fruit} / ${idx} / ${arr}`)
+      console.log(this)
+    });
+
+    // map
+    const numbers = [1, 2, 3]
+    // const doubleNumbers = numbers.map(function (number) {
+    //   return number * 2
+    // })
+    // const doubleNumbers = numbers.map((number) => {
+    //   return number * 2
+    // })
+    const callbackFunc = function (number) {
+      return number * 2
+    }
+    const doubleNumbers = numbers.map(callbackFunc)
+
+    console.log(doubleNumbers)
+
+    // forEach vs map   compare
+    console.log(numbers.forEach(function (number) {
+      return number * 2
+    }))
+    console.log(numbers.map(function (number) {
+      return number * 2
+    }))
+  </script>
+</body>
+</html>
