@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript Event</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <style>
+    .red {
+      color: rgb(253, 119, 119);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container mt-5 d-flex flex-column justify-content-center align-items-center">
+    <span id="result" class="display-1">0</span>
+    <div class="d-flex gap-2">
+      <input type="number" value="0" id="number" class="form-control">
+      <button id="plus" class="btn btn-lg btn-outline-primary">+</button>
+      <button id="minus" class="btn btn-lg btn-outline-danger">-</button>
+    </div>
+    <div class="d-flex mt-2 text-danger"></div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"></script>
+</body>
+
+<script>
+  /*
+    + - 버튼을 누를 때 마다 result 요소의 텍스트 변화(더하기, 빼기)
+    단, id가 number인 input의 value 만큼 더하기 빼기 수행
+  */
+  let cnt = 0
+  const plusBtn = document.querySelector('#plus')
+  const minusBtn = document.querySelector('#minus')
+  const spanTag = document.querySelector('#result')
+  const inputTag = document.querySelector('#number')
+  const MAX = 20, MIN = -20
+
+  plusBtn.addEventListener('click', (event) => {
+    cnt += inputTag.value * 1
+    if (cnt > MAX) {
+      cnt -= inputTag.value * 1
+      console.log(`cnt : ${cnt}`)
+      // event.preventDefault()
+      alert(`MAX 값 (${MAX}) 초과`)
+    // } else if (cnt < MIN) {
+    //   cnt -= inputTag.value * 1
+    //   console.log(`cnt : ${cnt}`)
+    //   event.preventDefault()
+    //   alert(`MIN 값 (${MIN}) 미만`)
+    // } else {
+    } else {
+      console.log(inputTag.value)
+      spanTag.textContent = cnt
+    }
+  })
+  minusBtn.addEventListener('click', (event) => {
+    cnt -= inputTag.value * 1
+    if (cnt < MIN) {
+      cnt += inputTag.value * 1
+      console.log(`cnt : ${cnt}`)
+      // event.preventDefault()
+      alert(`MAX 값 (${MAX}) 초과`)
+    // } else if (cnt > MAX) {
+    //   cnt += inputTag.value * 1
+    //   console.log(`cnt : ${cnt}`)
+    //   event.preventDefault()
+    //   alert(`MIN 값 (${MIN}) 미만`)
+    // } else {
+    } else {
+      spanTag.textContent = cnt
+    }
+  })
+
+  inputTag.addEventListener('input', (event) => {
+    // console.log(event)
+    // console.log(event.target.value)
+    if (event.target.value < 0) {
+      // event.preventDefault()
+      event.target.value = 0
+    } else if (event.target.value > 40) {
+      // event.preventDefault()
+      event.target.value = 40
+    }
+  })
+
+
+  // MIN, MAX 값 알림
+  const alertDiv = document.querySelector('.text-danger')
+  const newSpanMIN = document.createElement('span')
+  const newSpanMAX = document.createElement('span')
+  newSpanMIN.textContent = `MIN = ${MIN}`
+  newSpanMAX.textContent = `MAX = ${MAX}`
+  newSpanMIN.classList.add('me-5')
+
+  alertDiv.append(newSpanMIN, newSpanMAX)
+  
+</script>
+
+</html>
