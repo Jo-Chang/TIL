@@ -13,7 +13,7 @@
 
 ## 개선할 점
 
-- naverbar sticky
-- card box
+- ~~naverbar sticky~~
+- ~~card box~~
 - card select border bold
 - input calendar

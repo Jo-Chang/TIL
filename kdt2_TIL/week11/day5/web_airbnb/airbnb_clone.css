@@ -89,6 +89,14 @@ select:focus {
   font-size: 0.25rem;
 }
 
+.s2-card-star-icon {
+  width: 0.7rem;
+}
+
+.s2-card-img {
+  aspect-ratio: 4 / 3;
+}
+
 .material-symbols-rounded {
   font-variation-settings:
   'FILL' 0,
@@ -105,14 +113,15 @@ select:focus {
   'opsz' 20
 }
 
+
 /* footer */
 .github-icon {
   width: 1.5rem;
   height: 1.5rem;
 }
 
-/* media query */
 
+/* media query */
 @media (min-width: 768px) {
   .s1-card-width {
     width: 25rem;
