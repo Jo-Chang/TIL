@@ -151,11 +151,13 @@
 
 - [Web - grid2](week11/day3/week11-3.md)
 
-- [Web - javascript1](week12/day1/week12-1.md)
+- [Web_JavasSript - basic](week12/day1/week12-1.md)
 
-- [Web - javascript2](week12/day2/week12-2.md)
+- [Web_JavasSript - javascript](week12/day2/week12-2.md)
 
-- [Web - javascript3](week12/day3/week12-3.md)
+- [Web_JavasSript - function, object, array](week12/day3/week12-3.md)
+
+- [Web_JavasSript - controlling event](week12/day4/week12-4.md)
 
 
 -----

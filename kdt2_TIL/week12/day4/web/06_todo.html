@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <input type="text" class="input-text">
+  <button id="btn">+</button>
+  <ul></ul>
+
+  <script>
+    // 1. 필요한 요소 모두 선택
+    const inputTag = document.querySelector('.input-text')
+    const btnTag = document.querySelector('#btn')
+    const ulTag = document.querySelector('ul')
+
+    const addTodo = (event) => {
+      // 2-1. 사용자 입력 데이터 저장
+      const inputData = inputTag.value
+
+      if (inputData.trim()) {
+        const newList = document.createElement('li')
+        newList.textContent = inputData
+        ulTag.appendChild(newList)
+      } else {
+        alert('할 일을 입력하세요.')
+      }
+      inputTag.value = ''
+    }
+    
+    // 2. 버튼에 이벤트 핸들러를 부착
+    btnTag.addEventListener('click', addTodo)
+  </script>
+
+</body>
+
+</html>

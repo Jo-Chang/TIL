@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <h1>로또 추천 번호</h1>
+  <button id="btn">행운 번호 받기</button>
+  <div></div>
+
+  <!-- Lodash -->
+  <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
+  <script>
+    const divTag = document.querySelector('div')
+    const btnTag = document.querySelector('#btn')
+    
+    const numArray = _.range(1, 46)
+    console.log(numArray)
+    
+    const newUl = document.createElement('ul')
+    const getNumber = (event) => {
+      const pickNum = _.sampleSize(numArray, 6)
+      console.log(pickNum)
+      
+      pickNum.forEach((item) => {
+        const newLi = document.createElement('li')
+        newLi.textContent = item
+        newUl.appendChild(newLi)
+      })
+      newUl.appendChild(document.createElement('br'))
+    }
+    divTag.appendChild(newUl)
+    // const getNumber = (event) => {
+    //   const newUl = document.createElement('ul')
+    //   const pickNum = _.sampleSize(numArray, 6)
+    //   console.log(pickNum)
+      
+    //   pickNum.forEach((item) => {
+    //     const newLi = document.createElement('li')
+    //     newLi.textContent = item
+    //     newUl.appendChild(newLi)
+    //   })
+
+    //   divTag.appendChild(newUl)
+    // }
+
+    btnTag.addEventListener('click', getNumber)
+    </script>
+
+</body>
+
+</html>

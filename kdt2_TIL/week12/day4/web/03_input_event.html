@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <input type="text" id="text-input">
+  <p></p>
+
+  <script>
+    // 1. input element 선택
+    const inputTag = document.querySelector('#text-input')
+    console.log(inputTag)
+
+    // 2. p element 선택
+    const pTag = document.querySelector('p')
+
+    let inputString = ''
+
+    // 3. input 요소에 event handler 
+    inputTag.addEventListener('input', (event) => {
+      // console.log(event.data)
+      // pTag.textContent += event.data
+      // 삭제 처리 실패 코드
+
+      // console.log(event)
+      // console.log(event.target.value)
+      pTag.textContent = event.target.value
+    })
+  </script>
+</body>
+
+
+</html>
