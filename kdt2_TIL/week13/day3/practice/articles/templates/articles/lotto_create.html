@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+
+{% block title %}
+  Lotto Generator
+{% endblock title %}
+
+
+{% block style %}
+  .input-num {
+    width: 15rem;
+  }
+{% endblock style %}
+
+
+{% block content %}
+  <div class="container mt-5 fw-bold">
+    <form action="/lotto/" class="d-flex">
+      <input type="number" class="form-control input-num me-3" 
+      value="0" 
+      placeholder="로또 생성 수" 
+      min="0" max="20"
+      name="number" id="number">
+      <input type="submit" class="btn btn-outline-primary" value="생성">
+    </form>
+  </div>
+{% endblock content %}
+
+
+{% block script %}
+  const numInput = document.querySelector('input#number')
+  numInput.addEventListener('input', (event) => {
+    event.preventDefault()
+    console.log(numInput.value)
+    if (numInput.value === null) {
+      console.log('none!')
+    }
+  })
+{% endblock script %}

@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+
+{% block title %}
+  Lotto Generator
+{% endblock title %}
+
+
+{% block style %}
+{% endblock style %}
+
+
+{% block content %}
+  <div class="container mt-5">
+    <ul class="list-unstyled">
+    {% for lottery in lottery_lst %}
+      <li class="fs-5">{{ lottery }}</li>
+    {% endfor %}
+    </ul>
+    <a href="/lotto-create/">뒤로 가기</a>
+  </div>
+{% endblock content %}
+
+{% block script %}
+{% endblock script %}

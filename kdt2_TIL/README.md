@@ -24,6 +24,10 @@
 <br>
 
 - [Web](#web)
+<br>
+
+- [Django](#django)
+<br>
 
 - [Project](#project)
 <br>
@@ -168,6 +172,8 @@
 - [Django - install](week13/day1/week13-1.md)
 
 - [Django - design pattern](week13/day2/week13-2.md)
+
+- [Django - design template](week13/day3/week13-3.md)
 
 
 -----

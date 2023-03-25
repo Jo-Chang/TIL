@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block title %}
+  Throw & Catch
+{% endblock title %}
+
+{% block style %}
+  .input-text {
+    width: 15rem;
+  }
+{% endblock style %}
+
+
+
+{% block content %}
+  <div class="container mt-5">
+    <form action="/catch/" method="GET" class="d-flex">
+      <input type="text" name="query" id="message" class="form-control input-text me-3">
+      <input type="submit" value="Throw" class="btn btn-outline-primary">
+    </form>
+  </div>
+{% endblock content %}
