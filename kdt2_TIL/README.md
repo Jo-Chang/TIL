@@ -175,6 +175,8 @@
 
 - [Django - design template](week13/day3/week13-3.md)
 
+- [Django - design URLs](week13/day4/week13-4.md)
+
 
 -----
 

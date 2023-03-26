@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% comment %} {% extends 'articles/base.html' %} {% endcomment %}
+
+{% block title %}
+  <title>search 실습</title>
+{% endblock title %}
+
+{% block content %}
+  <h1>Form 실습</h1>
+  <form action="https://search.naver.com/search.naver" method="GET">
+    <label for="message">검색어 : </label>
+    {% comment %} label의 for와 input의 id 연결 {% endcomment %}
+    {% comment %} label은 semantic 적인 의미가 큼 {% endcomment %}
+    <input type="text" name="query" id="message">
+    <input type="submit" value="submit">
+  </form>
+{% endblock content %}

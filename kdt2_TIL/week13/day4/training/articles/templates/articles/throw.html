@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+
+{% block title %}
+  <title>Throw & Catch</title>
+{% endblock title %}
+
+{% block style %}
+  <style>
+    .throw-input {
+      width: 15rem;
+    }
+  </style>
+{% endblock style %}
+
+
+{% block content %}
+  <div class="container mt-5 fw-bold">
+    <form action="{% url 'articles:catch' %}" class="d-flex">
+      <input type="text" name="data" class="form-control me-3 throw-input" placeholder="내용 입력">
+      <input type="submit" value="Throw" class="btn btn-outline-primary">
+    </form>
+    <div class="mt-5">
+      <a href="{% url 'articles:index' %}" class="fs-5 mt-5">index.html</a>
+    </div>
+  </div>
+{% endblock content %}

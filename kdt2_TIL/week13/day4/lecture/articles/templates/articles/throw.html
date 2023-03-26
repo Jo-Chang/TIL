@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block title %}
+  <title>Throw & Catch</title>
+{% endblock title %}
+
+{% block content %}
+  <h1>Throw</h1>
+  <form action="{% url 'articles:catch' %}" method="GET">
+    <input type="text" name="message">
+    <input type="submit">
+  </form>
+{% endblock content %}

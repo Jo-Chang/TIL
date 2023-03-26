@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <div class="container mt-5">
+    <h1>index.html</h1>
+    <a href="{% url 'articles:dinner' %}" class="fs-4 me-3">dinner</a>
+    <a href="{% url 'articles:search' %}" class="fs-4 me-3">search</a>
+    <a href="{% url 'articles:throw' %}" class="fs-4 me-3">throw</a>
+    <a href="{% url 'pages:index' %}" class="fs-4 me-3">pages:index</a>
+  </div>
+{% endblock content %}

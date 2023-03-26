@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+  <div class="container mt-5">
+    <h2>더하기 : {{ plus }}</h2>
+    <h2>빼기 : {{ minus }}</h2>
+    <h2>곱하기 : {{ multiply }}</h2>
+    <h2>몫 : {{ divisor }}</h2>
+    <a href="{% url 'articles:index' %}" class="fs-5">index.html</a>
+  </div>
+{% endblock content %}

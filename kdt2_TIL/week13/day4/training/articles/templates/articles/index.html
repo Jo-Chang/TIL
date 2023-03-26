@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+  <div class="container mt-5 mx-auto">
+    <h1 class="fw-bold">index.html</h1>
+    <a href="{% url 'articles:throw' %}" class="fs-4 me-2">throw</a>
+    <a href="{% url 'articles:catch' %}" class="fs-4 me-2">catch</a>
+    <div class="mt-5">
+      <h2 class="fw-bold">For number-print</h2>
+      <ul class="list-unstyled">
+        {% comment %} <li><a href="{% url 'articles:number-print' %}" class="fs-5">1</a></li> {% endcomment %}
+        <li><a href="/number-print/1/" class="fs-5">1</a></li>
+        <li><a href="/number-print/2/" class="fs-5">2</a></li>
+        <li><a href="/number-print/3/" class="fs-5">3</a></li>
+        <li><a href="/number-print/9999/" class="fs-5">9999</a></li>
+      </ul>
+    </div>
+    <div class="mt-5">
+      <h2 class="fw-bold">For calculate</h2>
+      <ul class="list-unstyled">
+        {% comment %} <li><a href="{% url 'articles:number-print' %}" class="fs-5">1</a></li> {% endcomment %}
+        <li><a href="/calculate/2/1/" class="fs-5">2 1</a></li>
+        <li><a href="/calculate/10/5/" class="fs-5">10 5</a></li>
+        <li><a href="/calculate/8/4/" class="fs-5">8 4</a></li>
+        <li><a href="/calculate/10/3/" class="fs-5">10 3</a></li>
+      </ul>
+    </div>
+  </div>
+{% endblock content %}
