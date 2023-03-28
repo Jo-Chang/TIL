@@ -11,30 +11,15 @@
 <!--a style="display:scroll; position:fixed; bottom:10px; right:5px;" href="#" title="top"><img src="assets/images/btn_top.png"></a-->
 
 
-## Contents
-<br>
+## :zap: Contents
 
 - [CLI & Git](#cli--git)
-<br>
-
 - [Python Basic](#python-basic)
-<br>
-
 - [Data Structure](#python-data-structure)
-<br>
-
 - [Web](#web)
-<br>
-
 - [Django](#django)
-<br>
-
 - [Project](#project)
-<br>
-
 - [ETC](#tips)
-<br>
-
 
 -----
 
@@ -179,6 +164,7 @@
 
 - [Django - model](week13/day5/week13-5.md)
 
+- [Django - ORM](week14/day1/week14-1.md)
 
 -----
 
