@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block title %}
+  <title>index.html</title>
+{% endblock title %}
+
+{% block style %}
+  <style>
+    .card-width {
+      width: 22rem;
+    }
+  </style>
+{% endblock style %}
+
+{% block content %}
+  <div class="container mt-2 p-5">
+    <h1 class="">index.html</h1>
+    {% comment %} link new {% endcomment %}
+    <div class="mb-4">
+      <a href="{% url 'articles:new' %}" class="fs-4 fw-bold text-decoration-none">New</a>
+    </div>
+    <ul>
+      {% for article in articles %}
+      <li class="fw-bold">
+        <span>{{ article.pk }}.</span>
+        <a href="{% url 'articles:detail' article.pk %}"> {{ article.title }}</a>
+      </li>
+      {% endfor %}
+    </ul>
+    <h5>{{ articles }}</h5>
+    <div class="mt-5">
+      <a href="{% url 'articles:index' %}">[Home]</a>
+    </div>
+  </div>
+{% endblock content %}

@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block title %}
+  <title>Detail No. {{ article.pk }}</title>
+{% endblock title %}
+{% block style %}
+  <style>
+    .card-width {
+      width: 30rem;
+    }
+  </style>
+{% endblock style %}
+
+
+{% block content %}
+  <div class="container mt-5">
+    <div class="card card-width">
+      <div class="card-header fw-bold">{{ article.title }}</div>
+      <div class="card-body">{{ article.content }}</div>
+      <div class="card-footer">
+        <p class="mb-0">작성일 : {{ article.created_at }}</p>
+        <p class="mb-0">수정일 : {{ article.updated_at }}</p>
+      </div>
+    </div>
+    <div class="mt-5">
+      <a href="{% url 'articles:index' %}">[Home]</a>
+    </div>
+  </div>
+{% endblock content %}

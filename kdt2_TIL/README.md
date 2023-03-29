@@ -166,6 +166,7 @@
 
 - [Django - ORM](week14/day1/week14-1.md)
 
+- [Django - ORM, ORM with view](week14/day2/week14-2.md)
 -----
 
 
