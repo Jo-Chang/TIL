@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% block title %}
+  <title>Detail</title>
+{% endblock title %}
+
+{% block content %}
+  <div class="container mt-5">
+    <h1 class="fw-bold mb-3">Detail</h1>
+    <h4 class="fw-bold text-secondary mb-4">ID. {{ todo.pk }}</h4>
+    <div class="card card-width">
+      <div class="card-header fs-4 fw-bold">{{ todo.title }}</div>
+      <div class="card-body">
+        <p class="fs-5">{{ todo.content }}</p>
+        <hr>
+        <div>
+          <span>상태 :</span>
+          {% if todo.complted == False %}
+            <span class="text-danger fw-bold">미완료</span>
+          {% else %}
+            <span class="text-success fw-bold">완료</span>
+          {% endif %}
+        </div>
+        <div>
+          <span>우선순위 : </span>
+          <span class="fw-bold">{{ todo.priority }}</span>
+        </div>
+        <div>
+          <span>마감 기한 : </span>
+          <span class="fw-bold">{{ todo.deadline }}</span>
+        </div>
+      </div>
+      <div class="card-footer">
+        <span>생성일 : </span>
+        <span class="fw-bold">{{ todo.created_at }}</span>
+      </div>
+    </div>
+    <div class="mt-5">
+      <a href="{% url 'todos:index' %}" class="text-decoration-none">[home]</a>
+    </div>
+  </div>
+{% endblock content %}

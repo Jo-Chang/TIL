@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block title %}
+  <title>New & Create</title>
+{% endblock title %}
+
+{% block content %}
+  <div class="container mt-5">
+    <h1 class="fw-bold">Create</h1>
+    <h4>
+      <span>Save</span>
+      {% if flag %}
+      <span>Success!</span>
+      <div>
+        <span>"{{ todo.pk }}. </span>
+        <span>{{ todo.title }}"</span>
+      </div>
+      {% else %}
+      <span>Fail...</span>
+      {% endif %}
+    </h4>
+    <div class="mt-5">
+      <a href="{% url 'todos:detail' todo.pk %}" class="text-decoration-none">Detail</a>
+    </div>
+    <div class="mt-5">
+      <a href="{% url 'todos:index' %}" class="text-decoration-none">[home]</a>
+    </div>
+  </div>
+{% endblock content %}

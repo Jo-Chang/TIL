@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+{% block title %}
+  <title>New & Create</title>
+{% endblock title %}
+
+{% block content %}
+  <div class="container mt-5">
+    <h1 class="fw-bold mb-4">New</h1>
+    <div class="card-width">
+      <form action="{% url 'todos:create' %}">
+        <div class="mb-4">
+          <label for="title" class="fw-bold mb-2">title</label>
+          <input type="text" placeholder="title" name="title"
+          class="form-control">
+        </div>
+        <div class="mb-4">
+          <label for="content" class="fw-bold mb-2">content</label>
+          <textarea type="text" placeholder="content" cols="25" rows="5" name="content"
+          class="form-control"></textarea>
+        </div>
+        <div class="form-check">
+          <input type="checkbox" class="form-check-input" id="check" default="False" value="True" name="completed">
+          <label for="check" class="form-check-label fw-bold mb-2">completed</label>
+        </div>
+        <div class="mb-4 w-50">
+          <label for="priority" class="fw-bold mb-2">priority</label>
+          <input type="number" placeholder="priority" min="0" max="20" value="3" name="priority"
+          class="form-control">
+        </div>
+        <div class="mb-4 w-50">
+          <label for="deadline" class="fw-bold mb-2">deadline</label>
+          <input type="date" placeholder="deadline" name="deadline"
+          class="form-control">
+        </div>
+        <div>
+          <input type="submit" value="할 일 생성" class="btn btn-outline-primary">
+        </div>
+      </form>
+    </div>
+    <div class="mt-5">
+      <a href="{% url 'todos:index' %}" class="text-decoration-none">[home]</a>
+    </div>
+  </div>
+{% endblock content %}
