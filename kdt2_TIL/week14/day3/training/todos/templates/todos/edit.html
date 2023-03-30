@@ -9,6 +9,44 @@
 {% block content %}
   <div class="container mt-5">
 
+    <h1 class="fw-bold mb-3">Edit</h1>
+
+    <div class="mb-2 card-width">
+      <form action="{% url 'todos:update' todo.pk %}" method="POST"
+      class="">
+        {% csrf_token %}
+        <div class="mb-2">
+          <label for="" class="mb-1 fw-bold">할 일 제목</label>
+          <input type="text" name='title' id="title" placeholder="제목" value="{{ todo.title }}"
+          class="form-control">
+        </div>
+
+        <div class="mb-2">
+          <label for="content" class="mb-1 fw-bold">할 일 내용</label>
+          <textarea name="content" id="content" cols="25" rows="10" placeholder="내용"
+          class="form-control">{{ todo.content }}</textarea>
+        </div>
+        
+        <div class="mb-2 w-25">
+          <label for="priority" class="mb-1 fw-bold">우선순위</label>
+          <input type="number" name="priority" id="priority" placeholder="우선순위" min="1" max="20" value="{{ todo.priority }}"
+          class="form-control">
+        </div>
+        
+        <div class="mb-2 w-50">
+          <label for="deadline" class="mb-1 fw-bold">마감 기한</label>
+          <input type="date" name="deadline" id="deadline" placeholder="마감 기한" value="{{ todo.deadline|date:"Y-m-d" }}"
+          class="form-control">
+        </div>
+
+        <div class="mt-4">
+          <input type="submit" value="적용"
+          class="btn btn-outline-primary">
+        </div>
+
+      </form>
+    </div>
+
     {% comment %} Home {% endcomment %}
     <div class="mt-5">
       <a href="{% url 'todos:index' %}" class="text-decoration-none">[Home]</a>

@@ -15,10 +15,10 @@
       <form action="{% url 'todos:create' %}" method="POST"
       class="">
         {% csrf_token %}
-        <div class="mb-2">
-          <label for="" class="mb-1 fw-bold">할 일 제목</label>
+        <div class="mb-2 form-floating">
           <input type="text" name='title' id="title" placeholder="제목"
           class="form-control">
+          <label for="" class="fw-bold text-secondary">할 일 제목</label>
         </div>
 
         <div class="mb-2">
@@ -29,7 +29,7 @@
         
         <div class="mb-2 w-25">
           <label for="priority" class="mb-1 fw-bold">우선순위</label>
-          <input type="number" name="priority" id="priority" value="3" placeholder="우선순위"
+          <input type="number" name="priority" id="priority" value="3" min="1" max="20" placeholder="우선순위"
           class="form-control">
         </div>
         

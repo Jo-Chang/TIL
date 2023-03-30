@@ -19,12 +19,22 @@
       <ul>
         {% for todo in todos %}
         <li class="fs-6">
-          <span>{{ todo.pk }}. </span>
-          <a href="{% url 'todos:detail' todo.pk %}" class="fw-bold">{{ todo.title }}</a>
-          <span> - </span>
-          <form action="" class="d-inline-block">
-            <input type="checkbox" id="check" class="form-check-input">
-          </form>
+          <div class="d-flex align-items-center">
+            <span class="me-1">{{ todo.pk }}. </span>
+            <a href="{% url 'todos:detail' todo.pk %}" class="fw-bold me-2">{{ todo.title }}</a>
+            <span class="me-1 fw-bold"> - </span>
+            {% if todo.completed %}
+              <form action="{% url 'todos:check_completed' todo.pk 0 %}" method="POST" class="d-inline-block">
+                {% csrf_token %}
+                <input type="submit" class="btn text-success" value="완료" name="completed">
+              </form>
+            {% else %}
+              <form action="{% url 'todos:check_completed' todo.pk 1 %}" method="POST" class="d-inline-block">
+                {% csrf_token %}
+                <input type="submit" class="btn text-danger" value="미완료" name="completed">
+              </form>
+             {% endif %}
+            </div>
           </li>
         {% endfor %}
       </ul>
