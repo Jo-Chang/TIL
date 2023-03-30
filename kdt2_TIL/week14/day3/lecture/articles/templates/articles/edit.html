@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+
+
+{% block title %}
+  <title>Edit</title>
+{% endblock title %}
+
+{% block style %}
+  <style>
+    .container-width {
+      width: 50rem;
+    }
+    .title-width {
+      width: 25rem;
+    }
+    .content-width {
+      width: 25rem;
+    }
+    .btn-width {
+      width: 5rem;
+    }
+  </style>
+{% endblock style %}
+
+{% block content %}
+  <div class="container mt-5 container-width">
+    <h1 class="fw-bold mb-3">Edit</h1>
+    <form action="{% url 'articles:update' article.pk %}" class="d-flex flex-column" method="POST">
+      {% csrf_token %}
+      {% comment %} title input field {% endcomment %}
+      <div>
+        <label for="title" class="fw-bold mb-1 fs-5">제목</label>
+        <input type="text" name="title" id="title" placeholder="title" value="{{ article.title }}"
+        class="form-control mb-2 me-3 title-width">
+      </div>
+      {% comment %} content input field {% endcomment %}
+      <div>
+        <label for="content" class="fw-bold mb-1 fs-5">내용</label>
+        <textarea name="content" id="content" placeholder="content" cols="10" rows="5"
+        class="form-control mb-2 me-3 content-width">{{ article.content }}</textarea>
+      </div>
+      {% comment %} submit 버튼 {% endcomment %}
+      <input type="submit" class="btn btn-outline-primary btn-width mt-3">
+    </form>
+    <div class="mt-5">
+      <a href="{% url 'articles:index' %}">[Home]</a>
+    </div>
+  </div>
+{% endblock content %}

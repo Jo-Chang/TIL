@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}
+  <title>New & Create</title>
+{% endblock title %}
+
+{% block content %}
+  <div class="container mt-5">
+    <h1>Create Success!</h1>
+    <div class="mt-5">
+      <a href="{% url 'articles:detail' article.pk %}" class="fs-5">details</a>
+    </div>
+    <div class="mt-5">
+      <a href="{% url 'articles:index' %}" class="fs-5">[Home]</a>
+    </div>
+  </div>
+{% endblock content %}
