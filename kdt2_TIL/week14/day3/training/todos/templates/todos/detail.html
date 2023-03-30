@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+
+
+{% block title %}
+  <title>Detail</title>
+{% endblock title %}
+
+
+{% block content %}
+  <div class="container mt-5">
+
+    <h1 class="fw-bold">Details</h1>
+    <h4 class="fw-bold text-secondary">No. {{ todo.pk }}</h4>
+    <div class="card card-width">
+      <div class="card-header fw-bold fs-5">{{ todo.title }}</div>
+      <div class="card-body">
+        <p class="">{{ todo.content }}</p>
+        <hr>
+        <div>
+          <small>상태 : </small>
+          {% if todo.completed %}
+            <small class="text-success fw-bold">완료</small>
+          {% else %}
+            <small class="text-danger fw-bold">미완료</small>
+          {% endif %}
+        </div>
+        <div>
+          <small>우선 순위 : </small>
+          <small class="fw-bold">{{ priority }}</small>
+        </div>
+        <div>
+          <small>마감 기한 : </small>
+          <small class="fw-bold">{{ todo.deadline }}</small>
+        </div>
+      </div>
+      <div class="card-footer d-flex justify-content-between">
+        <div class="">
+          <small class="">생성일 : </small>
+          <small class="fw-bold">{{ todo.created_at }}</small>
+        </div>
+        <div class="align-self-end d-flex">
+          <div class="me-3">
+            <a href="{% url 'todos:edit' todo.pk %}" class="btn btn-outline-primary lh-1">수정</a>
+          </div>
+          <form action="{% url 'todos:delete' todo.pk %}">
+            <input type="submit" class="btn btn-danger lh-1" value="삭제">
+          </form>
+        </div>
+      </div>
+    </div>
+
+    {% comment %} Home {% endcomment %}
+    <div class="mt-5">
+      <a href="{% url 'todos:index' %}" class="text-decoration-none">[Home]</a>
+    </div>
+
+  </div>
+{% endblock content %}
