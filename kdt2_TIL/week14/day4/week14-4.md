@@ -23,3 +23,23 @@
 - 가계부 분류에 따라 다른 디자인
 - 가계부 분류별 조회
 - 특정 기준으로 정렬해서 조회
+```py
+# settings.py
+INSTALLED_APPS = [
+  ...,
+  'django.contrib.humanize',
+  ...
+]
+```
+```py
+# index.html
+{% extends ... %}
+{% load humanize %}
+
+...
+{{ intVar|incomma }}
+```
+```html
+<!-- detail.html -->
+<input type="number" ... step="1000">
+```
