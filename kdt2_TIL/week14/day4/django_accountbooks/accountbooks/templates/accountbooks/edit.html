@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+
+
+{% block title %}
+  <title>Edit & Update</title>
+{% endblock title %}
+
+
+{% block content %}
+  <div class="container mt-5">
+    <h1 class="fw-bold mb-3">Edit</h1>
+
+    <form action="{% url 'account-books:update' data.pk %}" method="POST" class="card-width">
+      {% csrf_token %}
+      <div class="mb-2">
+        <label for="note" class="mb-1 fw-bold form-label">내용</label>
+        <input type="text" name="note" id="note" placeholder="내용" value="{{ data.note }}"
+        class="form-control">
+      </div>
+
+      <div class="mb-2">
+        <label for="category" class="mb-1 fw-bold form-label">분류</label>
+        <input type="text" name="category" id="category" placeholder="분류" value="{{ data.category}}"
+        class="form-control">
+      </div>
+      
+      <div class="mb-2">
+        <label for="amount" class="mb-1 fw-bold form-label">사용 금액</label>
+        <input type="number" name="amount" id="amount" placeholder="사용 금액" value="{{ data.amount }}"
+        class="form-control w-25">
+      </div>
+      
+      <div class="mb-2">
+        <label for="date" class="mb-1 fw-bold form-label">사용 날짜</label>
+        <input type="date" name="date" id="date" placeholder="사용 날짜" value="{{ data.date|date:'Y-m-d'}}"
+        class="form-control w-50">
+      </div>
+      
+      <div class="mb-4">
+        <label for="description" class="mb-1 fw-bold form-label">메모</label>
+        <textarea type="date" name="description" id="description" placeholder="메모"
+        class="form-control">{{ data.description }}</textarea>
+      </div>
+      
+      <div class="mb-2">
+        <input type="submit" class="btn btn-outline-primary" value="수정하기">
+      </div>
+      
+      <div class="mt-5">
+        <a href="{% url 'account-books:index' %}">[Home]</a>
+      </div>
+
+    </form>
+  </div>
+{% endblock content %}

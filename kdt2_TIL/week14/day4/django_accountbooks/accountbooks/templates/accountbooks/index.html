@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+
+{% block title %}
+  <title>index</title>
+{% endblock title %}
+
+
+{% block content %}
+  <div class="container mt-5">
+    <h1 class="fw-bold mb-2">index</h1>
+
+    <div class="mb-3">
+      <a href="{% url 'account-books:new' %}" class="fw-bold mb-3 fs-4">New</a>
+    </div>
+
+    <div>
+      <table class="table table-hover">
+        <thead>  
+          <tr class="">
+            <th scope="col">
+              <form action="{% url 'account-books:index' %}" method="POST">
+                {% csrf_token %}
+                <label for="ID">ID </label>
+                <input type="submit" name="ID" value="{{ order.id|yesno:'False,True' }}" id="ID" hidden>
+              </form>
+            </th>
+            <th scope="col">내용</th>
+            <th scope="col">분류</th>
+            <th scope="col">사용 금액</th>
+            <th scope="col">사용 날짜</th>
+          </tr>
+        </thead>
+        <tbody class="">
+          {% for account in accountbooks %}
+            <tr>
+              <th scope="row">{{ account.pk }}</th>
+              <td>
+                <a class="d-block text-dark" href="{% url 'account-books:detail' account.pk %}">{{ account.note }}</a>
+              </td>
+              <td><a class="d-block text-dark" href="{% url 'account-books:detail' account.pk %}">{{ account.category }}</a></td>
+              <td><a class="d-block text-dark" href="{% url 'account-books:detail' account.pk %}">{{ account.amount }}</a></td>
+              <td><a class="d-block text-dark" href="{% url 'account-books:detail' account.pk %}">{{ account.date }}</a></td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+
+      <div class="mt-5">
+        <a href="{% url 'account-books:index' %}">[Home]</a>
+      </div>
+
+    </div>
+  </div>
+{% endblock content %}

@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+
+
+{% block title %}
+  <title>New & Create</title>
+{% endblock title %}
+
+
+{% block content %}
+  <div class="container mt-5">
+    <h1 class="fw-bold mb-3">New</h1>
+
+    <form action="{% url 'account-books:create' %}" method="POST" class="card-width">
+      {% csrf_token %}
+      <div class="mb-2">
+        <label for="note" class="mb-1 fw-bold form-label">내용</label>
+        <input type="text" name="note" id="note" placeholder="내용"
+        class="form-control">
+      </div>
+      
+      <div class="mb-2">
+        <label for="category" class="mb-1 fw-bold form-label">분류</label>
+        <input type="text" name="category" id="category" placeholder="분류"
+        class="form-control">
+      </div>
+      
+      <div class="mb-2">
+        <label for="amount" class="mb-1 fw-bold form-label">사용 금액</label>
+        <input type="number" name="amount" id="amount" placeholder="사용 금액" value="0"
+        class="form-control w-25">
+      </div>
+      
+      <div class="mb-2">
+        <label for="date" class="mb-1 fw-bold form-label">사용 날짜</label>
+        <input type="date" name="date" id="date" placeholder="사용 날짜"
+        class="form-control w-50">
+      </div>
+      
+      <div class="mb-4">
+        <label for="description" class="mb-1 fw-bold form-label">메모</label>
+        <textarea type="date" name="description" id="description" placeholder="메모"
+        class="form-control"></textarea>
+      </div>
+      
+      <div class="mb-2">
+        <input type="submit" class="btn btn-outline-primary" value="가계부 작성">
+      </div>
+      
+      <div class="mt-5">
+        <a href="{% url 'account-books:index' %}">[Home]</a>
+      </div>
+
+    </form>
+  </div>
+{% endblock content %}

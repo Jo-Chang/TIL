@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+
+{% block title %}
+  <title>Detail</title>
+{% endblock title %}
+
+
+{% block content %}
+  <div class="container mt-5">
+    <h1>Detail</h1>
+    <h4 class="text-secondary mb-3">No. {{ accountbook.pk }}</h4>
+
+    <div class="card card-width">
+      <div class="card-header fs-5 fw-bold">
+        {{ accountbook.note }}
+      </div>
+      <div class="card-body">
+        <p>{{ accountbook.description }}</p>
+        <hr>
+        <div class="">
+          <span>분류 : </span>
+          <span class="fw-bold">{{ accountbook.category }}</span>
+        </div>
+        <div>
+          <span>사용 금액 : </span>
+          <span class="fw-bold">{{ accountbook.amount }}원</span>
+        </div>
+        <div>
+          <span>사용 날짜 : </span>
+          <span class="fw-bold">{{ accountbook.date }}</span>
+        </div>
+      </div>
+      <div class="card-footer">
+        <p class="fw-bold">{{ accountbook.updated_at }}</p>
+      </div>
+    </div>
+
+    <div class="d-flex mt-3">
+      <a href="{%url 'account-books:edit' accountbook.pk %}" class="btn btn-outline-primary me-2">수정하기</a>
+      <form action="{% url 'account-books:delete' accountbook.pk %}" method="POST">
+        {% csrf_token %}
+        <input type="submit" class="btn btn-danger me-2" value="삭제하기">
+      </form>
+      <form action="{% url 'account-books:copy' accountbook.pk %}" method="POST">
+        {% csrf_token %}
+        <input type="submit" class="btn btn-primary" value="복사하기">
+      </form>
+    </div>
+
+    <div class="mt-5">
+      <a href="{% url 'account-books:index' %}">[Home]</a>
+    </div>
+
+  </div>
+{% endblock content %}
