@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+{% block title %}
+  <title>Detail No. {{ article.pk }}</title>
+{% endblock title %}
+{% block style %}
+  <style>
+    .card-width {
+      width: 30rem;
+    }
+  </style>
+{% endblock style %}
+
+
+{% block content %}
+  <div class="container mt-5">
+    
+    <div class="card card-width">
+      <div class="card-header fw-bold">{{ article.title }}</div>
+      <div class="card-body">{{ article.content }}</div>
+      <div class="card-footer d-flex justify-content-between">
+        <div>
+          <p class="mb-0">작성일 : {{ article.created_at }}</p>
+          <p class="mb-0">수정일 : {{ article.updated_at }}</p>
+        </div>
+        <div class="align-self-end d-flex">
+          {% comment %} <form action="{% url 'articles:edit' article.pk %}" method="GET" class="me-2"> {% endcomment %}
+          <form action="{% url 'articles:new_update' article.pk %}" method="GET" class="me-2">
+            {% csrf_token %}
+            <input type="submit" value="EDIT" class="btn btn-outline-primary lh-1">
+          </form>
+          <form action="{% url 'articles:delete' article.pk %}" method="POST">
+            {% csrf_token %}
+            <input type="submit" value="DELETE" class="btn btn-danger lh-1">
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-5">
+      <a href="{% url 'articles:index' %}" class="btn btn-outline-success">Home</a>
+    </div>
+    
+  </div>
+{% endblock content %}

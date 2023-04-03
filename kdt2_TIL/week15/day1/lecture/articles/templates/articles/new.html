@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+
+{% block title %}
+  <title>New & Create</title>
+{% endblock title %}
+
+{% block style %}
+  <style>
+    .container-width {
+      width: 50rem;
+    }
+    .title-width {
+      width: 25rem;
+    }
+    .content-width {
+      width: 25rem;
+    }
+    .btn-width {
+      width: 5rem;
+    }
+  </style>
+{% endblock style %}
+
+{% block content %}
+  <div class="container mt-5 container-width">
+
+    <h1 class="fw-bold mb-3">New</h1>
+    
+    <form action="{% url 'articles:create' %}" method="POST">
+      {% csrf_token %}
+      {{ form.as_p }}
+      <input type="submit" class="btn btn-outline-primary btn-width mt-3">
+    </form>
+
+    <div class="mt-5">
+      <a href="{% url 'articles:index' %}" class="btn btn-outline-success">Home</a>
+    </div>
+
+  </div>
+{% endblock content %}

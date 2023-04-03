@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+
+{% block title %}
+  <title>New-Create</title>
+{% endblock title %}
+
+{% block style %}
+{% endblock style %}
+
+{% block content %}
+  <div class="container mt-5 container-width">
+
+    <h1 class="fw-bold mb-3">New Create</h1>
+    
+    <form action="{% url 'articles:new_create' %}" method="POST">
+      {% csrf_token %}
+      {{ form.as_p }}
+      <input type="submit" value="Create" class="btn btn-outline-primary btn-width mt-3">
+    </form>
+
+    <div class="mt-5">
+      <a href="{% url 'articles:index' %}" class="btn btn-outline-success">Home</a>
+    </div>
+
+  </div>
+{% endblock content %}

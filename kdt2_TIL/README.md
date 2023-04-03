@@ -123,6 +123,7 @@
 - [Django - ORM](week14/day1/week14-1.md)
 - [Django - ORM with view CreateRead](week14/day2/week14-2.md)
 - [Django - ORM with view UpdateDelete](week14/day3/week14-3.md)
+- [Django - Form, Handling http requests](week15/day1/week15-1.md)
 
 
 -----
