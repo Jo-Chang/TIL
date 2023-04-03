@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+
+
+{% block title %}
+  <title>index</title>
+{% endblock title %}
+
+
+{% block content %}
+  <div class="container mt-5">
+    {% comment %} title {% endcomment %}
+    <h1 class="fw-bold mb-2">Index</h1>
+
+    <div class="mb-3">
+      <a href="{% url 'todos:create' %}" class="fs-3 fw-bold text-info">New</a>
+    </div>
+    
+    <table class="table table-hover" style="width:30rem;">
+      <thead class="table-primary">
+        <tr calss="">
+          <th class="col">#</th>
+          <th class="col">title</th>
+          <th class="col">completed</th>
+        </tr>
+      </thead>
+      <tbody class="">
+        {% for todo in todos %}
+        <tr>
+          <th scope="row" class="col">
+            <a href="{% url 'todos:detail' todo.pk %}" class="d-block w-100">{{ todo.pk }}</a>
+          </th>
+          <td class="col">
+            <a href="{% url 'todos:detail' todo.pk %}" class="d-block">{{ todo.title }}</a>
+          </td>
+          <td class="col">
+          {% if todo.completed %}
+            <a href="{% url 'todos:detail' todo.pk %}" class="d-block text-success">완료</a>
+            {% else %}
+            <a href="{% url 'todos:detail' todo.pk %}" class="d-block text-danger">미완료</a>
+          {% endif %}
+            </td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+
+    {% comment %} Home {% endcomment %}
+    <div class="mt-5">
+      <a href="{% url 'todos:index' %}" class="text-decoration-none btn btn-outline-success">Home</a>
+    </div>
+
+  </div>
+{% endblock content %}

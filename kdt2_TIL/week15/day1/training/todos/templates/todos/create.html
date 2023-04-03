@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+
+{% block title %}
+  <title>Create</title>
+{% endblock title %}
+
+
+{% block content %}
+  <div class="container mt-5">
+    <div>
+      <h1 class="fw-bold">Create</h1>
+    </div>
+
+    <div class="d-inline-block input-width">
+      <form action="{% url 'todos:create' %}" method="POST" class="">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="할 일 생성" class="btn btn-outline-primary">
+      </form>
+    </div>
+
+    <div class="mt-5">
+      <a href="{% url 'todos:index' %}" class="text-decoration-none btn btn-outline-success">Home</a>
+    </div>
+
+  </div>
+{% endblock content %}

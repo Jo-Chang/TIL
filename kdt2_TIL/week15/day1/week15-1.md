@@ -153,3 +153,5 @@ class ArticleForm(forms.ModelForm):
         model = Article
         fields = '__all__'
 ```
+
+- flex 속성 가지면 크롬 개발자 도구에서 justify-content, align-content 테스트 가능
