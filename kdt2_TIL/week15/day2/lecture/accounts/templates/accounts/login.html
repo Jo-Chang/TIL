@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+  <div class="container mt-5">
+    <h1 class="fw-bold">로그인</h1>
+
+    <form action="{% url 'accounts:login' %}" method="POST">
+      {% csrf_token %}
+      {{ form.as_p }}
+      <input type="submit" value="로그인">
+    </form>
+  </div>
+{% endblock content %}
