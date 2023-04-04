@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+
+{% block title %}
+  <title>Index</title>
+{% endblock title %}
+
+
+{% block content %}
+  <div class="container mt-5">
+
+    <h1 class="fw-bold">Login</h1>
+
+    <form action="{% url 'accounts:login' %}" method="POST" class="">
+      {% csrf_token %}
+      {{ form.as_p }}
+      <input type="submit" value="Login" class="btn btn-outline-primary">
+    </form>
+
+    <div class="my-5">
+      <a href="{% url 'accounts:index' %}" class="btn btn-outline-success">Home</a>
+    </div>
+
+  </div>
+{% endblock content %}

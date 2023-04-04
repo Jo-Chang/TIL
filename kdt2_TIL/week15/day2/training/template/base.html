@@ -1,0 +1,20 @@
+{% comment %} articles/base.html {% endcomment %}
+<!doctype html>
+<html lang="en">
+  {% load static %}
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+    <link rel="icon" href="https://oopy.lazyrockets.com/api/v2/notion/image?src=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F4c14a348-0f93-4541-91d6-dfe4f265d252%2Fhypergrowth_%25E1%2584%2585%25E1%2585%25A9%25E1%2584%2580%25E1%2585%25A9%25E1%2584%2589%25E1%2585%25B5%25E1%2586%25B7%25E1%2584%2587%25E1%2585%25A9%25E1%2586%25AF.png&blockId=a86012c3-a307-48f1-9c8f-0190bf2151cd&width=256">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    {% block title %}{% endblock title %}
+    {% block style %}{% endblock style %}
+  </head>
+  <body>
+    {% comment %} <h1>Hello, world! <small class="text-primary">from base.html</small></h1> {% endcomment %}
+    {% block content %}{% endblock content %}
+    {% block script %}{% endblock script %}
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
+  </body>
+</html>
