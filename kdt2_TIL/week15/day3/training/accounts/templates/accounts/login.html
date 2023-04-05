@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+
+{% block title %}
+  <title>Login</title>
+{% endblock title %}
+
+
+{% block content %}
+  <div class="container mt-5">
+    <h1 class="fw-bold mb-5">Login</h1>
+
+    <form action="{% url 'accounts:login' %}" method="post" class="my-3 input-width">
+      {% csrf_token %}
+      {{ form.as_p }}
+      <input type="submit" value="Login" class="btn btn-outline-primary">
+    </form>
+    
+    <div class="my-5 login-width w-25">
+      <h5 class="text-secondary">Customize later</h5>
+      {{ form.username.label }}:
+      {{ form.username }}
+    </div>
+
+  </div>
+{% endblock content %}

@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+
+{% block title %}
+  <title>Register</title>
+{% endblock title %}
+
+
+{% block content %}
+  <div class="container mt-5">
+    <h1 class="fw-bold">Sign Up</h1>
+
+    <form action="{% url 'accounts:sign_up' %}" method="POST" class="input-width">
+      {% csrf_token %}
+      {{ form.as_p }}
+      <input type="submit" value="Register" class="btn btn-primary">
+    </form>
+    
+  </div>
+{% endblock content %}

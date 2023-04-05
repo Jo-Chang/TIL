@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+
+
+{% block title %}
+  <title>Index</title>
+{% endblock title %}
+
+
+{% block content %}
+  <div class="container mt-5">
+    <h1 class="fw-bold">Index</h1>
+
+    <div class="my-3">
+      <h5 class="text-secondary">
+        <span class="">Hello, </span> 
+        <span class="fw-bold">{{ user }}</span>
+        <span class="fw-bold">{{ request.user.email }}</span>
+        <span class="fw-bold">{{ user.first_name }}</span>
+        <span class="fw-bold">{{ user.last_name }}</span>
+      </h5>
+    </div>
+
+    <div class="my-3">
+      <h3 class="fw-bold">User</h3>
+
+      <div class="d-flex">
+        {% if request.user.is_authenticated %}
+        <div class="me-3">
+          <a href="{% url 'accounts:update' %}" class="btn btn-primary">Information</a>
+        </div>
+        <form action="{% url 'accounts:logout' %}" method="post">
+          {% csrf_token %}
+          <input type="submit" value="Logout" class="btn btn-outline-danger">
+        </form>
+        {% else %}
+        <div class="me-3">
+          <a href="{% url 'accounts:login' %}" class="btn btn-outline-primary">Login</a>
+        </div>
+        {% endif %}
+      </div>
+    </div>
+    
+    <div class="my-3">
+      <h3 class="fw-bold">Register</h3>
+
+      <div class="d-flex">
+        {% if request.user.is_authenticated %}
+        <form action="{% url 'accounts:delete' %}" method="post">
+          {% csrf_token %}
+          <input type="submit" value="Withdrawal" class="btn btn-danger">
+        </form>
+        {% else %}
+        <div class="me-3">
+          <a href="{% url 'accounts:sign_up' %}" class="btn btn-outline-secondary">Sign Up</a>
+        </div>
+        {% endif %}
+      </div>
+
+    </div>
+
+  </div>
+{% endblock content %}
