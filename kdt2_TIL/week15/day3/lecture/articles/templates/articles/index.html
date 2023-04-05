@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+
+
+{% block title %}
+  <title>Index</title>
+{% endblock title %}
+
+{% block content %}
+<div class="container mt-5">
+
+  <h1 class="fw-bold mb-5">Index</h1>
+  <h6 class="text-secondary">Request message - {{ request }}</h6>
+  <h5 class="text-secondary">안녕하세요, {{ user }} 님!</h5>
+  <h3 class="fw-bold mb-3">Articles</h3>
+
+  <div class="mb-3">
+    <a href="{% url 'articles:create' %}" class="btn btn-outline-success">CREATE</a>
+  </div>
+
+  <h3 class="fw-bold">Login</h3>
+  <div class="d-flex mb-3">
+    {% if request.user.is_authenticated %}
+    <form action="{% url 'accounts:logout' %}" method="POST">
+      {% csrf_token %}
+      <input type="submit" value="Logout" class="btn btn-outline-danger">
+    </form>
+    {% else %}
+    <div class="me-2">
+      <a href="{% url 'accounts:login' %}" class="btn btn-outline-secondary">Login</a>
+    </div>
+    {% endif %}
+  </div>
+  
+  <h3 class="fw-bold">Register</h3>
+  <div class="d-flex">
+    {% if request.user.is_authenticated %}
+    <div class="me-2">
+      <a href="{% url 'accounts:update' %}" class="btn btn-outline-dark">회원 정보 수정</a>
+    </div>
+    <form action="{% url 'accounts:delete' %}" method="POST" class="me-2">
+      {% csrf_token %}
+      <input type="submit" value="회원 탈퇴" class="btn btn-danger">
+    </form>
+    {% else %}
+    <div class="me-2">
+      <a href="{% url 'accounts:signup' %}" class="btn btn-outline-secondary">회원 가입</a>
+    </div>
+    {% endif %}
+  </div>
+  
+  {% for article in articles %}
+  <p>제목: 
+    <a href="{% url 'articles:detail' article.pk %}">{{ article.title }}</a>
+  </p>
+  <p>내용: {{ article.content }}</p>
+  <hr>
+  {% endfor %}
+
+  <div class="my-5">
+    <a href="{% url 'articles:index' %}" class="btn btn-outline-success">Home</a>
+  </div>
+
+</div>
+{% endblock content %}
