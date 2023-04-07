@@ -1,0 +1,7 @@
+<ul class="ps-3">
+  {% for category in categories %}
+  <li id="id-category-list">
+    <a href="{% url 'posts:category' category.pk %}" class="no-wrap text-dark">{{ category.category }}</a>
+  </li>
+  {% endfor %}
+</ul>

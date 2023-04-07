@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+{% block title %}
+  DevShare
+{% endblock title %}
+
+
+{% block style %}
+  .custom-table-form {
+    width: 25rem;
+  }
+{% endblock style %}
+
+
+{% block content %}
+  <h3 class="fw-bold mb-4">게시글</h3>
+
+  <table class="table table-hover custom-table-form text-center">
+    <thead class="table-primary">
+      <tr>
+        <th class="col">#</th>
+        <th class="col">제목</th>
+        <th class="col">카테고리</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for post in posts %}
+          <th class="col">
+            <a href="{% url 'posts:detail' post.pk %}" class="d-block text-dark">{{ post.pk }}</a>
+          </th>
+          <td class="col-6">
+            <a href="{% url 'posts:detail' post.pk %}" class="d-block text-dark">{{ post.title }}</a>
+          </td>
+          <td class="col">
+            <a href="{% url 'posts:detail' post.pk %}" class="d-block text-dark">{{ post.category.category }}</a>
+          </td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+{% endblock content %}

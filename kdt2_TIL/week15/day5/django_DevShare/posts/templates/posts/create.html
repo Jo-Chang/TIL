@@ -1,0 +1,39 @@
+{% extends 'posts/index.html' %}
+
+
+{% block title %}
+  DevShare - Post Create
+{% endblock title %}
+
+
+{% block style %}
+{% endblock style %}
+
+
+{% block content %}
+<h3 class="fw-bold mb-4">게시글 생성</h3>
+
+<form action="{% url 'posts:create' %}" method="post">
+  {% csrf_token %}
+
+  <div class="mb-3">
+    <label for="{{ form.title.id_for_label }}" class="form-label">{{ form.title.label }}</label>
+    {{ form.title }}
+  </div>
+  <div class="mb-3">
+    <label for="{{ form.content.id_for_label }}" class="form-label">{{ form.content.label }}</label>
+    {{ form.content }}
+  </div>
+  {{ form.category }}
+  <br>
+  {% if form.category.errors %}
+    {% for error in form.category.errors %}
+      <p class="text-danger">
+        {{ error|escape }}
+      </p>
+    {% endfor %}
+  {% endif %}
+
+  <button type="submit" class="btn btn-primary mt-2">작성</button>
+</form>
+{% endblock content %}

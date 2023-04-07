@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block title %}
+DevShare - Sign Up
+{% endblock title %}
+
+{% block style %}
+  .custom-signup-form {
+    width: 200px;
+  }
+{% endblock style %}
+
+{% block content %}
+  <h3 class="fw-bold mb-4">회원가입</h3>
+  <form action="{% url 'accounts:signup' %}" method="POST" class="">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" class="btn btn-primary">회원가입</button>
+  </form>
+
+  {% if alert %}
+    <script>
+      alert('생일을 확인하세요')
+    </script>
+  {% endif %}
+{% endblock content %}

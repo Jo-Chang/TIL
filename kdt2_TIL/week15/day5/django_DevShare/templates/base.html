@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %}{% endblock title %}</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="icon" href="https://oopy.lazyrockets.com/api/v2/notion/image?src=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F4c14a348-0f93-4541-91d6-dfe4f265d252%2Fhypergrowth_%25E1%2584%2585%25E1%2585%25A9%25E1%2584%2580%25E1%2585%25A9%25E1%2584%2589%25E1%2585%25B5%25E1%2586%25B7%25E1%2584%2587%25E1%2585%25A9%25E1%2586%25AF.png&blockId=a86012c3-a307-48f1-9c8f-0190bf2151cd&width=256">
+    <style>
+      {% block style %}
+      {% endblock style %}
+      main {
+        min-width: 500px;
+      }
+      a {
+        text-decoration: none;
+      }
+      #sidebar {
+        min-width: 250px;
+      }
+      #content {
+        margin-left: 250px;
+      }
+      .custom-post-form {
+        width: 350px;
+      }
+      .custom-post-category-form {
+        width: 230px;
+      }
+      #id-category-list {
+        line-height: 1.8rem;
+      }
+      #id-category-list::marker {
+        content: "ㄴ";
+        color: gray;
+      }
+      #id-welcome {
+        font-size: 1.1rem;
+      }
+    </style>
+  </head>
+  <body>
+    {# 내브바 #}
+    {% include 'navbar.html' %}
+    <main class="d-flex">
+      {# 사이드바 #}
+      {% include 'sidebar.html' %}
+      <section id="content" class="container px-5 py-4">
+        {% block content %}
+          {# 글 목록 #}
+        {% endblock content %}
+      </section>
+    </main>
+    <script>
+      // const li = document.querySelector('li').classList.add("fw-bold")
+      const category = document.getElementById('category')
+      category.addEventListener('click', (e) => {
+        document.querySelectorAll('#id-category-list').forEach((e) => {
+          e.classList.add('fw-bold')
+        })
+      })
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+  </body>
+</html>

@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block title %}
+  DevShare - 회원정보 수정
+{% endblock title %}
+
+
+{% block style %}
+  .custom-update-form {
+    width: 200px;
+  }
+{% endblock style %}
+
+
+{% block content %}
+  <h3 class="fw-bold mb-4">회원정보 수정</h3>
+  <form action="{% url 'accounts:update' %}" method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" class="btn btn-primary">회원정보수정</button>
+  </form>
+
+  {% if alert %}
+  <script>
+    // alert
+    document.getElementById('{{ form.birthday.id_for_label }}').focus()
+    alert('생일을 확인하세요')
+  </script>
+  {% endif %}
+{% endblock content %}

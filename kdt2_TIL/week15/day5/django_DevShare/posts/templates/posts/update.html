@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+
+{% block title %}
+  DevShare - [ {{ pk }} ]
+{% endblock title %}
+
+
+{% block content %}
+  <h3 class="fw-bold mb-4">게시글 수정 - [ {{ pk }} ]</h3>
+
+  <form action="{% url 'posts:update' pk %}" method="post">
+    {% csrf_token %}
+
+    {{ form.as_p }}
+
+    <button type="submit" class="btn btn-primary">수정</button>
+  </form>
+{% endblock content %}

@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+{% block title %}
+  DevShare - [ {{ pk }} ]
+{% endblock title %}
+
+{% block style %}
+  .custom-content-form {
+    width: 40rem;
+  }
+  .custom-hr {
+    min-width: 30rem;
+  }
+{% endblock style %}
+
+{% block content %}
+    {% for key, val in post %}
+      {% if key == '제목' %}
+        <div class="fs-5 fw-bold mb-3">[ {{ pk }} ] {{ val }}</div>
+        <hr class="w-50 custom-hr">
+      {% elif key == '작성일' %}
+        <hr class="w-50 custom-hr"> 
+        <div class="">
+          <small>{{ key }} - </small>
+          <small class="fw-bold">{{ val }}</small>
+        </div>
+      {% else %}
+        <p class="my-4 custom-content-form">
+          <span>{{ key }}:</span>
+          <span class="fw-bold">{{ val }}</span>
+        </p>
+      {% endif %}
+    {% endfor %}
+  </div>
+
+  <form action="{% url 'posts:delete' pk %}" method="post" class="my-5">
+    {% csrf_token %}
+    <a href="{% url 'posts:update' pk %}" class="btn btn-dark">EDIT</a>
+    <button type="submit" class="btn btn-primary">DELETE</button>
+  </form>
+{% endblock content %}

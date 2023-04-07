@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block title %}
+  DevShare - Login
+{% endblock title %}
+
+{% block style %}
+  .custom-login-field-form {
+    width: 250px;
+  }
+{% endblock style %}
+
+{% block content %}
+  <div class="d-flex justify-content-center vh-100">
+    <div class="custom-login-field-form">
+      <h3 class="fw-bold mb-3 text-center">로그인</h3>
+      <form action="{% url 'accounts:login' %}" method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn btn-primary mt-3 container-fluid">로그인</button>
+      </form>
+    </div>
+  </div>
+{% endblock content %}

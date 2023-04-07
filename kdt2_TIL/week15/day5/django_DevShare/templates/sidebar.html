@@ -1,0 +1,24 @@
+<section class="d-flex flex-column position-fixed px-3 mt-3" id="sidebar">
+  <span class="fs-5 text-center mt-3 fw-bold">IT 정보 공유</span>
+  <hr>
+  <div class="container d-flex flex-column">
+    <a href="{% url 'posts:index' %}" class="no-wrap text-dark mb-2">전체 글 보기</a>
+    <a href="{% url 'posts:create' %}" class="no-wrap text-danger">글 작성하기</a>
+    <hr>
+    <h6 class="fw-bold" id="category">카테고리</h6>
+    {% include 'categories.html' %}
+    {% if request.user.is_superuser %}
+      <a href="{% url 'posts:add_category' %}">
+        <h6 class="fw-bold" id="add_category">카테고리 추가</h6>
+      </a>
+    {% endif %}
+  </div>
+</section>
+
+<script>
+  {% if request.path in "/accounts/signup/,/accounts/login/,/accounts/update/,/accounts/password/" %}
+    document.querySelectorAll('h6').forEach((e) => {
+      e.textContent = ''
+    })
+  {% endif %}
+</script>

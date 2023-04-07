@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<form action="{% url 'posts:add_category' %}" method="post">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <button type="submit">추가</button>
+</form>
+{% endblock content %}
