@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block content %}
+  <section class="container mt-3">
+    <h1 class="modal-title fs-3 fw-bold" id="exampleModalLabel">이미지 카드 수정</h1>
+    
+    <div class="mb-5">
+      {% if album.image %}
+        <img src="{{ album.image.url }}" alt="img" class="custom-sample-img">
+      {% else %}
+        <img src="{% static 'no-img.jpg' %}" alt="no img" class="custom-sample-img">
+      {% endif %}
+    </div>
+
+    <form action="{% url 'albums:update' album.pk %}" method="post" enctype="multipart/form-data">
+      {% csrf_token %}
+      {{ form.as_p }}
+      <button type="submit" class="btn btn-success mt-3">이미지 수정</button>
+    </form>
+  </section>
+{% endblock content %}

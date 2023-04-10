@@ -1,0 +1,25 @@
+.navbar-logo {
+  width: 10rem;
+}
+
+.no-img-logo {
+  width: 10rem;
+}
+
+.custom-card-img {
+  aspect-ratio: 5 / 5;
+}
+
+.custom-edit-delete-logo {
+  width: 1rem;
+  height: 1rem;
+}
+
+.custom-input-content-form {
+  width: 20rem;
+}
+
+.custom-sample-img {
+  display: inline-block;
+  width: 25rem;
+}

@@ -164,3 +164,6 @@ def articles_image_path(instance, filename):
   return f'images/{instance.user.username}/{filename}'
 image = models.ImageField(blank=True, upload_to='images/')
 ```
+
+- Django Image Resizing
+> https://django-imagekit.readthedocs.io/en/latest/
