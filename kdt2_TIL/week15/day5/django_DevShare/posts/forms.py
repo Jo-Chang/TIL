@@ -40,7 +40,7 @@ class PostForm(forms.ModelForm):
     #     # choices = [('개발', '개발'), ('CS', 'CS'), ('신기술', '신기술'), (None,'카테고리를 선택하세요')]
     # )
     q_set = Category.objects.all()
-    CHOICES = ((item.pk, item.category) for item in q_set)
+    # CHOICES = ((item.pk, item.category) for item in q_set)
     category = forms.ModelChoiceField(
         # choices = CHOICES,
         queryset=q_set, 
