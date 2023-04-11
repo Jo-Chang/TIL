@@ -6,7 +6,7 @@
     <h2 class="fw-bold mt-5">Update Review</h2>
 
     <div class="">
-      <form action="{% url 'reviews:update' review.pk %}" method="post">
+      <form action="{% url 'reviews:update' review.pk %}" method="post" enctype="multipart/form-data">
         {% csrf_token %}
         {{ review_form.as_p }}
         <button type="submit" class="btn btn-primary">리뷰 수정</button>

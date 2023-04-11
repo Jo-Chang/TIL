@@ -1,9 +1,16 @@
 {% extends 'base.html' %}
-
+{% load static %}
 
 {% block content %}
   {# Review Section #}
   <section class="container mt-5">
+    <div class="">
+      {% if review.image %}
+        <img src="{{ review.image.url }}" alt="image" class="custom-img">
+      {% else %}
+        <img src="{% static 'no-img.jpg' %}" alt="no image" class="custom-img">
+      {% endif %}
+    </div>
     <p class="fs-5">
       <span class="fw-bold">[ {{ review.movie }} ]</span>
       <span class="">&nbsp;-&nbsp;</span>
@@ -36,7 +43,7 @@
       {% for comment in comments %}
       <div class="col d-flex justify-content-between">
         <p class="">
-          <small class="fw-bold">({{ comment.pk }})</small>
+          <small class="fw-bold">[{{ comment.pk }}]</small>
           <span class="">&nbsp;</span>
           <span class="">{{ comment.content }}</span>
         </p>

@@ -20,7 +20,7 @@ def create(request):
     if request.method == 'GET':
         review_form = ReviewForm()
     else:
-        review_form = ReviewForm(data=request.POST)
+        review_form = ReviewForm(data=request.POST, files=request.FILES)
         if review_form.is_valid():
             review = review_form.save()
             return redirect('reviews:detail', review.pk)
@@ -54,7 +54,7 @@ def update(request, review_pk):
     if request.method == 'GET':
         review_form = ReviewForm(instance=review)
     else:
-        review_form = ReviewForm(data=request.POST, instance=review)
+        review_form = ReviewForm(data=request.POST, files=request.FILES, instance=review)
         if review_form.is_valid():
             review = review_form.save()
             return redirect('reviews:detail', review.pk)
