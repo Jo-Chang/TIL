@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+  {# Review Section #}
+  <section class="container mt-5">
+    <p class="fs-5">
+      <span class="fw-bold">[ {{ review.movie }} ]</span>
+      <span class="">&nbsp;-&nbsp;</span>
+      <span class="fw-bold">{{ review.title }}</span>
+    </p>
+    <hr>
+    <p class="">
+      <span class="fw-bold">{{ review.content }}</span>
+    </p>
+
+    <div class="d-flex mt-5">
+      <a href="{% url 'reviews:update' review.pk %}" class="btn btn-primary me-1">수정</a>
+      <form action="{% url 'reviews:delete' review.pk %}" method="post" class="">
+        {% csrf_token %}
+        <button type="submit" class="btn btn-danger">삭제</button>
+      </form>
+    </div>
+  </section>
+
+  {# Comment Section #}
+  <section class="container mt-5">
+    <hr>
+    <p class="fw-bold my-3">댓글목록 ({{ comments|length }})</p>
+    <form action="{% url 'reviews:comments_create' review.pk %}" method="post">
+      {% csrf_token %}
+      {{ comment_form }}
+      <button type="submit" class="btn btn-outline-primary my-2">댓글 작성</button>
+    </form>
+    <div class="my-3">
+      {% for comment in comments %}
+      <div class="col d-flex justify-content-between">
+        <p class="">
+          <small class="fw-bold">({{ comment.pk }})</small>
+          <span class="">&nbsp;</span>
+          <span class="">{{ comment.content }}</span>
+        </p>
+        <form action="{% url 'reviews:comments_delete' review.pk comment.pk %}" method="post">
+          {% csrf_token %}
+          <button type="submit" class="btn btn-outline-danger">댓글 삭제</button>
+        </form>
+      </div>
+      <hr>
+      {% empty %}
+        <p class="text-secondary">아직 댓글이 없습니다.</p>
+      {% endfor %}
+    </div>
+  </section>
+{% endblock content %}

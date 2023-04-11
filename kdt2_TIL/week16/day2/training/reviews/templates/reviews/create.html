@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+  <section class="container">
+    <h2 class="fw-bold mt-5">Create Review</h2>
+
+    <div class="">
+      <form action="{% url 'reviews:create' %}" method="post">
+        {% csrf_token %}
+        {{ review_form.as_p }}
+        <button type="submit" class="btn btn-primary">리뷰 생성</button>
+      </form>
+    </div>
+  </section>
+{% endblock content %}
