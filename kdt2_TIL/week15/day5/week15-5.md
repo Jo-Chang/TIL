@@ -25,3 +25,5 @@
 
 - Category 선택 시 Category fw-bold
 - Category 추가 기능 완성
+- Pagination
+- 조회수
