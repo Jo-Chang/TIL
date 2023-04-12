@@ -128,6 +128,7 @@
 - [Django - Authentication System2](week15/day3/week15-3.md)
 - [Django - Static files](week16/day1/week16-1.md)
 - [Django - Many to one relationships 1](week16/day2/week16-2.md)
+- [Django - Many to one relationships 2](week16/day3/week16-3.md)
 
 
 -----
