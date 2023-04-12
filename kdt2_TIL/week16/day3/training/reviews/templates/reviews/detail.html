@@ -1,0 +1,77 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+{% block content %}
+  <h3>DETAIL</h3>
+  <p class="fw-bold custom-text-red">
+    후기 작성자 -
+    {{review.user}}
+  </p>
+  <p>
+    후기 번호 -
+    {{review.pk}}
+  </p>
+  <p>
+    후기 제목 -
+    {{review.title}}
+  </p>
+  <p>
+    후기 내용 -
+    {{review.content}}
+  </p>
+  <p>
+    영화 이름 -
+    {{review.movie}}
+  </p>
+  <div class="">
+    {% if review.image %}
+      <img src="{{ review.image.url }}" alt="image" class="custom-img">
+    {% else %}
+      <img src="{% static 'no-img.jpg' %}" alt="no image" class="custom-img">
+    {% endif %}
+  </div>
+  {% if request.user == review.user %}
+    <div class="d-flex mb-2">
+      <a href="{% url 'reviews:update' review.pk %}" class="me-2">[edit]</a>
+      <form action="{% url 'reviews:delete' review.pk %}" method="post" class="">
+        {% csrf_token %}
+        <button href="" type="submit" class="bg-white border-0 p-0 d-inline text-primary">[delete]</button>
+      </form>
+    </div>
+  {% endif %}
+  <a href="{% url 'reviews:index' %}">[back]</a>
+  <hr>
+  <form action="{% url 'reviews:comment_create' review.pk %}" method="post">
+    {% csrf_token %}
+    {{ comment_form.as_p }}
+    <input type="submit" value="댓글 작성">
+  </form>
+  <hr>
+  <h3>
+    댓글 목록
+  </h3>
+  {% for comment in comments %}
+    <div>
+      <p class="fw-bold custom-text-red">댓글 작성자 -
+        {{ comment.user }}</p>
+      <p>
+        댓글 번호 -
+        {{comment.pk}}
+      </p>
+      <p>
+        댓글 내용 -
+        {{comment.content}}
+      </p>
+      {% if request.user == comment.user %}
+      <form action="{% url 'reviews:comment_delete' review.pk comment.pk %}" method="POST">
+        {% csrf_token %}
+        <input type="submit" value="댓글 삭제">
+      </form>
+      {% endif %}
+    </div>
+    <hr>
+    {% empty %}
+    <p class="text-secondary my-3">댓글이 없습니다.</p>
+  {% endfor %}
+{% endblock content %}
