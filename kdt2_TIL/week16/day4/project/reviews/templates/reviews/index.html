@@ -1,0 +1,29 @@
+{% extends 'base.html' %} {% block content %}
+<h1>INDEX</h1>
+<h3 class="text-secondary">
+  <a href="{% url 'reviews:profile' %}">{{ request.user }}</a>님, 안녕하세요!
+</h3>
+{% if request.user.is_authenticated %}
+{# Login 됐을 경우에 #}
+<form action="{% url 'accounts:logout' %}" method="post" class="">
+  {% csrf_token %}
+  <input type="submit" value="로그아웃" class="">
+</form>
+<form action="{% url 'accounts:delete' %}" method="post" class="">
+  {% csrf_token %}
+  <input type="submit" value="회원탈퇴" class="">
+</form>
+{% else %}
+{# Anonymous일 경우에 #}
+<a href="{% url 'accounts:login' %}" class="">로그인</a>
+<a href="{% url 'accounts:signup' %}" class="d-block mb-3">회원가입</a>
+{% endif %}
+
+{% for review in reviews  %}
+<a href="{% url 'reviews:detail' review.pk %}">제목: {{ review.title }}</a>
+<p>영화: {{ review.movie }}</p>
+<p>작성자: {{ review.user }}</p>
+<hr>
+{% endfor %}
+<a href="{% url 'reviews:create' %}">CREATE</a>
+{% endblock content %}

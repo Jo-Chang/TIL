@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+  <h1 class="">{{ request.user }}의 페이지</h1>
+  <hr>
+  <p>email : 
+    {% if request.user.email %}
+      {{ request.user.email }}
+    {% else %}
+      <span class="text-secondary">이메일이 없습니다.</span>
+    {% endif %}
+  </p>
+  <p>first name : 
+    {% if request.user.first_name %}
+      {{ request.user.first_name }}
+    {% else %}
+      <span class="text-secondary">이름이 없습니다.</span>
+    {% endif %}
+  </p>
+  <p>last name : 
+    {% if request.user.last_name %}
+      {{ request.user.last_name }}
+    {% else %}
+      <span class="text-secondary">성이 없습니다.</span>
+    {% endif %}
+  </p>
+  <hr>
+  {% for review in reviews %}
+    <a href="{% url 'reviews:detail' review.pk %}">제목: {{ review.title}}</a>
+    <p>영화: {{ review.movie }}</p>
+    <p>작성자: {{ review.user }}</p>
+    <hr>
+  {% endfor %}
+
+  <a href="{% url 'reviews:index' %}">back</a>
+{% endblock content %}

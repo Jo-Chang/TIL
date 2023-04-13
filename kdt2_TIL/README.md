@@ -145,6 +145,8 @@
 - [Web - lotto generator](week12/day5/week12-5.md)
 - [Django - account books](week14/day4/week14-4.md)
 - [Django - Developer Information Sharing Service](week15/day4/week15-4.md)
+- [Django - ](week16/day4/week16-4.md)
+- [Django - ](week16/day5/week16-5.md)
 
 
 -----
