@@ -1,0 +1,20 @@
+.custom-profile-icon {
+  margin-right: 0.1rem;
+  width: 1rem;
+  height: 1rem;
+}
+
+#sidebar {
+  position: fixed;
+  min-width: 13rem;
+  min-height: 40rem;
+  height: 70%;
+}
+
+main {
+  margin-left: 14rem;
+}
+
+.custom-input-form {
+  width: 20rem;
+}

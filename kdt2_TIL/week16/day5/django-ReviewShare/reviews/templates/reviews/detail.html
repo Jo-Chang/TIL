@@ -1,0 +1,145 @@
+{% extends 'base.html' %} {% block content %} {% load static %}
+<h3 class="fw-bold mb-3">[ {{ review.movie }} ] - {{ review.title }}</h3>
+
+<p>
+  <span class="text-secondary">내용:</span>
+  <span>{{ review.content }}</span>
+</p>
+<p class="d-flex">
+  <span class="me-1 text-secondary">평점:</span>
+  {% if review.score == 5 %}
+  <img
+    class="d-inline"
+    style="width: 25px"
+    src="{% static 'star.png' %}"
+    alt=""
+  />
+  <img
+    class="d-inline"
+    style="width: 25px"
+    src="{% static 'star.png' %}"
+    alt=""
+  />
+  <img
+    class="d-inline"
+    style="width: 25px"
+    src="{% static 'star.png' %}"
+    alt=""
+  />
+  <img
+    class="d-inline"
+    style="width: 25px"
+    src="{% static 'star.png' %}"
+    alt=""
+  />
+  <img
+    class="d-inline"
+    style="width: 25px"
+    src="{% static 'star.png' %}"
+    alt=""
+  />
+
+  {% elif review.score == 4 %}
+  <img
+    class="d-inline"
+    style="width: 25px"
+    src="{% static 'star.png' %}"
+    alt=""
+  />
+  <img
+    class="d-inline"
+    style="width: 25px"
+    src="{% static 'star.png' %}"
+    alt=""
+  />
+  <img
+    class="d-inline"
+    style="width: 25px"
+    src="{% static 'star.png' %}"
+    alt=""
+  />
+  <img
+    class="d-inline"
+    style="width: 25px"
+    src="{% static 'star.png' %}"
+    alt=""
+  />
+
+  {% elif review.score == 3 %}
+  <img
+    class="d-inline"
+    style="width: 25px"
+    src="{% static 'star.png' %}"
+    alt=""
+  />
+  <img
+    class="d-inline"
+    style="width: 25px"
+    src="{% static 'star.png' %}"
+    alt=""
+  />
+  <img
+    class="d-inline"
+    style="width: 25px"
+    src="{% static 'star.png' %}"
+    alt=""
+  />
+
+  {% elif review.score == 2 %}
+  <img
+    class="d-inline"
+    style="width: 25px"
+    src="{% static 'star.png' %}"
+    alt=""
+  />
+  <img
+    class="d-inline"
+    style="width: 25px"
+    src="{% static 'star.png' %}"
+    alt=""
+  />
+
+  {% else %}
+  <img
+    class="d-inline"
+    style="width: 25px"
+    src="{% static 'star.png' %}"
+    alt=""
+  />
+
+  {% endif %}
+</p>
+
+<div class="d-flex">
+  {% if request.user == review.user %}
+  <a href="{% url 'reviews:update' review.pk %}" class="btn btn-outline-primary me-2">수정</a>
+  <form action="{% url 'reviews:delete' review.pk %}" method="post">
+    {% csrf_token %}
+    <input type="submit" value="삭제" class="btn btn-outline-danger"/>
+  </form>
+  {% endif %}
+</div>
+
+{# Comment #}
+<hr>
+<form action="{% url 'reviews:comment_create' review.pk %}" method="post">
+  {% csrf_token %} {{ comment_form.as_p }}
+  <input type="submit" class="btn btn-outline-secondary">
+</form>
+
+<hr>
+{% for comment in comments %}
+<p>글쓴이: {{ comment.content }}</p>
+<p>댓글 내용: {{ comment.user }}</p>
+
+
+{% if request.user == comment.user %}
+<form action="{% url 'reviews:comment_delete' review.pk comment.pk %}" method="post">
+
+  {% csrf_token %}
+  <input type="submit" value="삭제" class="btn btn-secondary py-1 px-2">
+</form>
+{% endif %}
+
+<hr />
+{% endfor %} {% endblock content %}

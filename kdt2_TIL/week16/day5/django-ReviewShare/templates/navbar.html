@@ -1,0 +1,60 @@
+<nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top rounded-bottom-3 shadow-sm ps-2">
+  <div class="container-fluid">
+
+    <a class="navbar-brand" href="{% url 'reviews:index' %}">Home</a>
+    
+    <div class="d-flex" id="navbarSupportedContent">
+      {% if request.user.is_authenticated %}
+        <span class="navbar-text me-5 align-self-center">
+          <b>{{ request.user }}</b>
+          님, 안녕하세요!
+        </span>
+      {% endif %}
+      <ul class="navbar-nav ms-auto me-3 mb-2 mb-lg-0 d-flex flex-row">
+        {% if request.user.is_authenticated %}
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle fw-bold" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            {{ request.user }}
+          </a>
+          <ul class="dropdown-menu" style="position:absolute; left:auto; right:0;">
+            <li class="">
+              <a class="dropdown-item ps-1 d-flex justify-content-center align-items-center" href="{% url 'reviews:profile' %}">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-person-fill custom-profile-icon" viewBox="0 0 16 16">
+                  <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3Zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"/>
+                </svg>
+                <span>프로필</span>
+              </a>
+            </li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">회원정보 수정</a></li>
+            <li>
+              <form action="{% url 'accounts:delete' %}" method="post" class="">
+                {% csrf_token %}
+                <button type="submit" class="bg-transparent border-0 p-0 w-100 text-start">
+                  <a class="dropdown-item">회원탈퇴</a>
+                </button>
+              </form>
+            </li>
+            <li><hr class="dropdown-divider"></li>
+            <li>
+              <form action="{% url 'accounts:logout' %}" method="post" class="">
+                {% csrf_token %}
+                <button type="submit" class="bg-transparent border-0 p-0 w-100 text-start">
+                  <a class="dropdown-item">로그아웃</a>
+                </button>
+              </form>
+            </li>
+          </ul>
+        </li>
+        {% else %}
+        <li class="nav-item">
+            <a class="nav-link me-3" href="{% url 'accounts:login' %}">로그인</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="{% url 'accounts:signup' %}">회원가입</a>
+        </li>
+        {% endif %}
+      </ul>
+    </div>
+  </div>
+</nav>
