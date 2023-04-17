@@ -129,6 +129,7 @@
 - [Django - Static files](week16/day1/week16-1.md)
 - [Django - Many to one relationships 1](week16/day2/week16-2.md)
 - [Django - Many to one relationships 2](week16/day3/week16-3.md)
+- [Django - Many to many relationships 1](week17/day1/week17-1.md)
 
 
 -----
@@ -145,8 +146,9 @@
 - [Web - lotto generator](week12/day5/week12-5.md)
 - [Django - account books](week14/day4/week14-4.md)
 - [Django - Developer Information Sharing Service](week15/day4/week15-4.md)
-- [Django - ](week16/day4/week16-4.md)
-- [Django - ](week16/day5/week16-5.md)
+- [Django - Developer Information Sharing Service2](week15/day5/week15-5.md)
+- [Django - Movie Review Sharing Service](week16/day4/week16-4.md)
+- [Django - Movie Review Sharing Service2](week16/day5/week16-5.md)
 
 
 -----
