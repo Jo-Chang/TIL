@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>INDEX</h1>
+  <h3>{{ request.user }}</h3>
+  {% if request.user.is_authenticated %}
+    <div>
+      <form action="{% url 'accounts:logout' %}" method="POST">
+        {% csrf_token %}
+        <p>
+          <input type="submit" value="로그아웃" autocomplete="off">
+        </p>
+      </form>
+      <a href="{% url 'articles:create' %}">[글 작성]</a>
+    </div>
+  {% else %}
+    <div>
+      <a href="{% url 'accounts:login' %}">[로그인]</a>
+      <a href="{% url 'accounts:signup' %}">[회원가입]</a>
+    </div>
+  {% endif %}
+  {% for article in articles %}
+    <div>
+      <p>게시글 번호 -
+        {{ article.pk }}
+      </p>
+    </div>
+    <a href="{% url 'articles:detail' article.pk %}">[게시글 조회]</a>
+    {% if request.user.is_authenticated %}
+      <form action="{% url 'articles:article_likes' article.pk %}" method="post">
+        {% csrf_token %}
+        <input type="hidden" name="next" value="{{ request.path }}">
+        {% if request.user in article.like_users.all %}
+          <input type="submit" value="좋아요 취소" class="">
+        {% else %}
+          <input type="submit" value="좋아요" class="">
+        {% endif %}
+      </form>
+    {% else %}
+      <div class="">
+        <button disabled="disabled">좋아요</button>
+      </div>
+    {% endif %}
+    <hr>
+  {% endfor %}
+{%endblock content %}

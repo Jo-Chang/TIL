@@ -1,0 +1,112 @@
+{% extends "base.html" %}
+{% block content %}
+  <div>
+    <h3>DETAIL</h3>
+    <p>게시글 작성자 -
+      {{article.user}}</p>
+    <p>
+      게시글 번호 -
+      {{article.pk}}
+    </p>
+    <p>
+      게시글 제목 -
+      {{article.title}}
+    </p>
+    <p>
+      게시글 내용 -
+      {{article.content}}
+    </p>
+
+    <div class="mb-3">
+    {% if request.user.is_authenticated %}
+      <form action="{% url 'articles:article_likes' article.pk  %}" method="post" class="">
+        {% csrf_token %}
+        <input type="hidden" name="next" value="{{ request.path }}">
+        {% if request.user in article.like_users.all %}
+          <input type="submit" value="좋아요 취소" class="">
+          {% else %}
+          <input type="submit" value="좋아요" class="">
+        {% endif %}
+      </form>
+    {% else %}
+      <div class="">
+        <button disabled="disabled">좋아요</button>
+      </div>
+    {% endif %}
+    </div>
+
+    {% for emotion in emotions %}
+    <div>
+      {% if request.user.is_authenticated %}
+        {{ emotion.queryset }}
+        <form action="{% url 'articles:emotes' article.pk emotion.value %}" method="post" class="">
+          {% csrf_token %}
+          {% if emotion.exist %}
+            <input type="submit" value="{{ emotion.label }} 취소">
+          {% else %}
+            <input type="submit" value="{{ emotion.label }}">
+          {% endif %}
+        </form>
+      {% else %}
+        <button disabled="disabled">{{ emotion.label }}</button>
+      {% endif %}
+      <p>
+        게시글 {{ emotion.label }} 수 -
+        {{ emotion.count }}
+      </p>
+    </div>
+    {% endfor %}
+    <a href="{% url 'articles:index' %}">[back]</a>
+  </div>
+  <hr>
+  <form action="{% url 'articles:comment_create' article.pk %}" method="post">
+    {% csrf_token %}
+    {{ comment_form.as_p }}
+    <input type="submit" value="댓글 작성">
+  </form>
+  <hr>
+
+  {% for comment in comments %}
+    <div>
+      <p>댓글 작성자 -
+        {{comment.user}}</p>
+      <p>댓글 번호 -
+        {{ comment.pk }}</p>
+      <p class="mb-1">
+        댓글 내용 -
+        {{comment.content}}
+      </p>
+      {% if request.user.is_authenticated %}
+      <form action="{% url 'articles:comment_likes' article.pk comment.pk %}" method="post" class="d-inline-block">
+        {% csrf_token %}
+        <button type="submit" class="border-1 bg-transparent rounded-5 border-warning">
+        {% if request.user in comment.like_users.all %}
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16">
+            <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z"/>
+          </svg>
+        {% else %}
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-heart-fill text-danger" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
+          </svg>
+        {% endif %}
+        </button>
+      </form>
+    {% else %}
+      <div class="">
+        <input type="submit" value="좋아요" class="" disabled>
+      </div>
+    {% endif %}
+    <p class="d-inline-block">
+      댓글 좋아요 수 -
+      {{ comment.like_users.all|length }}
+    </p>
+      {% if comment.user == user %}
+        <form action="{% url 'articles:comment_delete' article.pk comment.pk %}" method="POST">
+          {% csrf_token %}
+          <input type="submit" value="댓글 삭제">
+        </form>
+      {% endif %}
+    </div>
+    <hr>
+  {% endfor %}
+{% endblock content %}
