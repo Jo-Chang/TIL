@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>{{ person.username }}의 프로필 페이지</h1>
+  {% for i in '1234567890123'|make_list %}
+  <h1>{{i}}-{{forloop.counter}}.{{ person.username }}의 프로필 페이지</h1>
+  {% endfor %}
+
+  <div>
+    팔로잉 : <span id="followings-count">{{ person.followings.all|length }}</span> / 
+    팔로워 : <span id="followers-count">{{ person.followers.all|length }}</span>
+  </div>
+
+  <div>
+    {% comment %} <form action="{% url 'accounts:follow' person.pk %}" method="POST"> {% endcomment %}
+      <form id="follow-form" data-user-id="{{ person.pk }}">
+        {% csrf_token %}
+        {% if request.user != person %}
+          {% if request.user in person.followers.all %}
+            <input type="submit" value="언팔로우">
+          {% else %}
+            <input type="submit" value="팔로우">
+          {% endif %}
+        {% endif %}
+      </form>
+    </div>
+
+  <h3>{{ person.username }}가 작성한 모든 게시글</h3>
+  {% for article in person.article_set.all %}
+    <div>{{ article.title }}</div>
+  {% endfor %}
+
+  <hr>
+
+  <h3>{{ person.username }}가 작성한 모든 댓글</h3>
+  {% for comment in person.comment_set.all %}
+    <div>{{ comment.content }}</div>
+  {% endfor %}
+
+  <hr>
+  
+  <h3>{{ person.username }}가 좋아요를 누른 모든 게시글</h3>
+  {% for article in person.like_articles.all %}
+    <div>{{ article.title }}</div>
+  {% endfor %}
+
+  <a href="{% url 'articles:index' %}" class="">[back]</a>
+
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script>
+    const form = document.querySelector('#follow-form')
+    const csrftoken = document.querySelector('[name=csrfmiddlewaretoken]').value
+
+    form.addEventListener('submit', (event) => {
+      event.preventDefault()
+
+      const userId = event.target.dataset.userId
+
+      axios({
+        method: 'POST',
+        url: `/accounts/${userId}/follow/`,
+        headers: {'X-CSRFToken': csrftoken,}
+      })
+        .then((response) => {
+          console.log(response.data)
+          const isFollowed = response.data.is_followed
+          const followBtn = document.querySelector('#follow-form > input[type=submit]')
+          if (isFollowed === true) {
+            followBtn.value = 'Unfollow'
+          } else {
+            followBtn.value = 'Follow'
+          }
+          const followingsCountTag = document.querySelector('#followings-count')
+          const followersCountTag = document.querySelector('#followers-count')
+          const followingsCountData = response.data.followings_count
+          const followersCountData = response.data.followers_count
+          followingsCountTag.textContent = followingsCountData
+          followersCountTag.textContent = followersCountData
+        })
+    })
+  </script>
+</body>
+</html>
