@@ -130,7 +130,7 @@
 - [Django - Many to one relationships 1](week16/day2/week16-2.md)
 - [Django - Many to one relationships 2](week16/day3/week16-3.md)
 - [Django - Many to many relationships 1](week17/day1/week17-1.md)
-- [Django - Many to many relationships 2, Fixture](week17/day1/week17-1.md)
+- [Django - Many to many relationships 2, Fixture](week17/day3/week17-3.md)
 
 
 -----
@@ -150,6 +150,8 @@
 - [Django - Developer Information Sharing Service2](week15/day5/week15-5.md)
 - [Django - Movie Review Sharing Service](week16/day4/week16-4.md)
 - [Django - Movie Review Sharing Service2](week16/day5/week16-5.md)
+- [Django - Movie Balance Game](week17/day4/week17-4.md)
+- [Django - Movie Balance Game2](week17/day5/week17-5.md)
 
 
 -----
