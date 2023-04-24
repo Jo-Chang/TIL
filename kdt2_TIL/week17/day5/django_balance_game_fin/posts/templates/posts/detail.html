@@ -1,0 +1,244 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+  <h1>Detail</h1>
+
+  <p class="">
+    작성자 - 
+    <a href="{% url 'accounts:profile' post.user.username %}">{{ post.user }}</a>
+  </p>
+  <p class="">
+    제목 - 
+    {{ post.title }}
+  </p>
+
+  {% comment %} post.likes {% endcomment %}
+  <div class="mb-2">
+    <form id="post-likeform" data-post-id="{{ post.pk }}">
+      {% csrf_token %}
+      {% if request.user.is_authenticated %}
+        {% if request.user in post.like_users.all %}
+          <button type="submit" class="p-0 btn btn-link text-danger"><i class="bi bi-heart-fill"></i></button>
+        {% else %}
+          <button type="submit" class="p-0 btn btn-link text-danger"><i class="bi bi-heart"></i></button>
+        {% endif %}
+      {% else %}
+        <button type="submit" class="p-0 btn btn-link text-danger" disabled="disabled"><i class="bi bi-heart"></i></button>  
+      {% endif %}
+      <span id="post-likescount">{{ post.like_users.count }}</span>
+    </form>
+  </div>
+
+  <div class="d-flex justify-content-center">
+
+    <div class="d-flex flex-column">
+      {% if post.select1_image %}
+      <img src="{{ post.select1_image.url }}" alt="image" class="select-image">
+      {% else %}
+      <img src="{% static 'no-img.jpg' %}" alt="no image" class="select-image">
+      {% endif %}
+      <form action="{% url 'posts:answer' post.pk post.select1_content %}" method="post">
+        {% csrf_token %}
+        <button type="submit" class="container-fluid rounded-3 btn btn-sm btn-primary ps-1 pe-1"
+        {% if request.user in post.select1_user.all or request.user in post.select2_user.all %}
+          disabled="disabled"
+        {% endif %}
+        >{{ post.select1_content }} - {{ post.select1_user.all.count }}</button>
+      </form>
+    </div>
+  
+    <div class="d-flex flex-column">
+      {% if post.select2_image %}
+        <img src="{{ post.select2_image.url }}" alt="image" class="select-image">
+      {% else %}
+        <img src="{% static 'no-img.jpg' %}" alt="no image" class="select-image">
+      {% endif %}
+      <form action="{% url 'posts:answer' post.pk post.select2_content %}" method="post">
+        {% csrf_token %}
+        <button type="submit" class="container-fluid rounded-3 btn btn-sm btn-secondary ps-1 pe-1"
+        {% if request.user in post.select1_user.all or request.user in post.select2_user.all %}
+          disabled="disabled"
+        {% endif %}
+        >{{ post.select2_content }} - {{ post.select2_user.all.count }}</button>
+      </form>
+    </div>
+
+  </div>
+
+  <hr>
+
+  <form action="{% url 'posts:comment_create' post.pk %}" method="POST">
+    {% csrf_token %}
+    {% for field in comment_form %}
+      <label for="{{ field.id_for_label }}">{{ field.label }}</label>
+      {{ field }}
+    {% endfor %}
+    <input type="submit" value="댓글 작성" class="btn btn-sm btn-outline-primary mt-3">
+  </form>
+
+  <hr>
+
+  {% for comment in comments %}
+    <p>작성자 - {{ comment.user }}</p>
+    <p id="comment-content-{{ comment.pk }}">{{ comment.content }}</p>
+  
+    <div class="mb-1">
+    {% if request.user.is_authenticated %}
+      <form class="comment-likeform" id="commentlike-{{ comment.pk }}" data-comment-id="{{ comment.pk }}" data-post-id="{{ post.pk }}">
+      {% csrf_token %}
+      {% if request.user in comment.like_users.all %}
+        <button type="submit" class="p-0 btn btn-link text-danger"><i class="bi bi-heart-fill"></i></button>
+      {% else %}
+        <button type="submit" class="p-0 btn btn-link text-danger"><i class="bi bi-heart"></i></button>
+      {% endif %}
+    {% else %}
+        <button type="submit" class="p-0 btn btn-link text-danger" disabled="disabled"><i class="bi bi-heart"></i></button> 
+    {% endif %}
+        <span class="like-{{ comment.pk }}">{{ comment.like_users.count }}</span>
+      </form>
+    </div>
+
+  <div>
+    {% if request.user == comment.user %}
+      <div class="d-flex">
+        <form action="{% url 'posts:comment_delete' post.pk comment.pk %}" method="POST" class="me-3">
+          {% csrf_token %}
+          <input type="submit" value="댓글 삭제" class="btn btn-sm btn-outline-danger" onclick="onDelete()">
+        </form>
+        <input type="button" value="댓글 수정" class="comment-edit-btn btn btn-sm btn-outline-primary" data-post-id="{{ post.pk }}" data-comment-id="{{ comment.pk }}">
+      </div>
+      <form class="comment-edit-form my-3" id="comment-edit-form-{{ comment.pk }}" data-post-id="{{ post.pk }}" data-comment-id="{{ comment.pk }}" hidden>
+        {% csrf_token %}
+        {% for field in comment_updateform %}
+          <label for="{{ field.id_for_label }}">{{ field.label }}</label>
+          {{ field }}
+        {% endfor %}
+        <input type="submit" value="수정" class="update btn btn-sm btn-outline-primary">
+        <input type="button" value="취소" class="cancel btn btn-sm btn-outline-secondary" data-comment-id="{{ comment.pk }}">
+      </form>
+    {% endif %}
+  </div>
+  <hr>
+  {% endfor %}
+  <script>
+    const postform = document.querySelector('#post-likeform')
+    const commentforms = document.querySelectorAll('.comment-likeform')
+    const csrftoken = document.querySelector('[name=csrfmiddlewaretoken]').value
+
+    // Post 좋아요
+    postform.addEventListener('submit', function (event) {
+      event.preventDefault()
+      const postId = event.target.dataset.postId
+      axios({
+        method: 'post',
+        url: `/posts/${postId}/likes/`,
+        headers: {'X-CSRFToken': csrftoken},
+      })
+        .then((response) => {
+          const isLiked = response.data.is_liked
+          const postlikesCountTag = document.querySelector('#post-likescount')
+          const postlikesCountData = response.data.likes_count
+          const likeBtn = document.querySelector('#post-likeform > button[type=submit] > i')
+          
+          if (isLiked === true) {
+            likeBtn.className = 'bi bi-heart-fill'
+          } else {
+            likeBtn.className = 'bi bi-heart'
+          }
+        
+          postlikesCountTag.textContent = postlikesCountData
+        })
+        .catch((error) => {
+          console.log(error.response)
+        })
+    })
+
+    // Comment 좋아요
+    commentforms.forEach((commentform) => {
+      commentform.addEventListener('submit', function (event) {
+        event.preventDefault()
+        const commentId = event.target.dataset.commentId
+        const postId = event.target.dataset.postId
+        axios({
+          method:'post',
+          url:`/posts/${postId}/comments/${commentId}/likes/`,
+          headers: {'X-CSRFToken': csrftoken},
+        })
+          .then((response) => {
+            const isLiked = response.data.is_liked
+            const commentLikesCountTag = document.querySelector(`.like-${commentId}`)
+            const commentLikesCountData = response.data.likes_count
+            const likeBtn = document.querySelector(`#commentlike-${commentId} > button[type=submit] > i`)
+            
+            if (isLiked) {
+              likeBtn.className = 'bi bi-heart-fill'
+            } else {
+              likeBtn.className = 'bi bi-heart'
+            }
+            commentLikesCountTag.textContent = commentLikesCountData
+          })
+          .catch((error) => {
+            console.log(error.response)
+          })
+      })
+
+    })
+
+    // 댓글 수정
+    const commentUpdates = document.querySelectorAll('.comment-edit-btn')
+
+    commentUpdates.forEach((comment) => {
+      comment.addEventListener('click', (event) => {
+        const commentId = event.target.dataset.commentId
+        const commentUpdateDiv = document.querySelector(`#comment-edit-form-${commentId}`)
+        const contentTextArea = document.querySelector(`#comment-edit-form-${commentId}>textarea`)
+        commentUpdateDiv.hidden = false
+        contentTextArea.value = document.querySelector(`#comment-content-${commentId}`).textContent
+      })
+    })
+    
+    const commentUpdateConfirms = document.querySelectorAll('.comment-edit-form')
+    commentUpdateConfirms.forEach((updateBtn) => {
+      updateBtn.addEventListener('submit', (event) => {
+        event.preventDefault()
+        const postId = event.target.dataset.postId
+        const commentId = event.target.dataset.commentId
+        const data = {
+          content: document.querySelector(`#comment-edit-form-${commentId}>textarea`).value,
+        }
+        axios({
+          method:'post',
+          url:`/posts/${postId}/comments/${commentId}/update/`,
+          headers: {'X-CSRFToken': csrftoken,},
+          data: JSON.stringify(data),
+        })
+          .then((response) => {
+            if (window.confirm('댓글 수정하시겠습니까?')) {
+              updateBtn.hidden = true
+              document.querySelector(`#comment-content-${commentId}`).textContent = data['content']
+            }
+          })
+          .catch((error) => {
+            console.log(error.response)
+          })
+      })
+    })
+
+    const commentUpdateCancels = document.querySelectorAll('.comment-edit-form>.cancel')
+    commentUpdateCancels.forEach((cancelBtn) => {
+      cancelBtn.addEventListener('click', (event) => {
+        const commentId = event.target.dataset.commentId
+        const commentUpdateForm = document.querySelector(`#comment-edit-form-${commentId}`)
+        commentUpdateForm.hidden = true
+      })
+    })
+
+    // 댓글 삭제
+    const onDelete = () => {
+      if (window.confirm('삭제하시겠습니까?')) {
+        alert('삭제되었습니다.')
+      } 
+    }
+  </script>
+{% endblock content %}

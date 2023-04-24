@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>Index</h1>
+  
+  <div class="mb-3">
+    {% if request.user.is_authenticated %}
+    <span><a href="{% url 'accounts:profile' request.user.username %}" class="user-link">
+    {{ request.user }}</a> 님 안녕하세요 ! </span>
+    {% endif %}
+  </div>
+  <div class="mb-3">
+    <a href="{% url 'posts:create' %}" class="btn btn-outline-success">주제 생성</a>
+  </div>
+  <hr>
+
+  {% for post in posts %}
+    <p>
+      작성자 - 
+      <a href="{% url 'accounts:profile' post.user.username %}">{{ post.user }}</a>
+    </p>
+    <p>
+      <span class="">제목 - </span>
+      <a href='{% url 'posts:detail' post.pk %}'>
+        {{ post.title }}
+      </a>
+    </p>
+
+    <hr>
+
+  {% endfor %}
+{% endblock content %}
+

@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block content %}
+  <h1 class="mb-3">Signup</h1>
+  <form action="{% url 'accounts:signup' %}" method="POST">
+    {% csrf_token %}
+    
+    {% for field in form %}
+    <div class="mb-3">
+      {% if field.errors %}
+      {{ field.errors }}
+      {% endif %}
+      <label for="id_{{ field.name }}" class="form-label">{{ field.label }}</label>
+      {{ field }}
+      {% if field.help_text %}
+      {{ field.help_text }}
+      {% endif %}
+    </div>
+    {% endfor %}
+    <input type="submit" value="가입하기" class="btn btn-primary">
+  </form>
+
+{% endblock content %}

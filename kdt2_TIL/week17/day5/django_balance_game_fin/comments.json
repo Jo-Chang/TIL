@@ -1,0 +1,110 @@
+[
+{
+    "model": "posts.comment",
+    "pk": 1,
+    "fields": {
+        "post": 1,
+        "user": 1,
+        "content": "치킨1표",
+        "like_users": [
+            2
+        ]
+    }
+},
+{
+    "model": "posts.comment",
+    "pk": 2,
+    "fields": {
+        "post": 1,
+        "user": 1,
+        "content": "치킨2표",
+        "like_users": [
+            2
+        ]
+    }
+},
+{
+    "model": "posts.comment",
+    "pk": 3,
+    "fields": {
+        "post": 1,
+        "user": 1,
+        "content": "피자1표",
+        "like_users": [
+            3
+        ]
+    }
+},
+{
+    "model": "posts.comment",
+    "pk": 4,
+    "fields": {
+        "post": 1,
+        "user": 2,
+        "content": "치킨맛있다",
+        "like_users": []
+    }
+},
+{
+    "model": "posts.comment",
+    "pk": 5,
+    "fields": {
+        "post": 2,
+        "user": 2,
+        "content": "1번이더좋은듯",
+        "like_users": [
+            2,
+            3
+        ]
+    }
+},
+{
+    "model": "posts.comment",
+    "pk": 6,
+    "fields": {
+        "post": 3,
+        "user": 2,
+        "content": "프론트가 더 좋은듯",
+        "like_users": [
+            2,
+            3
+        ]
+    }
+},
+{
+    "model": "posts.comment",
+    "pk": 7,
+    "fields": {
+        "post": 3,
+        "user": 3,
+        "content": "백엔드가 더 좋은듯",
+        "like_users": [
+            3
+        ]
+    }
+},
+{
+    "model": "posts.comment",
+    "pk": 8,
+    "fields": {
+        "post": 2,
+        "user": 3,
+        "content": "2번이더좋은듯",
+        "like_users": [
+            3
+        ]
+    }
+},
+{
+    "model": "posts.comment",
+    "pk": 9,
+    "fields": {
+        "post": 1,
+        "user": 3,
+        "content": "피자맛있다",
+        "like_users": [
+            3
+        ]
+    }
+}
+]

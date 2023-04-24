@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1 class="mb-3">Update</h1>
+<form action="{% url 'accounts:update' %}" method="post">
+  {% csrf_token %}
+    
+  {% for field in form %}
+    <div class="mb-3">
+      {% if field.errors %}
+        {{ field.errors }}
+      {% endif %}
+      <label for="id_{{ field.name }}" class="form-label">{{ field.label }}</label>
+      {{ field }}
+    </div>
+  {% endfor %}
+  <input type="submit" value="변경하기" class="btn btn-primary">
+</form>
+{% endblock content %}

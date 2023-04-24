@@ -1,0 +1,54 @@
+/* base.html */
+nav {
+  height: 70px;
+}
+
+.nav-aria {
+  max-width: 1200px;
+}
+
+.profile-bg {
+  width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.profile-list {
+  margin-top: .25rem;
+}
+
+.profile-list li {
+  white-space: nowrap;
+}
+
+main {
+  max-width: 1200px;
+}
+
+.select-image {
+  width: 40vw;
+  height: 40vw;
+}
+
+a {
+  text-decoration-line: none;
+}
+
+.user-link {
+  color: black;
+}
+
+.user-link:hover {
+  text-decoration-line: underline;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.7rem;
+}

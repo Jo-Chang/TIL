@@ -1,0 +1,58 @@
+[
+{
+    "model": "posts.post",
+    "pk": 1,
+    "fields": {
+        "user": 1,
+        "title": "배달음식",
+        "select1_content": "치킨",
+        "select2_content": "피자",
+        "select1_image": "",
+        "select2_image": "",
+        "like_users": [
+            2,
+            3
+        ],
+        "select1_user": [
+            1
+        ],
+        "select2_user": []
+    }
+},
+{
+    "model": "posts.post",
+    "pk": 2,
+    "fields": {
+        "user": 1,
+        "title": "휴양지",
+        "select1_content": "휴양지1",
+        "select2_content": "휴양지2",
+        "select1_image": "select_image/04.png",
+        "select2_image": "select_image/09.png",
+        "like_users": [
+            2,
+            3
+        ],
+        "select1_user": [],
+        "select2_user": []
+    }
+},
+{
+    "model": "posts.post",
+    "pk": 3,
+    "fields": {
+        "user": 1,
+        "title": "웹 개발",
+        "select1_content": "프론트엔드",
+        "select2_content": "백엔드",
+        "select1_image": "",
+        "select2_image": "",
+        "like_users": [
+            2,
+            3
+        ],
+        "select1_user": [],
+        "select2_user": []
+    }
+}
+]
