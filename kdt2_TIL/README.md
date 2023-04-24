@@ -131,6 +131,7 @@
 - [Django - Many to one relationships 2](week16/day3/week16-3.md)
 - [Django - Many to many relationships 1](week17/day1/week17-1.md)
 - [Django - Many to many relationships 2, Fixture](week17/day3/week17-3.md)
+- [Django - Rest Framework](week18/day1/week18-1.md)
 
 
 -----
