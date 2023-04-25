@@ -53,3 +53,22 @@
   + `get_object_or_404()`
   + `get_list_or_404()`
   + -> 클라이언트 입장에서 서버 오류(500)보다 예외 처리(404)가 적합함
+
+- Request Method 별 데코레이터 달리하는 법
+> https://jinpyo-hong.tistory.com/5
+
+### PUT vs PATCH (RFC 문서 기준)
+- PUT : 요청한 URI에 payload에 있는 자원으로 <span>대체</span>
+  + 요청한 URI 아래 자원이 존재하지 않는 경우 -> 새로운 자원으로 저장하고 201(Created) status response
+  + 존재하는 경우 -> 대체 요청 적용 시 200(ok) status, 실패 시 204(no content) status
+  + 예시) 좋아요/싫어요, 추천/비추천
+  + PUT 메서드는 클라이언트가 해당 자원의 상태를 모두 알고 있다고 가정되어야 함 -> payload만으로 자원의 전체 상태를 알 수 있어야 함
+
+- PATCH : 요청한 자원에 대한 <span>부분적인 수정</span>을 적용하는 메서드
+  + {{고찰}} *댓글 기능에서 댓글 내용만 바꾸는 경우는 PATCH가 더 적절할지도..?*
+
+- Idempotence (멱등성) : f(f(x)) = f(x), 연산을 여러번 진행한 후에 다시 자기 자신이 되는 성질
+
+- 참고 문서
+  > https://tecoble.techcourse.co.kr/post/2020-08-17-put-vs-patch/
+  > 
