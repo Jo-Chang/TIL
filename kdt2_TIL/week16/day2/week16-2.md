@@ -117,5 +117,3 @@ def comments_create(request, article_pk):
 
 - 댓글 수정의 미구현 이유
   + 현재 페이지를 유지한 상태로 Form부분만 변경되어 수정해야 하므로 JavaScript의 영역
-
-- html <nobr> 태그
